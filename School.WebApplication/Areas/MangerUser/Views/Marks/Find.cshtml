@@ -1,0 +1,66 @@
+﻿@model School.Data.ViewModels.MarkViewModel
+
+@{
+    ViewData["Title"] = "عرض علامات الطالب";
+}
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+
+
+
+<div class="row" style="margin-top:-4.5rem !important ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                هذه الصفحة تعرض علامات الطالب  :     <strong>@Model.Student.FullName</strong>
+            </span>
+            <span>
+                  من الصف   :     <strong>@Model.Student.Class.Name</strong>
+            </span>
+        </div>
+    </div>
+</div>
+
+<table id="myTable" class="table dt-responsive table-hover" style="width: 108%; margin-left: -35px;">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الدرجة النهائية    </td>
+            <td class="text-right">  الدرجة النصفية  </td>
+            <td class="text-right">    الدرجة الشهرية  </td>
+            <td class="text-right">      مدرس المادة  </td>
+            <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">المادة </td> 
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.MarkList)
+        {
+            <tr style="  color: #000;">
+
+                @if (item.ClassId < 105)
+                {
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)   </td>
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)   </td>
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)   </td>
+                }
+                else
+                {
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
+                }
+
+
+                <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+

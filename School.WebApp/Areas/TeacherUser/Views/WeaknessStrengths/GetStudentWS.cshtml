@@ -1,0 +1,26 @@
+﻿ 
+
+@model School.Data.ViewModels.SkillsSuggestionsViewModel
+
+@{
+    ViewData["Title"] = "سجل مواطن القوة والضعف للطالب ";
+}
+
+ 
+
+
+<table id="myTable" class="table dt-responsive" style="width">
+    <thead class="thead_dark">
+        <tr>   
+              <td class="text-center">   موطن الضعف   </td>
+         </tr>
+    </thead>
+    <tbody>
+         <tr> 
+             <td class="text-center"> @Html.DisplayFor(model => model.SkillsSuggestions.Name)   </td>
+         </tr>
+ 
+    </tbody>
+</table>
+
+ 

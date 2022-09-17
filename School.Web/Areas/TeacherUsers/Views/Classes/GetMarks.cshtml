@@ -1,0 +1,36 @@
+﻿@model School.Data.ViewModels.MarkViewModel
+
+@{
+    ViewData["Title"] = "درجات الطلاب";
+}
+
+
+ <table id="myTable" class="table dt-responsive" style="width">
+    <thead class="thead_dark">
+        <tr>  
+              <th class="text-right"> المجموع الكلي</th> 
+              <td class="text-center"> علامة الدرجة النهائية    </td> 
+              <td class="text-center">  علامة الدرجة الفصلية   </td>
+              <td class="text-center">   علامة الدرجة الشهرية  </td>
+              <td class="text-center">    اسم المادة </td> 
+              <td class="text-center">    اسم الطالب </td> 
+
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MarkList) {
+        <tr>
+             @*<td class="text-center"> @Html.DisplayFor(modelItem => item.Total)   </td>*@
+             <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+             <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+             <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
+             <td class="text-center"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+              <td class="text-center"> @Html.DisplayFor(modelItem => item.Student.FullName)   </td> 
+            
+        </tr>
+}
+    </tbody>
+</table>
+
+ 

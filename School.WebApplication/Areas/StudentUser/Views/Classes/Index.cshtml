@@ -1,0 +1,15 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+@{
+    ViewData["Title"] = "لوحة التحكم";
+}
+ 
+
+<div class="myClass" >
+     <p> اسم الصف :   </p>
+ 
+  <a asp-controller="Skillss"                 asp-action="Index"   asp-area="StudentUser" asp-route-id="@Model.StudentId">سجل التقييمات </a>
+  <a asp-controller="SkillsStudentBehaviors"  asp-action="Index" asp-area="StudentUser" asp-route-id="@Model.StudentId">سجل التقييمات السلوكية </a>
+  <a asp-controller="Marks"                       asp-action="Index"         asp-area="StudentUser" asp-route-id="@Model.StudentId">سجل العلامات </a>
+  <a asp-controller="Teacher"                     asp-action="Index"       asp-area="StudentUser" asp-route-id="@Model.StudentId">سجل المعلمين  </a>
+ 
+</div>

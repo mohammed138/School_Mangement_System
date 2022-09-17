@@ -1,0 +1,70 @@
+﻿@model School.Data.ViewModels.SkillsViewModel
+
+@{
+    ViewData["Title"] = "عرض تقييمات الطالب";
+}
+@if(Model.StudentName != "" ){
+
+
+<p> اسم الطالب: @Model.StudentName </p>
+  
+  
+
+    
+  <table  id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+        <tr> 
+        
+           
+            
+             <th class="text-right">
+                @Html.DisplayNameFor(model => model.Skills.Notice)
+            </th> 
+
+              <td class="text-center"> 
+                 @Html.DisplayNameFor(model => model.Skills.SkillsType) 
+            </td>
+
+               <td class="text-center"> 
+                 @Html.DisplayNameFor(model => model.Skills.Teacher) 
+            </td>
+
+             <td class="text-center"> 
+                  اسم المادة 
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SkillsList) {
+        <tr> 
+              <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Notice)
+            </td> 
+              <td class="text-center">
+                @Html.DisplayFor(modelItem => item.SkillsType.Name)
+            </td>
+
+              <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Teacher.FullName)
+
+            </td>
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Subject.Name)
+            </td>
+           
+           
+           
+        </tr>
+}
+    </tbody>
+</table>
+
+}
+else{
+    <p style="    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5cm;"> لم يتم إضافة تقييم للطالب حتى الأن </p>
+
+}
+

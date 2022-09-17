@@ -1,0 +1,72 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+
+@{
+    ViewData["Title"] = "عرض المواد الدراسية للفصل";
+}
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+
+
+<div class="row" style="margin-top:-4.5rem !important ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                هذه الصفحة تعرض مواد الصف  :     <strong>@Model.Class.Name</strong>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+@if (Model.SubjectList.Count() > 0)
+{
+
+    <table id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+
+                @*<th class="text-right">الإجراءات</th>*@
+
+
+                <th class="text-right">
+                    @Html.DisplayNameFor(model => model.Subject.Teacher)
+                </th>
+
+
+                <th class="text-right">
+                    @Html.DisplayNameFor(model => model.Subject.Name)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SubjectList)
+            {
+                <tr>
+
+
+
+
+                    <td class="text-right">
+                        @Html.DisplayFor(modelItem => item.Teacher.FullName)
+                    </td>
+                    <td class="text-right">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <p style="    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5cm;">لم يتم إضافة مواد دراسية لحتى الأن  </p>
+
+}
+

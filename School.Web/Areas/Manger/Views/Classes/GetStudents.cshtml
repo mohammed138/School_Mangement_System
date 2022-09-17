@@ -1,0 +1,363 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+
+@{
+    ViewData["Title"] = "عرض طلاب الفصل";
+}
+
+
+<style>
+    .dropdown {
+        padding: 0px;
+    }
+
+    table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:after, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:after {
+        color: #0E268C;
+        opacity: 1;
+        font-size: 20px;
+    }
+
+    .table-hover tbody tr:hover {
+        color: #212529;
+        background-color: rgba(0,0,0,.075);
+    }
+
+    .table-hover tbody tr {
+        background-color: #fff;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting_asc_disabled, table.dataTable thead > tr > th.sorting_desc_disabled, table.dataTable thead > tr > td.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting_asc_disabled, table.dataTable thead > tr > td.sorting_desc_disabled {
+        cursor: pointer;
+        position: relative;
+        padding-right: 26px;
+        color: #fff;
+    }
+
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #fff;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .dropdown-menu {
+        border-top-left-radius: 15px;
+        position: absolute;
+        will-change: transform;
+        background-color: rgb(14, 38, 140);
+        border: 2px solid rgb(14, 38, 140);
+        top: 0px;
+        opacity: 0.7;
+        left: 0px;
+        transform: translate3d(0px, -185px, 0px);
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        color: rgb(14, 38, 140);
+        text-decoration: none;
+        background-color: #fff;
+    }
+
+
+    .dropdown-item.active, .dropdown-item:hover {
+        color: rgb(14, 38, 140) !important;
+        text-decoration: none;
+        background-color: #fff !important;
+    }
+
+    .dataTables_wrapper .dataTables_length {
+        float: left;
+        display: none;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: left;
+        text-align: left;
+        direction: rtl;
+    }
+
+    table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting_asc_disabled, table.dataTable thead > tr > th.sorting_desc_disabled, table.dataTable thead > tr > td.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting_asc_disabled, table.dataTable thead > tr > td.sorting_desc_disabled {
+        cursor: pointer;
+        position: relative;
+        padding-right: 26px;
+        color: #fff;
+        border-top: 0px;
+    }
+
+    .small-info {
+        background-color: #8c9cd0;
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: transparent;
+        margin-left: 3px;
+        margin-right: 10px !important;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        color: #4159AE;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        color: #fff !important;
+        background-color: #0E268C;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        color: #fff !important;
+        background-color: #0E268C;
+    }
+</style>
+<style>
+
+
+    .content {
+        padding: 7rem 0;
+    }
+
+
+    .owl-1 .owl-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+    }
+
+        .owl-1 .owl-nav .owl-next,
+        .owl-1 .owl-nav .owl-prev {
+            border: 1px solid red;
+            z-index: 92;
+            position: absolute;
+            top: 50%;
+        }
+
+            .owl-1 .owl-nav .owl-next:active, .owl-1 .owl-nav .owl-next:focus,
+            .owl-1 .owl-nav .owl-prev:active,
+            .owl-1 .owl-nav .owl-prev:focus {
+                outline: none;
+            }
+
+            .owl-1 .owl-nav .owl-next span,
+            .owl-1 .owl-nav .owl-prev span {
+                color: #fff;
+            }
+
+                .owl-1 .owl-nav .owl-next span:before,
+                .owl-1 .owl-nav .owl-prev span:before {
+                    font-size: 40px !important;
+                }
+
+        .owl-1 .owl-nav .owl-next {
+            border: 4px solid blue;
+            right: 20px;
+        }
+
+        .owl-1 .owl-nav .owl-prev {
+            left: 20px;
+        }
+
+    .owl-1 .owl-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+        .owl-1 .owl-dots .owl-dot {
+            background: none;
+            display: inline-block;
+        }
+
+            .owl-1 .owl-dots .owl-dot > span {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                margin: 4px;
+            }
+
+            .owl-1 .owl-dots .owl-dot.active > span {
+                background: white;
+            }
+
+            .owl-1 .owl-dots .owl-dot:active, .owl-1 .owl-dots .owl-dot:focus {
+                outline: none;
+            }
+
+    .media-29101 .img {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .media-29101 .text {
+        padding: 50px;
+    }
+
+    @@media (max-width: 991.98px) {
+        .media-29101 .text {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+
+    .media-29101 .text .category {
+        color: #adb5bd;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: .2rem;
+    }
+
+    .media-29101 .text h2 {
+        font-family: "Playfair Display", times, serif;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+
+        .media-29101 .text h2 a {
+            color: #000;
+        }
+
+    .carousel-nav {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 40px;
+    }
+
+        .carousel-nav a {
+            color: #999;
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+
+            .carousel-nav a:hover {
+                color: #000;
+            }
+
+            .carousel-nav a.active {
+                color: #000;
+            }
+
+                .carousel-nav a.active:before {
+                    content: "";
+                    bottom: -1px;
+                    left: 0;
+                    right: 0;
+                    position: absolute;
+                    border-bottom: 1px solid #000;
+                }
+</style>
+
+
+
+
+
+<div class="row" style="margin-top:-4.5rem !important ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                هذه الصفحة تعرض طلاب الصف  :     <strong>@Model.Class.Name</strong>
+            </span>
+        </div> 
+    </div>
+</div>
+
+
+
+@if (Model.StudentList.Count() > 0)
+{
+    <table id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+                <th class="text-right"> الإجراءات </th>
+
+                <th class="text-right">
+                    @Html.DisplayNameFor(model => model.Student.PhoneNumber)
+                </th>
+                <th class="text-right">
+                    @Html.DisplayNameFor(model => model.Student.EmailAddress)
+                </th>
+                <th class="text-right">
+                    @Html.DisplayNameFor(model => model.Student.FullName)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.StudentList)
+            {
+                <tr>
+                    <td class="text-right">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary"
+                                    type="button"
+                                    id="dropdownMenuButton"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                            </button>
+
+                            <div class="dropdown-menu text-right"
+                                 aria-labelledby="dropdownMenuButton" style="">
+
+                                <a class="dropdown-item" asp-controller="Marks" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">سجل العلامات  </a> |
+                                <a class="dropdown-item" asp-controller="Skillss" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">سجل التقييم للطالب </a> |
+                                <a class="dropdown-item" asp-controller="SkillsStudentBehaviors" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">سجل التقييم السلوكي للطالب </a> |
+                                <a class="dropdown-item" asp-controller="SkillsSuggestionss" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">مواطن الضعف والقوة للطالب</a> |
+
+                            </div>
+                        </div>
+                    </td>
+
+
+
+                    <td class="text-right">
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+
+
+                    <td class="text-right">
+                        @Html.DisplayFor(modelItem => item.EmailAddress)
+                    </td>
+
+
+                    <td class="text-right">
+                        @Html.DisplayFor(modelItem => item.FullName)
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <p>لم يتم إضافة طلاب للفصل حتى الأن  </p>
+}

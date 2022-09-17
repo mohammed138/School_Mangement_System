@@ -1,0 +1,63 @@
+﻿@model School.Data.ViewModels.SkillsBehaviorViewModel
+
+@{
+    ViewData["Title"] = "عرض التقييم السلوكي للطالب";
+}
+@if(Model.SkillsBehaviorList.Count() >0 ){
+
+ 
+  <table  id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+        <tr> 
+              <th class="text-right">
+                @Html.DisplayNameFor(model => model.SkillsBehavior.Notice)
+            </th> 
+           
+             <td class="text-center"> 
+                 @Html.DisplayNameFor(model => model.SkillsBehavior.SkillsType) 
+            </td> 
+           
+               <td class="text-center"> 
+                 @Html.DisplayNameFor(model => model.SkillsBehavior.TeacherId) 
+            </td>
+
+              <td class="text-center"> 
+                  اسم المادة 
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SkillsBehaviorList) {
+        <tr> 
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Notice)
+            </td> 
+              <td class="text-center">
+                @Html.DisplayFor(modelItem => item.SkillsType.Name)
+            </td>
+            
+
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Teacher.FullName)
+            </td>
+
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Subject.Name)
+            </td>
+            
+           
+            
+        </tr>
+}
+    </tbody>
+</table>
+
+}
+else{
+  <p style="    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5cm;"> لم يتم إضافة تقييم سلوكي للطالب</p>
+
+}
+

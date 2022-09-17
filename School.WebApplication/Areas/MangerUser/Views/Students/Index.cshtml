@@ -1,0 +1,58 @@
+﻿@model IEnumerable<School.Data.Entities.Student>
+
+@{
+    ViewData["Title"] = "صفحة الطلاب ";
+}
+ 
+
+<p>
+    <a asp-action="Create">إضافة طالب جديد</a>
+</p>
+  <table  id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+        <tr>
+           
+             <th class="text-right">الإجراءات</th>
+         
+             <th class="text-right">
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+              <th class="text-right">
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+             <th class="text-right">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+              <th class="text-right">
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+               <td class="text-center">
+                <a asp-action="Edit" asp-route-id="@item.Id">تعديل</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">تفاصيل</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
+            </td>
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Class.Name)
+            </td>
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td> 
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+              
+          
+        </tr>
+}
+    </tbody>
+</table>

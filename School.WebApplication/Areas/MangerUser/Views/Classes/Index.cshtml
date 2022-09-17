@@ -1,0 +1,96 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+
+@{
+    ViewData["Title"] = "عرض الصفوف المدرسية ";
+}
+
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+
+
+
+
+@using (Html.BeginForm("ExporDataToFile", "Classes", FormMethod.Post))
+{
+
+    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+        <button id="btnExportData" type="submit" value="ExportData" name="action">
+            <i class="fas fa-file-download"> Export Data </i>
+        </button>
+    </div>
+
+    <div class="col-md-3">
+        <label>
+            <input id="ExportPdf" name="Export" type="radio"
+                   value="Pdf" />
+            <i class="far fa-file-pdf">  Export To Pdf</i>
+        </label>
+    </div>
+
+
+}
+
+
+
+
+<table id="myTable" class="table dt-responsive  " style="width:100%">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <th class="text-right">الإجراءات</th>
+
+
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Class.Name)
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ClassList)
+        {
+            <tr>
+
+                <td class="text-right">
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #fff;border:0px;">
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                        </button>
+
+                        <div class="dropdown-menu text-right"
+                             aria-labelledby="dropdownMenuButton" style="">
+                            <a class="dropdown-item" asp-action="GetStudents" asp-area="Manger" asp-route-id="@item.Id"> عرض طلاب الفصل  <i class="fa-solid fa-users"></i> </a> |
+                            <a class="dropdown-item" asp-action="GetSubjects" asp-area="Manger" asp-route-id="@item.Id"> عرض مواد الفصل <i class="fa-solid fa-bookmark"></i> </a> |
+                            <a class="dropdown-item" asp-action="GetTeachers" asp-area="Manger" asp-route-id="@item.Id"> عرض مدرسين الفصل <i class="fa-solid fa-chalkboard-user"></i> </a>
+
+
+                        </div>
+                    </div>
+                </td>
+
+
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+}

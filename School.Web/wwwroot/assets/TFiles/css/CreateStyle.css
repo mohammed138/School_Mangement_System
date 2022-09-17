@@ -1,0 +1,119 @@
+﻿
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: initial;
+    line-height: 1.5;
+    color: #000;
+}
+
+.kt-separator.kt-separator--border-dashed, .kt-separator.kt-separator--dashed {
+    border-bottom: 1px dashed #ebedf2;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.kt-section .kt-section__heading, .kt-section .kt-section__title {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+    color: #464457;
+}
+
+.kt-portlet .kt-portlet__head .kt-portlet__head-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: flex-first;
+    align-content: flex-first;
+}
+
+    .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #464457;
+    }
+
+        .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title small {
+            font-weight: 300;
+            padding-left: 0.5rem;
+            font-size: 1rem;
+            color: #a7abc3;
+        }
+
+.btn.btn-clean {
+    border-color: transparent;
+    background: transparent;
+    color: #93a2dd;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.btn.btn-clean i {
+    color: #93a2dd;
+}
+
+.btn-brand {
+    color: #fff;
+    background-color: #5d78ff;
+    border-color: #5d78ff;
+    color: #ffffff;
+}
+
+.kt-portlet .kt-portlet__head .kt-portlet__head-toolbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: initial;
+    -ms-flex-line-pack: end;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    direction: rtl;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.kt-separator.kt-separator--border-dashed, .kt-separator.kt-separator--dashed {
+    border-bottom: 3px dashed #ebedf2;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.save-click {
+    border: 3px solid;
+    width: 100px;
+}
+
+    .save-click :hover {
+        cursor: pointer;
+    }

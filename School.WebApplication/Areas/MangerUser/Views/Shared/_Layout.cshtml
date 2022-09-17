@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - School.WebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+     <link rel="stylesheet" href="../wwwroot/css/all.css" /> 
+     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />  
+     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />  
+
+     <script src="https://kit.fontawesome.com/ef3884b0e6.js" crossorigin="anonymous"></script>
+
+       <link rel="stylesheet" href="~/css/LayoutStyleSheet.css" />
+
+    <link rel="icon" src="./favicon.JPG">
+     
+    <style>
+        @@import url(https://fonts.googleapis.com/css?family=Tajawal);
+  
+.main-content{
+  width:100%!important;
+  padding-left:150px!important;
+    padding-right:150px!important;
+
+  background: white;
+  padding-top:100px;
+}
+.thead_dark {
+    background: #ececec;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+}
+.btn-download {
+    background: #42C2A1!important;
+    border-radius: 50%!important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    vertical-align: top!important;
+    padding: 5px;
+    border: none;
+    color: white;
+  
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    display:none;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    top: 9px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    display: block;
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    box-shadow: 0 0 3px #444;
+    box-sizing: content-box;
+    text-align: center;
+    text-indent: 0 !important;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 14px;
+    content: '+';
+    background-color: #60b6ab;
+}
+
+.table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+    content: '-';
+    background-color: #d33333;
+}
+
+ .page-item.active .page-link {
+    z-index: 1;
+    color: #fff!important;
+    background-color: #42c2a1!important;
+    border-color: #42c2a1!important;
+    border-radius: 8px!important;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #42c2a1!important;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.dataTables_info, .dataTables_length{
+      float: right;
+}
+#myTable_paginate,.dataTables_filter{
+  float: left;
+}
+    </style>
+
+     
+     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet"> 
+		@*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">*@
+
+</head>
+<body>
+
+
+    <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="order-last" class="img" style="background-color:#000;">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	        </button>
+        </div>
+        <div class="">
+              <a  class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">  !@User.Identity.Name مرحبا بك</a> 	        <ul class="list-unstyled components mb-5">
+	       
+              <li class="active">
+	            <a href="#"><span class="fa fa-home mr-3"></span> الصفحة الرئيسية </a>
+	          </li>
+
+               <li>
+              <a asp-controller="Classes" asp-action="Index"  asp-area="Manger"><span class="fa fa-cogs mr-3"></span> عرض الصفوف  </a>
+	          </li> 
+
+	          <li>
+	              <a asp-controller="Students" asp-action="Index" asp-area="Manger"><span class="fa fa-user mr-3"></span> عرض الطلاب   </a>
+	          </li>
+
+	          <li>
+                  <a asp-controller="Teachers" asp-action="Index" asp-area="Manger"><span class="fa fa-sticky-note mr-3"></span> عرض المدرسيين     </a>
+	          </li>
+
+              <li>
+                  <a asp-controller="ExamsTables" asp-action="Index" asp-area="Manger"><span class="fa fa-sticky-note mr-3"></span> صفحة جدول الامتحانات   </a>
+	          </li>
+               
+	           
+
+
+
+	        </ul>
+
+	        <div class="mb-5 px-4">
+						<h3 class="h6 mb-3">مدرسة السلام </h3>
+						 
+			</div>
+
+	        <div class="footer px-4">
+	        	<p> </p>
+	        </div>
+
+	      </div>
+
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+       <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+      </div>
+	</div>
+
+
+
+
+
+
+
+
+     
+
+
+
+
+   @* <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="./favicon.JPG" width="50" height="50" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>*@
+    @*<div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>*@
+
+    @*<footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - School.WebApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    
+     <script src="js/popper.js"></script>
+     <script src="js/main.js"></script>
+
+     <script>
+      (function($) {
+
+	"use strict";
+
+	var fullHeight = function() {
+
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
+
+	};
+	fullHeight();
+
+	$('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
+
+})(jQuery); 
+     </script>
+        
+
+    <script src="~/js/popper.js"></script> 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    
+    <script>
+           $(document).ready(function() {
+            $('#myTable').DataTable({
+                "aLengthMenu": [
+                    [5, 10, 25, -1],
+                    [5, 10, 25, "All"]
+                ],
+                "iDisplayLength": 10,
+
+                "language": {
+                    "sProcessing": "جارٍ التحميل...",
+                    "sLengthMenu": "أظهر _MENU_ مدخلات",
+                    "sZeroRecords": "لم يعثر على أية سجلات",
+                    "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ مدخل",
+                    "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+                    "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                    "sInfoPostFix": "",
+                    "sSearch": "ابحث:",
+                    "sUrl": "",
+                    "oPaginate": {
+                        "sFirst": "الأول",
+                        "sPrevious": "السابق",
+                        "sNext": "التالي",
+                        "sLast": "الأخير"
+                    }
+                }
+            });
+        });
+    </script>
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

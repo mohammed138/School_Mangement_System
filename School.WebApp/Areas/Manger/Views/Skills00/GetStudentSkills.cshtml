@@ -1,0 +1,194 @@
+﻿
+
+@model School.Data.ViewModels.SkillsViewModel
+
+@{
+    ViewData["Title"] = "سجل التقييم للطالب ";
+}
+
+ 
+<style>
+    .subrow {
+        border-top: 2px solid;
+        padding-top: 10px;
+    }
+
+    .header-t {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        color: #000;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .header-p-t {
+        font-weight: 500;
+        color: #000;
+    }
+
+    p {
+        font-family: dkmmljn.kjn !important;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #000;
+    }
+</style>
+
+
+<div class="row" style="font-family: 'Changa', sans-serif;    ">
+    <div class="container-fluid">
+        <div class="row text-right" style=" border: 2px solid;">
+            <div class="col-md-3" style=" border-right: 1px solid;">
+                <div class="header-t row" style="padding-bottom: 0px; padding-top: 10px;">
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز سريع </p>
+                    </div>
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز عادي </p>
+
+                    </div>
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز مساعدة </p>
+
+                    </div>
+                    <div class="col-3">
+                        <p class="header-p-t"> لم ينجز  </p>
+
+                    </div>
+
+                </div>
+                <div class="row subrow">
+                    @if (Model.IsActive == true)
+                    {
+                        @foreach (var item in Model.SkillsList)
+                        {
+                            @if (item.SkillsTypeId == 10) // إنجاز
+                            {
+                                <div class="col-3">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+
+                            }
+                            else if (item.SkillsTypeId == 20)
+                            {
+                                <div class="col-3"></div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+
+                            }
+                            else if (item.SkillsTypeId == 30)
+                            {
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="col-3"></div>
+
+                            }
+                            else if (item.SkillsTypeId == 40)
+                            {
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+                                <div class="col-3"></div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            }
+
+                        }
+
+                     } 
+
+                </div>
+            </div>
+            <div class="col-md-7" style=" border-right: 2px solid;">
+                <p class="header-t">  مهارات التعلم الأساسية   </p>
+
+                <div class="row subrow">
+
+
+                    @if (Model.IsActive == true)
+                    {
+
+                        @foreach (var item in Model.SkillsList)
+                        {
+                            <div class="col-md-12" style=" padding-bottom: 12px;">
+                                @item.Name
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <p class="text-right" style=" padding-bottom: 12px; padding-left: 9cm;">
+                            لم يتم إضافة مهارات دراسية للطالب
+                        </p>
+                    }
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <p class="header-t"> المبحث </p>
+                <div class="row subrow">
+                    @if (Model.IsActive == true)
+                    {
+                        @foreach (var item in Model.SkillsList)
+                        {
+                            <div class="col-md-12">
+                                @item.Subject.Name
+                            </div>
+                        }
+                    }
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

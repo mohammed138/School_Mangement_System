@@ -1,0 +1,273 @@
+﻿@model School.Data.ViewModels.SkillsBehaviorViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    /* .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            direction: rtl;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 8px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #1459AE;
+            direction: rtl;
+            background-color: #efefef;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    */
+    .col-form-label {
+        padding-top: calc(0.375rem + 1px);
+        padding-bottom: calc(0.375rem + 1px);
+        margin-bottom: 0;
+        font-size: initial;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    .kt-separator.kt-separator--border-dashed, .kt-separator.kt-separator--dashed {
+        border-bottom: 1px dashed #ebedf2;
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+
+    .kt-section .kt-section__heading, .kt-section .kt-section__title {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 0;
+        margin: 0 0 1.75rem 0;
+        color: #464457;
+    }
+
+    .kt-portlet .kt-portlet__head .kt-portlet__head-label {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: flex-first;
+        align-content: flex-first;
+    }
+
+        .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title {
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #464457;
+        }
+
+            .kt-portlet .kt-portlet__head .kt-portlet__head-label .kt-portlet__head-title small {
+                font-weight: 300;
+                padding-left: 0.5rem;
+                font-size: 1rem;
+                color: #a7abc3;
+            }
+
+    .btn.btn-clean {
+        border-color: transparent;
+        background: transparent;
+        color: #93a2dd;
+    }
+
+    .btn-group, .btn-group-vertical {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+    .btn.btn-clean i {
+        color: #93a2dd;
+    }
+
+    .btn-brand {
+        color: #fff;
+        background-color: #5d78ff;
+        border-color: #5d78ff;
+        color: #ffffff;
+    }
+
+    .kt-portlet .kt-portlet__head .kt-portlet__head-toolbar {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: initial;
+        -ms-flex-line-pack: end;
+        align-content: center;
+        justify-content: flex-end;
+    }
+</style>
+
+<style>
+    .form-control {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        direction: rtl;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .kt-separator.kt-separator--border-dashed, .kt-separator.kt-separator--dashed {
+        border-bottom: 3px dashed #ebedf2;
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+
+    .save-click {
+        border: 3px solid;
+        width: 100px;
+    }
+
+        .save-click :hover {
+            cursor: pointer;
+        }
+</style>
+
+<form class="kt-form" id="kt_form" asp-action="Create">
+    <div class="col-md-12">
+        <div class="footer-section">
+            <div class="row" style="color: #fff; background-color: #8c9cd0; padding: 15px;">
+
+                <div class="col-6 text-left">
+                    <div>
+                        <div class="save-click">
+                            <input type="submit" value="حفظ" class="btn btn-primary" style="color: #fff; border-color: #8c9cd0; background-color: #8c9cd0; " />
+                            <i class="fa-solid fa-check" style=" padding-right: 10px;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="back-click">
+                        <div style="padding-top: 5px; color: #fff; font-size: 20px; font-family: 'Changa', sans-serif; ">
+                            <span class="">
+                                إضافة تقييم سلوكي 
+                            </span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 mb-3">
+        <div class="row  text-right">
+            <div class="kt-content  kt-grid__item kt-grid__item--fluid col-12" id="kt_content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--begin::Portlet-->
+                        <div class="kt-portlet kt-portlet--last kt-portlet--head-lg kt-portlet--responsive-mobile" id="kt_page_portlet">
+
+                            <div class="kt-portlet__body">
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="row">
+                                    <div class="col-xl-2"></div>
+                                    <div class="col-xl-8">
+                                        <div class="kt-section kt-section--first">
+                                            <div class="kt-section__body">
+                                                <h3 class="kt-section__title kt-section__title-lg " style="text-align: right;"> : البيانات الأساسية </h3>
+                                                <div class="form-group row">
+                                                    <div class="col-9">
+                                                        <select asp-for="@Model.SkillsBehavior.StudentId" class="form-control" asp-items="Model.StudentDrop"></select>
+                                                    </div>
+                                                    <label class="col-3 col-form-label">الطالب</label>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-9">
+                                                        <select asp-for="@Model.SkillsBehavior.SubjectId" class="form-control" asp-items="Model.SubjectsDrop"></select>
+                                                    </div>
+                                                    <label class="col-3 col-form-label"> المادة</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+                                        <div class="kt-section">
+                                            <div class="kt-section__body">
+                                                <h3 class="kt-section__title kt-section__title-lg text-right" style="text-align: right !important;"> : البيانات التفصيلية </h3>
+
+
+
+
+
+                                                <div class="form-group row">
+                                                    <div class="col-9">
+                                                        <select asp-for="@Model.SkillsBehavior.DurationId" class="form-control" asp-items="Model.DurationDrop"></select>
+                                                    </div>
+                                                    <label class="col-3 col-form-label">  رقم الأسبوع </label>
+                                                </div>
+
+
+                                                <div class="form-group row">
+                                                    <div class="col-9">
+                                                        <select asp-for="@Model.SkillsBehavior.SkillsTypeId" class="form-control" asp-items="Model.SkillsTypeDrop"></select>
+                                                    </div>
+                                                    <label class="col-3 col-form-label">  التقييم   </label>
+
+                                                </div> 
+
+                                               
+
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+
+                                    </div>
+                                    <div class="col-xl-2"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--end::Portlet-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+ 

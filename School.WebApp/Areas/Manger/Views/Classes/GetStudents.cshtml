@@ -1,0 +1,90 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+
+@{
+    ViewData["Title"] = "عرض طلاب الفصل";
+}
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+
+
+
+
+<div class="row" style="margin-top:-4.5rem !important ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                هذه الصفحة تعرض طلاب الصف  :     <strong>@Model.Class.Name</strong>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<table id="myTable" class="table dt-responsive  " style="width:100%">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <th class="text-right"> الإجراءات </th>
+
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Student.PhoneNumber)
+            </th>
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Student.EmailAddress)
+            </th>
+            <th class="text-right">
+                @Html.DisplayNameFor(model => model.Student.FullName)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.StudentList)
+        {
+            <tr>
+                <td class="text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #fff;border:0px;">
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                        </button>
+
+                        <div class="dropdown-menu text-right"
+                             aria-labelledby="dropdownMenuButton" style="">
+
+                            <a class="dropdown-item" asp-controller="Marks" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">سجل العلامات  </a>  
+                            <a class="dropdown-item" asp-controller="Skills" asp-action="GetStudentSkills" asp-route-id="@item.Id" asp-area="Manger">سجل التقييم الدراسي </a>  
+                            <a class="dropdown-item" asp-controller="SkillsBehaviors" asp-action="GetStudentSkillsBehaviors" asp-route-id="@item.Id" asp-area="Manger">سجل التقييم السلوكي للطالب </a>  
+                            @*<a class="dropdown-item" asp-controller="SkillsSuggestionss" asp-action="Find" asp-route-id="@item.Id" asp-area="Manger">مواطن الضعف والقوة للطالب</a>*@ 
+
+                        </div>
+                    </div>
+                </td>
+
+
+
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+
+
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+
+
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

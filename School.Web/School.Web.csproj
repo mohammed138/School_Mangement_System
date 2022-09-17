@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-School.Web-319A2157-B037-488E-B161-952A8F1825BF</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\TeacherUser\**" />
+    <Compile Remove="assets\**" />
+    <Content Remove="Areas\TeacherUser\**" />
+    <Content Remove="assets\**" />
+    <EmbeddedResource Remove="Areas\TeacherUser\**" />
+    <EmbeddedResource Remove="assets\**" />
+    <None Remove="Areas\TeacherUser\**" />
+    <None Remove="assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\TFiles\img\hero_1.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\img\hero_2.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\img\hero_3.jpg" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Areas\Manger\Controllers\ClassesController.cs~RFdeeca05.TMP" />
+    <None Remove="Areas\StudentUser\Views\Classes\GetStudentInformation.cshtml~RFdfbc013.TMP" />
+    <None Remove="Areas\TeacherUsers\Views\Classes\GetMarks.cshtml~RF2161d6.TMP" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="wwwroot\assets\TFiles\img\hero_1.jpg" />
+    <None Include="wwwroot\assets\TFiles\img\hero_2.jpg" />
+    <None Include="wwwroot\assets\TFiles\img\hero_3.jpg" />
+    <None Include="wwwroot\assets\TFiles\hero_1.jpg" />
+    <None Include="wwwroot\assets\TFiles\hero_2.jpg" />
+    <None Include="wwwroot\assets\TFiles\hero_3.jpg" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Twilio" Version="5.78.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\School.DataAccess\School.DataAccess.csproj" />
+    <ProjectReference Include="..\School.Data\School.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\SFiles\" />
+  </ItemGroup>
+
+</Project>

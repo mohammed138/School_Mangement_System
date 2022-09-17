@@ -1,0 +1,30 @@
+﻿ 
+
+@model School.Data.ViewModels.SkillsBehaviorViewModel
+
+@{
+    ViewData["Title"] = "سجل التقييم السلوكي للطالب";
+}
+
+ 
+
+
+<table id="myTable" class="table dt-responsive" style="width">
+    <thead class="thead_dark">
+        <tr>   
+              <td class="text-center">   الأسبوع   </td> 
+
+              <td class="text-center"> التقييم السلوكي    </td>
+        </tr>
+    </thead>
+    <tbody>
+         <tr> 
+             <td class="text-center"> @Html.DisplayFor(model => model.SkillsBehavior.Duration.Name)   </td>
+             <td class="text-center"> @Html.DisplayFor(model => model.SkillsBehavior.SkillsType.Name)   </td> 
+           
+        </tr>
+ 
+    </tbody>
+</table>
+
+ 

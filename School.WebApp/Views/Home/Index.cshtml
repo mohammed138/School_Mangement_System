@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .bottom-left {
+        position: absolute;
+        top: 52%;
+        right: 0cm;
+    }
+    .top-left {
+        position: absolute;
+        top: 20%;
+        right: 0cm;
+        text-align: right;
+    }
+</style>
+
+
+
+<div class="row">
+    <div class="col-md-12" style="margin-top: 70px;">
+        <div class="WellcomeSection">
+            <div class="top-left ">
+                <span style="text-align: right; font-size: 20px; font-weight: 500;  color: #fff; background-color: #8c9cd0; padding: 15px;"> مرحبا بك في نظام مدرسة السلام  </span>
+
+                <br />
+                <small style="font-weight: 500; margin-top: 20px; color: #fff; background-color: #4159AE; padding: 6px; float: right; ">تم تطوير هذا النظام بشكل يناسب التطور التكنولوجي الهائل  , يهدف النظام الى التطور التكنولوجي وتسهيل الوصول للبيانات   </small>
+            </div>
+
+            <img src="~/assets/TFiles/img/wel.jpg" style="background-size: cover; margin-top: 20px; margin-bottom: 20px; height: 100%; width: 115%; margin-left: -70px;" />
+
+        </div>
+    </div>
+
+
+    <div class="col-md-12 bottom-left ">
+        @{
+            if (User.IsInRole("MangerRole"))
+            {
+                <p class="text-center">
+                    <a class="btn btn-info" asp-action="Index" asp-controller="Classes" asp-area="Manger" style=" background-color: #4159AE; color: #fff; padding-left: 20px; font-weight: 500; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        الذهاب الى لوحة التحكم
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </p>
+            }
+            else if (User.IsInRole("StudentRole"))
+            {
+
+                <p class="text-center">
+                    <a class="btn btn-info" asp-action="GetStudentData" asp-controller="Classes" asp-area="StudentUser" style=" background-color: #4159AE; color: #fff; padding-left: 20px; font-weight: 500; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        الذهاب الى لوحة التحكم
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </p>
+            }
+            else if (User.IsInRole("TeacherRole"))
+            {
+
+                <p class="text-center">
+                    <a class="btn btn-info" asp-action="Index" asp-controller="Classes" asp-area="TeacherUser" style=" background-color: #4159AE; color: #fff; padding-left: 20px; font-weight: 500; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        الذهاب الى لوحة التحكم
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </p>
+            }
+            else
+            {
+                <p>
+                    . يرجى القيام بتسجيل الدخول للإستفادة من خدمات نظام مدرسة السلام
+                </p>
+
+
+                <p class="text-center">
+                    <a class="btn btn-info" asp-area="Identity" asp-page="/Account/Login" style=" background-color: #4159AE; color: #fff; padding-left: 20px; font-weight: 500; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+                        تسجيل الدخول
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </p>
+            }
+        }
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

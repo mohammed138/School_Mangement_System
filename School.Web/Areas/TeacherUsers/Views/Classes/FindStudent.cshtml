@@ -1,0 +1,169 @@
+﻿@model School.Data.ViewModels.ClassViewModel
+
+@{
+    ViewData["Title"] = "طلاب الفصل الدراسي";
+}
+
+ <style>
+     .dropdown{
+         padding:0px;
+     }
+     table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:after, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:after {
+         color: #0E268C;
+         opacity: 1;
+         font-size: 20px;
+     }
+     .table-hover tbody tr:hover {
+         color: #212529;
+         background-color: rgba(0,0,0,.075);
+     }
+
+     .table-hover tbody tr {
+         background-color: #fff;
+     }
+     table.dataTable tbody th, table.dataTable tbody td {
+         padding-left: 15px;
+         padding-top: 15px;
+     }
+     table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting_asc_disabled, table.dataTable thead > tr > th.sorting_desc_disabled, table.dataTable thead > tr > td.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting_asc_disabled, table.dataTable thead > tr > td.sorting_desc_disabled {
+         cursor: pointer;
+         position: relative;
+         padding-right: 26px;
+         color: #fff;
+     }
+
+     .dropdown-item {
+         display: block;
+         width: 100%;
+         padding: 0.5rem 1rem;
+         clear: both;
+         font-weight: 400;
+         color: #fff;
+         text-align: inherit;
+         white-space: nowrap;
+         background-color: transparent;
+         border: 0;
+     }
+
+     .dropdown-menu {
+         border-top-left-radius: 15px;
+         position: absolute;
+         will-change: transform;
+         background-color: rgb(14, 38, 140);
+         border: 2px solid rgb(14, 38, 140);
+         top: 0px;
+         opacity: 0.7;
+         left: 0px;
+         transform: translate3d(0px, -185px, 0px);
+     }
+
+     .dropdown-item.active, .dropdown-item:active {
+         color: rgb(14, 38, 140);
+         text-decoration: none;
+         background-color: #fff;
+     }
+
+
+     .dropdown-item.active, .dropdown-item:hover {
+         color: rgb(14, 38, 140) !important;
+         text-decoration: none;
+         background-color: #fff !important;
+     }
+     .dataTables_wrapper .dataTables_length {
+         float: left;
+         display: none;
+     }
+     .dataTables_wrapper .dataTables_filter {
+         float: left;
+         text-align: left;
+         direction: rtl;
+     }
+
+ </style>
+  
+
+
+
+
+
+ <div class="row" style="margin-top:-4.5rem !important ">
+     <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+         <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+             <span>
+                 . مرحبا بك , في صفحة عرض طلاب الفصل الدراسي
+             </span>
+         </div>
+         <div class="badge-title" style="">
+             <span class="small-info ">
+                 .  هذه الصفحة تعرض جميع طلاب الفصل والبيانات الخاصة بهم
+             </span>
+         </div>
+     </div>
+ </div>
+
+
+
+@if (Model.StudentList.Count() > 0)
+{
+<table id="myTable" class="table dt-responsive table-hover" >
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #abadbc;">
+            <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الإجراءات     </td>
+            <td class="text-right" style="   border-bottom: 0px;">   رقم الهاتف  </td>
+            <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">  اسم الطالب  </td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.StudentList)
+        {
+            <tr style="  color: #000;">
+                <td class="text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false" style="background-color: #fff;border:0px;">
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                        </button>
+
+                        <div class="dropdown-menu text-right"
+                             aria-labelledby="dropdownMenuButton" style="">
+                            <a class="dropdown-item" asp-action="GetStudentMarks" asp-controller="Marks" asp-route-id="@item.Id">
+                                عرض علامات الطالب
+                                <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                            </a>
+                            <a class="dropdown-item" asp-action="GetStudentSkills"  asp-controller="Skillss" asp-route-id="@item.Id" >
+                                عرض سجل التقييم
+                                <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                            </a>
+                            <a class="dropdown-item" asp-action="GetStudentBE"  asp-controller="SkillsStudentBehaviors" asp-route-id="@item.Id" >
+                                عرض سجل التقييم السلوكي
+                                <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                            </a>
+                            <a class="dropdown-item" asp-action="GetStudentWS"  asp-controller="SkillsSuggestionss" asp-route-id="@item.Id" >
+                                عرض مواطن الطالب
+                                <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </td>
+                <td class="text-right">0599173040  </td>
+                <td class="text-right"> محمد علاء لبد   </td>
+            </tr>
+        }
+    </tbody> 
+</table>
+
+}
+else
+{
+    <p style="    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5cm;">للأسف لا يوجد بيانات  </p>
+ }

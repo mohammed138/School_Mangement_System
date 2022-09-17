@@ -1,0 +1,137 @@
+﻿@model School.Data.ViewModels.MarkViewModel
+
+@{
+    ViewData["Title"] = "سجل درجات الطالب ";
+}
+
+
+<div class="col-md-12 text-right">
+    @if (Model.Decisions.AllowToCreatMarks == true)
+    {
+        @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+        {
+
+
+            <a asp-action="Create" asp-controller="Marks" asp-route-id="@Model.Student.ClassId" class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                إضافة درجة جديدة
+                <i class="fa-solid fa-plus"></i>
+            </a>
+
+
+        }
+        else
+        {
+            <button disabled asp-action="Create" asp-controller="Marks" class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                إضافة درجة جديدة
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        }
+    }
+    else
+    {
+        <button disabled asp-action="Create" asp-controller="Marks" class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+            إضافة درجة جديدة
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    }
+    <br />
+    <br />
+    <br />
+</div>
+
+
+
+
+<table id="myTable" class="table dt-responsive">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <td class="text-right">  الإجراءات     </td>
+            <td class="text-center">  الدرجة النهائية    </td>
+            <td class="text-center">  الدرجة النهائية    </td>
+            <td class="text-center">   الدرجة الفصلية   </td>
+            <td class="text-center">   المادة   </td>
+            <td class="text-center">   اسم الطالب   </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MarkList)
+        {
+            <tr>
+
+                <td class="text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"
+                                style="background-color: #fff;border:0px;">
+
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+
+                        </button>
+                        <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
+
+                            @if (Model.Decisions.AllowToCreatMarks == true)
+                            {
+                                @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+                                { 
+                                    <a class="dropdown-item btn btn-default"  asp-action="Edit" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                                        تعديل
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a> 
+                                }
+                            }
+                        
+                        </div>
+                    </div>
+                </td>
+
+
+                @if (item.ClassId < 105)
+                {
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)      </td>
+                    <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)      </td>
+                    <td class="text-center">  @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)  </td>
+                }
+                else
+                {
+                    <td class="text-center">
+                        @if (item.FinalTermValue != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.FinalTermValue)
+                        }
+                        else
+                        {
+                            <p> لم يتم رصد الدرجة  </p>
+                        }
+                    </td>
+                    <td class="text-center">
+                        @if (item.MidTermValue != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.MidTermValue)
+                        }
+                        else
+                        {
+                            <p> لم يتم رصد الدرجة  </p>
+                        }
+
+                    </td>
+                    <td class="text-center">
+
+
+                        @if (item.FirstTermValue != null)
+                        {
+                            @Html.DisplayFor(modelItem => item.FirstTermValue)
+                        }
+                        else
+                        {
+                            <p> لم يتم رصد الدرجة  </p>
+                        }
+                    </td>
+                }
+                <td class="text-center"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+                <td class="text-center"> @Html.DisplayFor(modelItem => item.Student.FullName)   </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

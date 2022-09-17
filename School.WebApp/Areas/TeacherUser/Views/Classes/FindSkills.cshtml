@@ -1,0 +1,143 @@
+﻿@model School.Data.ViewModels.SkillsViewModel
+
+@{
+    ViewData["Title"] = "عرض التقييمات الدراسية  ";
+}
+
+
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+
+
+
+
+<div class="container-fluid mt-5 mb-3">
+    <div class="row" style="margin-top:-5rem !important ">
+        <div class="col-12 text-right" style="    margin-bottom: 50px;
+                           padding: 30px;
+                           background-color: #fff;
+                           box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+            <h3>
+                عرض التقييمات الدراسية  لطلاب الفصل
+            </h3>
+            <small>
+                .  هذه الصفحة تعرض التقييمات  الطلاب وتعرض بيانات مفصلة , الخاصة بكل طالب للتسهيل الوصول إليها
+            </small>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row ">
+
+        <div class="col-md-12 text-right">
+            @if (Model.Decisions.AllowToCreatMarks == true)
+            {
+                @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+                {
+                   <a asp-action="Create" asp-controller="Skills" asp-route-id="@Model.ClassID" class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم      </a>
+
+                }
+                else
+                { 
+        <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم  </button>
+                     
+                }
+            }
+            else
+            {
+            <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;">إضافة تقييم  </button>
+
+            }
+        </div>
+
+        <div class="col-md-12 ">
+            <div class="row bg-white">
+                <div class="col-12">
+                    <table id="myTable" class="table dt-responsive">
+                        <thead class="thead_dark">
+                            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+
+                                <td class="text-right">  الإجراءات     </td>
+                                <td class="text-right">   ملاحظات    </td>
+                                <td class="text-right">   القييم    </td>
+                                <td class="text-right">   رقم الأسبوع    </td>
+                                <td class="text-right">   مدرس المادة     </td>
+                                <td class="text-right">   المادة    </td>
+                                <td class="text-right">  اسم الطالب  </td>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.IsActive == true)
+                            {
+
+                                @foreach (var item in Model.SkillsList)
+                                {
+                                    <tr>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary"
+                                                        type="button"
+                                                        id="dropdownMenuButton"
+                                                        data-toggle="dropdown"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false" style="background-color: #fff;border:0px;">
+                                                    <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                                                </button>
+
+                                                <div class="dropdown-menu text-right"
+                                                     aria-labelledby="dropdownMenuButton">
+                                                    @if (Model.Decisions.AllowToCreatMarks == true)
+                                                    {
+                                                        @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+                                                        {
+
+                                                            <a class="dropdown-item" asp-action="Edit" asp-controller="Skills" asp-route-id="@item.Id">
+                                                                تعديل
+                                                               <i class="fa-solid fa-plus"></i>
+
+                                                            </a>
+                                                        }
+                                                    }
+
+                                                    <a class="dropdown-item" asp-action="GetStudentSkills" asp-controller="Skills" asp-route-id="@item.StudentId">
+                                                        التفاصيل
+                                                        <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Notice) </td>
+                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
+                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
+                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                        <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+                                        <td class="text-right">
+                                            @Html.DisplayFor(modelItem => item.Student.FullName)
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            }
+                            else
+                            {
+                              
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

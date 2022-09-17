@@ -1,0 +1,47 @@
+﻿.card {
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 10px !important;
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.slides {
+    margin-bottom: 15px !important;
+}
+
+.go-btn {
+    display: none;
+}
+
+.card:hover {
+    opacity: 0.9;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    transform: scale(1.05);
+}
+
+.card:hover {
+    background: #79D0F2;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+}
+
+    .card:hover::before {
+        background: rgb(85 108 214 / 10%);
+    }
+
+.badge-title span {
+    background-color: #79D0F2;
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+.dropdown-toggle1::after {
+    display: none !important;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}

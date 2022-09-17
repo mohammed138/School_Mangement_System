@@ -1,0 +1,108 @@
+﻿@model School.Data.Entities.Subject
+
+ 
+@{
+    ViewData["Title"] = "تفاصيل المادة الدراسية ";
+}
+
+
+ 
+
+<style>
+    .label-info {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .data-div {
+        margin-top: 20px;
+    }
+
+    .data-span {
+        font-size: 15px;
+        color: #918282;
+    }
+</style>
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-right">
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id" style="background-color: #4159AE;color:#fff;font-weight:500;">
+                        تعديل
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div style="text-align: right; color: #000; font-size: 22px; font-weight: 600; margin-bottom: 40px; border-bottom: 2px dashed ; padding-bottom: 10px;">
+                    <span>بيانات المادة الدراسية   </span>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+    <div class="col-md-3 text-right">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="label-info">
+                  
+                 </span>
+            </div>
+            <div class="col-md-12 data-div">
+             </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-right">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="label-info">
+                    اسم المادة
+                    <i class="fa-solid fa-signature"></i>
+                </span>
+            </div>
+            <div class="col-md-12 data-div">
+                <span class="data-span"> @Html.DisplayFor(model => model.Name)  </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-right">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="label-info">
+                    المادة خاصة بالصف الدراسي
+                 </span>
+            </div>
+            <div class="col-md-12 data-div">
+                <span class="data-span">  @Html.DisplayFor(model => model.Class.Name)  </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-right">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="label-info">
+                    معلم المادة
+                 </span>
+            </div>
+            <div class="col-md-12 data-div">
+                <span class="data-span">  @Html.DisplayFor(model => model.Teacher.FullName) </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+ 

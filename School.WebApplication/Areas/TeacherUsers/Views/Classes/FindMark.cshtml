@@ -1,0 +1,681 @@
+﻿@model School.Data.ViewModels.MarkViewModel
+
+@{
+    ViewData["Title"] = "درجات الطلاب";
+}
+
+
+<link rel="stylesheet" href="~/assets/TFiles/animate.css" />
+<link rel="stylesheet" href="~/assets/TFiles/owl.carousel.css" />
+ 
+<style>
+    .dropdown {
+        padding: 0px;
+    }
+
+    table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:after, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:after {
+        color: #0E268C;
+        opacity: 1;
+        font-size: 20px;
+    }
+
+    .table-hover tbody tr:hover {
+        color: #212529;
+        background-color: rgba(0,0,0,.075);
+    }
+
+    .table-hover tbody tr {
+        background-color: #fff;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting_asc_disabled, table.dataTable thead > tr > th.sorting_desc_disabled, table.dataTable thead > tr > td.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting_asc_disabled, table.dataTable thead > tr > td.sorting_desc_disabled {
+        cursor: pointer;
+        position: relative;
+        padding-right: 26px;
+        color: #fff;
+    }
+
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #fff;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .dropdown-menu {
+        border-top-left-radius: 15px;
+        position: absolute;
+        will-change: transform;
+        background-color: rgb(14, 38, 140);
+        border: 2px solid rgb(14, 38, 140);
+        top: 0px;
+        opacity: 0.7;
+        left: 0px;
+        transform: translate3d(0px, -185px, 0px);
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        color: rgb(14, 38, 140);
+        text-decoration: none;
+        background-color: #fff;
+    }
+
+
+    .dropdown-item.active, .dropdown-item:hover {
+        color: rgb(14, 38, 140) !important;
+        text-decoration: none;
+        background-color: #fff !important;
+    }
+
+    .dataTables_wrapper .dataTables_length {
+        float: left;
+        display: none;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: left;
+        text-align: left;
+        direction: rtl;
+    }
+    table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting_asc_disabled, table.dataTable thead > tr > th.sorting_desc_disabled, table.dataTable thead > tr > td.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting_asc_disabled, table.dataTable thead > tr > td.sorting_desc_disabled {
+        cursor: pointer;
+        position: relative;
+        padding-right: 26px;
+        color: #fff;
+        border-top: 0px;
+    }
+    .small-info {
+        background-color: #8c9cd0;
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+    }
+    .dataTables_wrapper .dataTables_filter input {
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: transparent;
+        margin-left: 3px;
+        margin-right: 10px !important;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        color: #4159AE;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        color: #fff !important;
+        background-color: #0E268C;
+    }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+            color: #fff !important;
+            background-color: #0E268C;
+        }
+
+</style> 
+<style>
+
+
+    .content {
+        padding: 7rem 0;
+    }
+
+
+    .owl-1 .owl-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+    }
+
+        .owl-1 .owl-nav .owl-next,
+        .owl-1 .owl-nav .owl-prev {
+            border: 1px solid red;
+            z-index: 92;
+            position: absolute;
+            top: 50%;
+        }
+
+            .owl-1 .owl-nav .owl-next:active, .owl-1 .owl-nav .owl-next:focus,
+            .owl-1 .owl-nav .owl-prev:active,
+            .owl-1 .owl-nav .owl-prev:focus {
+                outline: none;
+            }
+
+            .owl-1 .owl-nav .owl-next span,
+            .owl-1 .owl-nav .owl-prev span {
+                color: #fff;
+            }
+
+                .owl-1 .owl-nav .owl-next span:before,
+                .owl-1 .owl-nav .owl-prev span:before {
+                    font-size: 40px !important;
+                }
+
+        .owl-1 .owl-nav .owl-next {
+            border: 4px solid blue;
+            right: 20px;
+        }
+
+        .owl-1 .owl-nav .owl-prev {
+            left: 20px;
+        }
+
+    .owl-1 .owl-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+        .owl-1 .owl-dots .owl-dot {
+            background: none;
+            display: inline-block;
+        }
+
+            .owl-1 .owl-dots .owl-dot > span {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                margin: 4px;
+            }
+
+            .owl-1 .owl-dots .owl-dot.active > span {
+                background: white;
+            }
+
+            .owl-1 .owl-dots .owl-dot:active, .owl-1 .owl-dots .owl-dot:focus {
+                outline: none;
+            }
+
+    .media-29101 .img {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .media-29101 .text {
+        padding: 50px;
+    }
+
+    @@media (max-width: 991.98px) {
+        .media-29101 .text {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+
+    .media-29101 .text .category {
+        color: #adb5bd;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: .2rem;
+    }
+
+    .media-29101 .text h2 {
+        font-family: "Playfair Display", times, serif;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+
+        .media-29101 .text h2 a {
+            color: #000;
+        }
+
+    .carousel-nav {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 40px;
+    }
+
+        .carousel-nav a {
+            color: #999;
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+
+            .carousel-nav a:hover {
+                color: #000;
+            }
+
+            .carousel-nav a.active {
+                color: #000;
+            }
+
+                .carousel-nav a.active:before {
+                    content: "";
+                    bottom: -1px;
+                    left: 0;
+                    right: 0;
+                    position: absolute;
+                    border-bottom: 1px solid #000;
+                }
+</style>
+
+
+
+
+<div class="row" style="margin-top:-4.5rem !important; margin-bottom:2rem; ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                . مرحبا بك , في صفحة تفاصيل وبيانات الفصل الدراسي
+            </span>
+        </div>
+        <div class="badge-title" style="">
+            <span class="small-info ">
+                .  هذه الصفحة تعرض جميع طلاب الفصل والبيانات الخاصة بهم بشكل مفصل وواضح
+            </span>
+        </div>
+    </div>
+</div> 
+<div class="row" style="margin-right: -30px; margin-left: -52px;">
+    <div class="col-md-12">
+        <div class="p-5 bg-white rounded shadow mb-5">
+            <!-- Lined tabs-->
+            <ul id="myTab2" role="tablist" class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
+                <li class="nav-item flex-sm-fill">
+                    <a id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 ">قسم المواطن  </a>
+                </li>
+                <li class="nav-item flex-sm-fill">
+                    <a id="home2-tab" data-toggle="tab" href="#EVABH" role="tab" aria-controls="EVABH" aria-selected="true" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 ">قسم التقييمات السلوكية </a>
+                </li>
+                <li class="nav-item flex-sm-fill">
+                    <a id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0">قسم التقييمات </a>
+                </li>
+                <li class="nav-item flex-sm-fill">
+                    <a id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false" class="nav-link text-uppercase font-weight-bold rounded-0 active show">قسم الدرجات</a>
+                </li>
+            </ul>
+            <div id="myTab2Content" class="tab-content">
+
+                @* SkillsSuggestionss *@
+
+                <div id="home2" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+                    <div class="col-md-12 text-right">
+                        <a asp-action="Create" asp-controller="SkillsSuggestionss" asp-route-id="@Model.ClassID" class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            إضافة  موطن لطالب
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                    <table id="myTable" class="table dt-responsive table-hover" style="width: 110%; margin-left: -35px;">
+                        <thead class="thead_dark">
+                            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+                                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الإجراءات   </td>
+                                <td class="text-right">   موطن الضعف    </td>
+                                <td class="text-right">  موطن القوة    </td>
+                                <td class="text-right">   مدرس المادة     </td>
+                                <td class="text-right">   المادة    </td>
+                                <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MarkList)
+                            {
+                                <tr style="  color: #000;">
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary"
+                                                    type="button"
+                                                    id="dropdownMenuButton"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                                            </button>
+
+                                            <div class="dropdown-menu text-right"
+                                                 aria-labelledby="dropdownMenuButton" style="">
+                                                <a class="dropdown-item" asp-action="GetStudentMarks" asp-controller="Marks" asp-route-id="@item.Id">
+                                                    طلب تعديل الدرجة
+                                                    <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+
+                                    
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+                                    
+
+
+                                    <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                 
+                @*Skills Behaviors*@
+                <div id="EVABH" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+                    <div class="col-md-12 text-right">
+                        <a  asp-action="Create" asp-controller="SkillsStudentBehaviors" asp-route-id="@Model.ClassID" class="btn btn-default" style=" margin-bottom: 25px; background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            إضافة تقييم سلوكي
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                    <table id="myTable" class="table dt-responsive table-hover" style="width: 110%; margin-left: -35px;">
+                        <thead class="thead_dark">
+                            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+                                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الإجراءات   </td>
+                                <td class="text-right">   القييم    </td>
+                                <td class="text-right">   رقم الأسبوع    </td>
+                                <td class="text-right">   مدرس المادة     </td>
+                                <td class="text-right">   المادة    </td>
+                                <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MarkList)
+                            {
+                                <tr style="  color: #000;">
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary"
+                                                    type="button"
+                                                    id="dropdownMenuButton"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                                            </button>
+
+                                            <div class="dropdown-menu text-right"
+                                                 aria-labelledby="dropdownMenuButton" style="">
+                                                <a class="dropdown-item" asp-action="GetStudentMarks" asp-controller="Marks" asp-route-id="@item.Id">
+                                                    طلب تعديل الدرجة
+                                                    <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                     
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)   </td>
+                                   
+                                    <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                @*Skills*@
+                <div id="profile2" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
+                    <div class="col-md-12 text-right">
+                        <a asp-action="Create" asp-controller="Skillss" asp-route-id="@Model.ClassID" class="btn btn-default" style=" margin-bottom: 25px; background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            إضافة تقييم جديد
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                    <table id="myTable" class="table dt-responsive table-hover" style="width: 110%; margin-left: -35px;">
+                        <thead class="thead_dark">
+                            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+                                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الإجراءات   </td>
+                                <td class="text-right">   القييم    </td>
+                                <td class="text-right">   رقم الأسبوع    </td>
+                                <td class="text-right">   مدرس المادة     </td>
+                                <td class="text-right">   المادة    </td>
+                                <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
+
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MarkList)
+                            {
+                                <tr style="  color: #000;">
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary"
+                                                    type="button"
+                                                    id="dropdownMenuButton"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                                            </button>
+
+                                            <div class="dropdown-menu text-right"
+                                                 aria-labelledby="dropdownMenuButton" style="">
+                                                <a class="dropdown-item" asp-action="GetStudentMarks" asp-controller="Marks" asp-route-id="@item.Id">
+                                                    طلب تعديل الدرجة
+                                                    <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                     
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
+                                   
+
+                                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                @*Marks Section...*@
+                <div id="contact2" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade px-4 py-5">
+
+                    <div class="col-md-12 text-right">
+                        <a asp-action="Create" asp-controller="Marks" asp-route-id="@Model.ClassID"  class="btn btn-default" style=" margin-bottom: 25px; background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            إضافة درجة جديدة
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+
+                    <table id="myTable" class="table dt-responsive table-hover" style="width: 110%; margin-left: -35px;">
+                        <thead class="thead_dark">
+                            <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+                                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الإجراءات   </td>
+                                <td class="text-right">  الدرجة النهائية    </td>
+                                <td class="text-right">   الدرجة الفصلية   </td>
+                                <td class="text-right">    الدرجة الشهرية  </td>
+                                <td class="text-right">      مدرس المادة  </td>
+                                <td class="text-right">      المادة </td>
+                                <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model.MarkList)
+                            {
+                                <tr style="  color: #000;">
+                                    <td class="text-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary"
+                                                    type="button"
+                                                    id="dropdownMenuButton"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                                            </button>
+
+                                            <div class="dropdown-menu text-right"
+                                                 aria-labelledby="dropdownMenuButton" style="">
+                                                <a class="dropdown-item" asp-action="GetStudentMarks" asp-controller="Marks" asp-route-id="@item.Id">
+                                                    طلب تعديل الدرجة
+                                                    <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+
+                                    @if (item.ClassId < 105)
+                                    {
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)   </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+                                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
+                                    }
+
+
+                                    <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- End lined tabs -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@section scripts{
+    <script src="~/assets/TFiles/js/owl.carousel.min.js"></script>
+    <script src="~/assets/TFiles/js/main.js"></script>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<table id="myTable" class="table dt-responsive" >
+        <thead class="thead_dark">
+            <tr>
+                <td class="text-center ">     الإجراءات   </td>
+                <td class="text-center">  الدرجة النهائية    </td>
+                <td class="text-center">   الدرجة الفصلية   </td>
+                <td class="text-center">    الدرجة الشهرية  </td>
+                <td class="text-center">      مدرس المادة  </td>
+                <td class="text-center">      المادة </td>
+                <td class="text-center">    اسم الطالب </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.MarkList)
+            {
+                <tr>
+                    <td class="text-right">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary"
+                                    type="button"
+                                    id="dropdownMenuButton"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false" style="background-color: #fff;border:0px;">
+                                <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+                            </button>
+
+                            <div class="dropdown-menu text-right"
+                                 aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">
+                                    طلب تعديل
+                                    <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </td>
+
+                    @if (item.ClassId < 105)
+                    {
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)   </td>
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)   </td>
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)   </td>
+                    }
+                    else
+                    {
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
+                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
+                    }
+
+
+
+                    <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
+
+
+    </tr>
+            }
+        </tbody>
+
+    </table>*@
+

@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-School.WebApp-6A938454-1209-4C57-B90A-081B9110756E</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Manger\Views\Skills00\**" />
+    <Compile Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
+    <Compile Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
+    <Compile Remove="Areas\StudentUser\Views\Evaluations\**" />
+    <Compile Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
+    <Content Remove="Areas\Manger\Views\Skills00\**" />
+    <Content Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
+    <Content Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
+    <Content Remove="Areas\StudentUser\Views\Evaluations\**" />
+    <Content Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
+    <EmbeddedResource Remove="Areas\Manger\Views\Skills00\**" />
+    <EmbeddedResource Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
+    <EmbeddedResource Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
+    <EmbeddedResource Remove="Areas\StudentUser\Views\Evaluations\**" />
+    <EmbeddedResource Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
+    <None Remove="Areas\Manger\Views\Skills00\**" />
+    <None Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
+    <None Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
+    <None Remove="Areas\StudentUser\Views\Evaluations\**" />
+    <None Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Manger\Controllers\SkillsBehaviorsController00.cs" />
+    <Compile Remove="Areas\Manger\Controllers\SkillsController00.cs" />
+    <Compile Remove="Areas\StudentUser\Controllers\EvaluationsController.cs" />
+    <Compile Remove="Areas\StudentUser\Controllers\EvaluationStudentBehaviorsController.cs" />
+    <Compile Remove="Areas\TeacherUser\Controllers\EvaluationStudentBehaviorsController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\TFiles\hero_1.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\hero_2.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\hero_3.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\img\hero_1.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\img\hero_2.jpg" />
+    <Content Remove="wwwroot\assets\TFiles\img\hero_3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\SFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\TFiles\hero_1.jpg" />
+    <None Include="wwwroot\assets\TFiles\hero_2.jpg" />
+    <None Include="wwwroot\assets\TFiles\hero_3.jpg" />
+    <None Include="wwwroot\assets\TFiles\img\hero_1.jpg" />
+    <None Include="wwwroot\assets\TFiles\img\hero_2.jpg" />
+    <None Include="wwwroot\assets\TFiles\img\hero_3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\School.DataAccess\School.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,195 @@
+﻿
+
+@model School.Data.ViewModels.SkillsBehaviorViewModel
+
+@{
+    ViewData["Title"] = "سجل التقييم للطالب ";
+}
+
+
+<style>
+    .subrow {
+        border-top: 2px solid;
+        padding-top: 10px;
+    }
+
+    .header-t {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        color: #000;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .header-p-t {
+        font-weight: 500;
+        color: #000;
+    }
+
+    p {
+        font-family: dkmmljn.kjn !important;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #000;
+    }
+    .data-info-sec {
+        padding-bottom: 12px !important;
+        padding-top: 10px !important;
+    }
+</style>
+
+
+<div class="row" style="font-family: 'Changa', sans-serif;    ">
+    <div class="container-fluid">
+        <div class="row text-right" style=" border: 2px solid;">
+            <div class="col-md-3" style=" border-right: 1px solid;">
+                <div class="header-t row" style="padding-bottom: 0px; padding-top: 10px;">
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز سريع </p>
+                    </div>
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز مساعدة </p>
+                    </div>
+                    <div class="col-3">
+                        <p class="header-p-t"> إنجاز عادي </p> 
+                    </div> 
+                    <div class="col-3">
+                        <p class="header-p-t"> لم ينجز  </p> 
+                    </div>
+
+                </div>
+                <div class="row subrow">
+                    @if (Model.IsActive == true)
+                    {
+                        @foreach (var item in Model.SkillsBehaviorList)
+                        {
+                            @if (item.CompletionTypeId == 1) // إنجاز
+                            {
+                                <div class="col-3 data-info-sec">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+
+                            }
+                            else if (item.CompletionTypeId == 2)
+                            {
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+
+                            }
+                            else if (item.CompletionTypeId == 3)
+                            {
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="col-3 data-info-sec"></div>
+
+                            }
+                            else if (item.CompletionTypeId == 4)
+                            {
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec"></div>
+                                <div class="col-3 data-info-sec">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            }
+
+                        }
+
+                    }
+
+                </div>
+            </div>
+            <div class="col-md-7" style=" border-right: 2px solid;">
+                <p class="header-t">  البنود </p>
+
+                <div class="row subrow">
+
+
+                    @if (Model.IsActive == true)
+                    {
+
+                        @foreach (var item in Model.SkillsBehaviorList)
+                        {
+                            <div class="col-md-12 data-info-sec">
+                                @item.Name
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <p class="text-center" style=" padding-bottom: 12px; padding-left: 9cm;">
+                            لم يتم إضافة مهارات دراسية للطالب
+                        </p>
+                    }
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <p class="header-t"> # </p>
+                <div class="row subrow">
+                    @if (Model.IsActive == true)
+                    {
+                        @foreach (var item in Model.SkillsBehaviorList)
+                        {
+                            <div class="col-md-12 data-info-sec">
+                                @item.Id
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

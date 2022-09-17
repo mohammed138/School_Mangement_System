@@ -1,0 +1,195 @@
+﻿
+
+@model School.Data.ViewModels.ClassViewModel
+
+
+@{
+    ViewData["Title"] = "تفاصيل الصف ";
+}
+
+
+
+
+<style>
+    .animate-charcter {
+        text-transform: uppercase;
+        background-image: linear-gradient( -225deg, #231557 0%, #44107a 29%, #2f1c6d 67%, #f7f8ff 100% ) !important;
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 3s linear infinite !important;
+        display: inline-block;
+        font-size: 25px;
+    }
+    .card-style {
+        margin-bottom: 30px;
+        background: linear-gradient( rgb(113 165 255 / 0%) 100%, rgb(52 127 255)100%),url(https://localhost:44384/assets/TFiles/classroomupdated.jpeg);
+        background-size: cover;
+        height: 200px;
+        border-bottom-left-radius: 70px;
+    } 
+    .card:hover {
+        opacity: 0.8 !important;
+    } 
+    .card-info {
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+        margin-right: 15px;
+        margin-bottom: 50px;
+        padding-top: 15px;
+    } 
+    .span-header {
+        padding-left: 30px;
+        padding-right: 10px;
+        background-color: #1459AE;
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+    } 
+    .card-details {
+        margin-top: 125px;
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+        margin-right: 15px;
+        font-size: 11px;
+        margin-bottom: 13px;
+    }
+
+    .footer-info {
+        margin-top: 65px;
+    }
+
+
+    .small-info {
+        background-color: #8c9cd0;
+        color: #fff;
+        padding: 3px;
+        font-size: 11px;
+        border-radius: 3px;
+    }
+
+    #content {
+        border: 2px solid #8c9cd0 !important;
+    }
+
+    .hTitle-span{
+
+    }
+</style>
+
+
+
+<div class="row" style="margin-top:-4.5rem !important ">
+    <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
+              background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
+        <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
+            <span>
+                . مرحبا بك , في صفحة تفاصيل الفصل الدراسي
+            </span>
+        </div>
+        <div class="badge-title" style="">
+            <span class="small-info ">
+                .  هذه الصفحة تعرض طلاب الفصل وبيانات الفصل الدراسي
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <a asp-action="FindStudent" asp-controller="Classes" asp-route-id="@Model.Class.Id">
+            <div class="card-style op-slider text-right students-slide class-info-slider" style=" background: linear-gradient( rgb(113 165 255 / 35%) 100%, rgb(52 127 255)100%),url(https://localhost:44362/assets/TFiles/smiling.jpg); background-size: cover; padding-right: 10px; ">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-title-section">
+                            <div class="header-title animate-charcter">
+                                <span class="hTitle-span">الطلاب</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 footer-info">
+                        <span class="small-info">
+                          .  الرجاء الضغط على هذه الشريحة لعرض طلاب الفصل الخاص بالفصل الدراسي
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6 ">
+        <a asp-action="FindMark" asp-controller="Classes" asp-route-id="@Model.Class.Id">
+            <div class="op-slider text-right students-slide class-info-slider" style=" background: linear-gradient( rgb(113 165 255 / 35%) 100%, rgb(52 127 255)100%),url(https://localhost:44362/assets/TFiles/studentmark.jpg); background-size: cover; padding-right: 10px; ">
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="header-title animate-charcter">درجات الطلاب  </p>
+                    </div>
+                    <div class="col-12 footer-info">
+                        <span class="small-info">
+                            .  الرجاء الضغط على هذه الشريحة لعرض طلاب الفصل الخاص بالفصل الدراسي
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-md-6 ">
+        <a asp-action="FindSkills" asp-controller="Classes" asp-route-id="@Model.Class.Id">
+            <div class="op-slider text-right students-slide class-info-slider" style=" background: linear-gradient( rgb(113 165 255 / 35%) 100%, rgb(52 127 255)100%),url(https://localhost:44362/assets/TFiles/photo_2022-09-05_21-35-56.jpg); background-size: cover; padding-right: 10px; ">
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="header-title animate-charcter"> تقييمات الطلاب في المواد    </p>
+                    </div>
+                    <div class="col-12 footer-info">
+                        <span class="small-info">
+                            .  الرجاء الضغط على هذه الشريحة لعرض طلاب الفصل الخاص بالفصل الدراسي
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-md-6 ">
+        <a asp-action="FindSkillsBehaviors" asp-controller="Classes" asp-route-id="@Model.Class.Id">
+            <div class="op-slider text-right students-slide class-info-slider" style=" background: linear-gradient( rgb(113 165 255 / 35%) 100%, rgb(52 127 255)100%),url(https://localhost:44362/assets/TFiles/studentmark.jpg); background-size: cover; padding-right: 10px; ">
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="header-title animate-charcter">    التقييمات السلوكية للطلاب  </p>
+                    </div>
+                    <div class="col-12 footer-info">
+                        <span class="small-info">
+                            .  الرجاء الضغط على هذه الشريحة لعرض طلاب الفصل الخاص بالفصل الدراسي
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="~/assets/TFiles/SpiceficClasses.css" />
+<link rel="stylesheet" href="~/assets/TFiles/NavSidestyle.css" />

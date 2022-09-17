@@ -1,0 +1,165 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "تسجيل الدخول";
+}
+
+
+
+<link rel="stylesheet" href="~/assets/TFiles/css/loginPageStyle.css" />
+
+<style>
+    .ftco-section {
+        padding: 1em 0 !important;
+    }
+
+    @@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386D5;
+        color: #fff;
+        transition: all 0.3s;
+        display: none;
+    }
+
+    .wrap .img {
+        height: 270px;
+    }
+
+    .form-control {
+        height: 48px;
+        direction: rtl;
+        background: #fff;
+        color: #000;
+        font-size: 16px;
+        border-radius: 5px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        position: relative;
+        z-index: 0;
+        margin-bottom: 20px !important;
+        text-align: end;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .form-control:focus, .form-control:active {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid #01d28e;
+    }
+
+    a:hover, a:active, a:focus {
+        color: #8c9cd0;
+        outline: none !important;
+        text-decoration: none !important;
+        font-weight: 500;
+    }
+
+    .btn.btn-primary {
+        background: #1459AE !important;
+        border: 1px solid #1459AE !important;
+        color: #fff !important;
+    }
+
+    body {
+        margin: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+    }
+
+    .social-media .social-icon:hover, .social-media .social-icon:focus {
+        background: #8c9cd0 !important;
+    }
+
+
+    body {
+        font-family: 'Changa', sans-serif !important;
+    }
+</style>
+
+<form id="account" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="wrap">
+                        <div class="img" style="background-image: url(https://localhost:44384/assets/TFiles/img/logo.jpg); "></div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <p class="social-media ">
+                                        <a href="https://www.facebook.com/profile.php?id=100046632135068" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                    </p>
+                                </div>
+                                <div class="w-100">
+                                    <h3 class="mb-4">تسجيل الدخول  </h3>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label asp-for="Input.Email"></label>
+                                <input asp-for="Input.Email" class="form-control" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Input.Password"></label>
+                                <input asp-for="Input.Password" class="form-control" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">تسجيل الدخول</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0" style="visibility:hidden">
+                                        تذكرني
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a id="forgot-password" asp-page="./ForgotPassword">نسيت كلمة المرور</a>
+                                </div>
+                            </div>
+                            <p class="text-center">ليس لديك حساب ؟ <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" style="color: #8c9cd0 !important;">تسجيل اشتراك</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</form>
+
+@*<a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>*@
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

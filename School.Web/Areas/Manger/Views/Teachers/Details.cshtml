@@ -1,0 +1,90 @@
+﻿@model School.Data.Entities.Teacher
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+ 
+<style>
+    .hr-line {
+        height: 2px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border: 1px dashed #0E268C;
+    }
+</style>
+
+
+<div class="row text-right ">
+    <div class="col-12 text-right" style="margin-bottom:30px">
+        <span style=" background-color: #0E268C; color: #fff; padding: 10px; padding-left: 15px; padding-right: 15px;">
+            بيانات المعلم وجميع التفاصيل الخاصة به 
+        </span>
+    </div>
+    <div class="col-md-5"></div>
+    <div class="col-md-7">
+
+        <dl class="row">
+
+            <dd class="col-8">
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+            <dt class="col-4">
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+
+
+            <div class="hr-line"></div>
+
+
+
+            <dd class="col-8">
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+            <dt class="col-4">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+
+
+            <div class="hr-line"></div>
+
+            <dd class="col-8">
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+            <dt class="col-4">
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+
+            <div class="hr-line"></div>
+
+            <dd class="col-8">
+                @Html.DisplayFor(model => model.AppointmentYear)
+            </dd>
+            <dt class="col-4">
+                @Html.DisplayNameFor(model => model.AppointmentYear)
+            </dt>
+
+
+            <div class="hr-line"></div>
+
+            <dd class="col-8">
+                @Html.DisplayFor(model => model.Specialization)
+            </dd>
+            <dt class="col-4">
+                @Html.DisplayNameFor(model => model.Specialization)
+            </dt>
+
+
+        </dl>
+
+
+    </div>
+ </div>
+
+
+
+
+
+
+ 

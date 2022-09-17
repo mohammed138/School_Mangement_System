@@ -1,0 +1,45 @@
+﻿@model School.Data.ViewModels.SkillsSuggestionsViewModel
+
+@{
+    ViewData["Title"] = "عرض مواظن الضعف والقوة ";
+}
+@if(Model.StudentName != "" ){
+
+
+<p> اسم الطالب: @Model.StudentName </p>
+  
+  
+
+    
+  <table  id="myTable" class="table dt-responsive  " style="width:100%">
+        <thead class="thead_dark">
+        <tr> 
+             <td class="text-center"> 
+                  اسم المادة 
+            </td>
+          
+           
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SkillsSuggestionsList) {
+        <tr> 
+             <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Subject.Name)
+            </td>
+           
+            
+        </tr>
+}
+    </tbody>
+</table>
+
+}
+else{
+   <p style="    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 5cm;"> لا يوجد نقاط ضعف وقوة  لهذا الطالب </p>
+
+}
+

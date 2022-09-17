@@ -1,0 +1,33 @@
+﻿ 
+
+@model School.Data.ViewModels.SkillsViewModel
+
+@{
+    ViewData["Title"] = "سجل التقييم للطالب ";
+}
+
+ 
+<p>
+    <a asp-action="Create" asp-controller="Skillss" asp-route-id="@Model.Skills.StudentId"></a>
+</p>
+
+<table id="myTable" class="table dt-responsive" style="width">
+    <thead class="thead_dark">
+        <tr>   
+              <td class="text-center">   الأسبوع   </td> 
+
+              <td class="text-center">    التقييم    </td>
+        </tr>
+    </thead>
+    <tbody>
+         <tr> 
+             <td class="text-center"> @Html.DisplayFor(model => model.Skills.Duration.Name)   </td>
+
+             <td class="text-center"> @Html.DisplayFor(model => model.Skills.SkillsType.Name)   </td> 
+           
+        </tr>
+ 
+    </tbody>
+</table>
+
+ 
