@@ -57,8 +57,18 @@
                             <div class="dropdown-menu text-right"
                                  aria-labelledby="dropdownMenuButton" style="">
 
-                                <a class="dropdown-item" asp-controller="Teachers" asp-action="Details" asp-route-id="@item.Id" asp-area="Manger">تفاصيل المعلم </a>
-
+                                 <a class="dropdown-item" asp-controller="Teachers" asp-action="Edit" asp-route-id="@item.Id">
+                                    تعديل
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <a class="dropdown-item" asp-controller="Teachers" asp-action="Details" asp-route-id="@item.Id">
+                                    تفاصيل المعلم
+                                    <i class="fa-solid fa-list"></i>
+                                </a>
+                                <div class="dropdown-item"   asp-controller="Teachers" asp-action="Delete" asp-route-id="@item.Id">
+                                    حذف المعلم
+                                    <i class="fa-solid fa-trash"></i>
+                                </div>
 
 
                             </div>
