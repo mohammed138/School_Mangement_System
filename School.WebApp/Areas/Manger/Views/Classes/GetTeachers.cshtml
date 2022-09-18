@@ -18,6 +18,20 @@
 </div>
 
 
+<br />
+<br />
+<br />
+<br />
+<p class="text-right">
+    <a class="btn btn-info" asp-action="Create" style="background-color: #4159AE;color:#fff;font-weight:500;">
+        إضافة  معلم  جديد
+        <i class="fa-solid fa-plus"></i>
+    </a>
+</p>
+<br />
+<br />
+
+
 
 @if (Model.IsActive == true)
 {
@@ -57,7 +71,7 @@
                             <div class="dropdown-menu text-right"
                                  aria-labelledby="dropdownMenuButton" style="">
 
-                                 <a class="dropdown-item" asp-controller="Teachers" asp-action="Edit" asp-route-id="@item.Id">
+                                <a class="dropdown-item" asp-controller="Teachers" asp-action="Edit" asp-route-id="@item.Id">
                                     تعديل
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
@@ -65,14 +79,15 @@
                                     تفاصيل المعلم
                                     <i class="fa-solid fa-list"></i>
                                 </a>
-                                <div class="dropdown-item"   asp-controller="Teachers" asp-action="Delete" asp-route-id="@item.Id">
+                                <a class="dropdown-item" asp-controller="Teachers" asp-action="Delete" asp-route-id="@item.Id">
                                     حذف المعلم
                                     <i class="fa-solid fa-trash"></i>
-                                </div>
-
+                                 </a>
+                            </div>
+                           
 
                             </div>
-                        </div>
+                    
                     </td>
                     <td class="text-right">
                         @Html.DisplayFor(modelItem => item.AppointmentYear)

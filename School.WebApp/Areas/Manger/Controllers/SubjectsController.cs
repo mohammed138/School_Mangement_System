@@ -33,7 +33,7 @@ namespace School.WebApp.Areas.Manger.Controllers
         public async Task<IActionResult> GetAll()
         {
             var model = new SubjectViewModel();
-            model.SubjectList = _context.Subject.Include(s => s.Class).Include(s => s.Teacher).ToList();
+            model.SubjectList = _context.Subject.Where(d=>d.IsDelete != true).Include(s => s.Class).Include(s => s.Teacher).ToList();
             return View(model);
         }
 

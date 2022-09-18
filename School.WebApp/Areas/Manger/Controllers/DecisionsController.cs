@@ -90,7 +90,7 @@ namespace School.WebApp.Areas.Manger.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details));
             }
             return View(decisions);
         }
