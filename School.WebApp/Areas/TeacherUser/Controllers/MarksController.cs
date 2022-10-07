@@ -59,10 +59,7 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
                 .Include(m => m.Class)
                 .Include(m => m.Student)
                 .Include(m => m.Subject)
-                .Include(m => m.Teacher)
-                .Include(m => m.FSkillsType)
-                .Include(m => m.MSkillsType)
-                .Include(m => m.FinalSkillsType)
+                .Include(m => m.Teacher)  
                 .Where(d => d.StudentId == id).ToListAsync();
 
             model.ClassID = (int)id;

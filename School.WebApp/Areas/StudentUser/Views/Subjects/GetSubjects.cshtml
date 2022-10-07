@@ -336,7 +336,30 @@
             border-radius: 3%;
         }
 </style>
-
+<style>
+    .widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-day {
+        color: #4e73e5;
+        font-weight: 500;
+        font-size: 18px !important;
+        line-height: 1;
+    }
+    .widget-49 .widget-49-meeting-points .widget-49-meeting-item {
+        margin-top: 15px;
+        display: list-item;
+        color: #727686;
+        margin-bottom: -17px !important;
+    }
+    .widget-49 .widget-49-title-wrapper .widget-49-date-primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #edf1fc;
+        height: 3rem !important;
+        margin-top: -22px !important;
+        border-radius: 3%;
+    }
+</style>
 
 <div class="container">
     <div class="row">
@@ -376,8 +399,4 @@
 </div>
 
 
-@foreach (var item in Model.SubjectList)
-{
-    @item.Name
-    @item.Teacher.FullName
-}
+ 

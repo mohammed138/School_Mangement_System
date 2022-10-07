@@ -47,15 +47,14 @@ namespace School.WebApp.Areas.Manger.Controllers
             }
             return null;
         }
-
-
-
-
+         
         private void ExportToPdf(DataTable @class)
         {
 
             if (@class.Rows.Count > 0)
             {
+                string fontLoc = @"C:\Users\hp\Desktop\arial-unicode-ms\ARIALUNI.ttf"; // make sure to have the correct path to the font file
+
                 int pdfRowIndex = 1;
                 string filename = "الفصول الدراسية -" + DateTime.Now.ToString("dd-MM-yyyy hh_mm_s_tt");
                 string filepath = MyServer.MapPath("\\") + "" + filename + ".pdf";
@@ -64,10 +63,14 @@ namespace School.WebApp.Areas.Manger.Controllers
                 PdfWriter writer = PdfWriter.GetInstance(document, fs);
                 document.Open();
 
-                Font font1 = FontFactory.GetFont(FontFactory.COURIER_BOLD, 15);
+                Font font1 = FontFactory.GetFont(FontFactory.COURIER_BOLD, 13);
                 Font font2 = FontFactory.GetFont(FontFactory.COURIER, 8);
+                BaseFont bf = BaseFont.CreateFont(fontLoc, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                Font f = new Font(bf, 8);
 
-                float[] columnDefinitionSize = { 2F, 5F, 2F, 5F };
+
+
+                float[] columnDefinitionSize = { 5F};
                 PdfPTable table;
                 PdfPCell cell;
 
@@ -80,15 +83,12 @@ namespace School.WebApp.Areas.Manger.Controllers
                 {
                     BackgroundColor = new BaseColor(0xC0, 0xC0, 0xC0)
                 };
-
-                table.AddCell(new Phrase("Id", font1));
-                table.AddCell(new Phrase("Name", font1));
-                table.HeaderRows = 1;
+                table.RunDirection = PdfWriter.RUN_DIRECTION_RTL;
+                 table.AddCell(new Phrase("اسم الصف", font1));
 
                 foreach (DataRow data in @class.Rows)
                 {
-                    table.AddCell(new Phrase(data["Id"].ToString(), font2));
-                    table.AddCell(new Phrase(data["Name"].ToString(), font2));
+                     table.AddCell(new Phrase(data["Name"].ToString(), f));
 
                     pdfRowIndex++;
                 }
@@ -118,6 +118,21 @@ namespace School.WebApp.Areas.Manger.Controllers
                 Response.Body.WriteAsync(getContent);
                 Response.Body.Flush();
             }
+        }
+        private DataTable GetClassDetail()
+        {
+            var Class = _context.Classes.ToList();
+
+            DataTable dtProduct = new DataTable("عرض صفوف المدرسة ");
+            dtProduct.Columns.AddRange(new DataColumn[] {
+                new DataColumn("Name")
+            });
+            foreach (var @Classes in Class)
+            {
+                dtProduct.Rows.Add(@Classes.Name);
+            }
+
+            return dtProduct;
         }
         public async Task<IActionResult> Index()
         {
@@ -244,22 +259,7 @@ namespace School.WebApp.Areas.Manger.Controllers
 
 
 
-        private DataTable GetClassDetail()
-        {
-            var Class = _context.Classes.ToList();
-
-            DataTable dtProduct = new DataTable("عرض صفوف المدرسة ");
-            dtProduct.Columns.AddRange(new DataColumn[2] {
-                new DataColumn("Id"),
-                new DataColumn("Name")
-            });
-            foreach (var @Classes in Class)
-            {
-                dtProduct.Rows.Add(@Classes.Id, @Classes.Name);
-            }
-
-            return dtProduct;
-        }
+      
 
     }
 }

@@ -6,29 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Manger\Views\Skills00\**" />
-    <Compile Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
-    <Compile Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
-    <Compile Remove="Areas\StudentUser\Views\Evaluations\**" />
-    <Compile Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
-    <Content Remove="Areas\Manger\Views\Skills00\**" />
-    <Content Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
-    <Content Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
-    <Content Remove="Areas\StudentUser\Views\Evaluations\**" />
-    <Content Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
-    <EmbeddedResource Remove="Areas\Manger\Views\Skills00\**" />
-    <EmbeddedResource Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
-    <EmbeddedResource Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
-    <EmbeddedResource Remove="Areas\StudentUser\Views\Evaluations\**" />
-    <EmbeddedResource Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
-    <None Remove="Areas\Manger\Views\Skills00\**" />
-    <None Remove="Areas\Manger\Views\SkillsBehaviors00\**" />
-    <None Remove="Areas\StudentUser\Views\EvaluationStudentBehaviors\**" />
-    <None Remove="Areas\StudentUser\Views\Evaluations\**" />
-    <None Remove="Areas\TeacherUser\Views\EvaluationStudentBehaviors\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Areas\Manger\Controllers\SkillsBehaviorsController00.cs" />
     <Compile Remove="Areas\Manger\Controllers\SkillsController00.cs" />
     <Compile Remove="Areas\StudentUser\Controllers\EvaluationsController.cs" />
@@ -63,6 +40,78 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Manger\Views\Classes\GetStudents.cshtml" />
+    <None Include="Areas\Manger\Views\Classes\GetSubjects.cshtml" />
+    <None Include="Areas\Manger\Views\Classes\GetTeachers.cshtml" />
+    <None Include="Areas\Manger\Views\Classes\Index.cshtml" />
+    <None Include="Areas\Manger\Views\Decisions\Details.cshtml" />
+    <None Include="Areas\Manger\Views\Decisions\Edit.cshtml" />
+    <None Include="Areas\Manger\Views\Marks\Find.cshtml" />
+    <None Include="Areas\Manger\Views\Shared\Error.cshtml" />
+    <None Include="Areas\Manger\Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Areas\Manger\Views\Shared\_MangerLayout.cshtml" />
+    <None Include="Areas\Manger\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\Manger\Views\SkillsBehaviors\GetStudentSkillsBehaviors.cshtml" />
+    <None Include="Areas\Manger\Views\Skills\GetStudentSkills.cshtml" />
+    <None Include="Areas\Manger\Views\Students\Create.cshtml" />
+    <None Include="Areas\Manger\Views\Students\Delete.cshtml" />
+    <None Include="Areas\Manger\Views\Students\Details.cshtml" />
+    <None Include="Areas\Manger\Views\Students\Edit.cshtml" />
+    <None Include="Areas\Manger\Views\Students\GetAll.cshtml" />
+    <None Include="Areas\Manger\Views\Subjects\Create.cshtml" />
+    <None Include="Areas\Manger\Views\Subjects\Delete.cshtml" />
+    <None Include="Areas\Manger\Views\Subjects\Details.cshtml" />
+    <None Include="Areas\Manger\Views\Subjects\Edit.cshtml" />
+    <None Include="Areas\Manger\Views\Subjects\GetAll.cshtml" />
+    <None Include="Areas\Manger\Views\Teachers\Create.cshtml" />
+    <None Include="Areas\Manger\Views\Teachers\Delete.cshtml" />
+    <None Include="Areas\Manger\Views\Teachers\Details.cshtml" />
+    <None Include="Areas\Manger\Views\Teachers\Edit.cshtml" />
+    <None Include="Areas\Manger\Views\Teachers\GetAll.cshtml" />
+    <None Include="Areas\Manger\_ViewImports.cshtml" />
+    <None Include="Areas\Manger\_ViewStart.cshtml" />
+    <None Include="Areas\StudentUser\Views\Classes\CPanel.cshtml" />
+    <None Include="Areas\StudentUser\Views\Classes\GetStudentInformation.cshtml" />
+    <None Include="Areas\StudentUser\Views\Classes\Index.cshtml" />
+    <None Include="Areas\StudentUser\Views\Marks\Index.cshtml" />
+    <None Include="Areas\StudentUser\Views\Shared\Error.cshtml" />
+    <None Include="Areas\StudentUser\Views\Shared\_Layout.cshtml" />
+    <None Include="Areas\StudentUser\Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Areas\StudentUser\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\StudentUser\Views\SkillsBehaviors\Index.cshtml" />
+    <None Include="Areas\StudentUser\Views\Skills\Index.cshtml" />
+    <None Include="Areas\StudentUser\Views\Subjects\GetSubjects.cshtml" />
+    <None Include="Areas\StudentUser\Views\Subjects\Index.cshtml" />
+    <None Include="Areas\StudentUser\_ViewImports.cshtml" />
+    <None Include="Areas\StudentUser\_ViewStart.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\FindMark.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\FindSkills.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\FindSkillsBehaviors.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\FindStudent.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\GetMarks.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\Index.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Classes\specificClass.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\Edit.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\Find.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\GetStudentMarkDetails.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\GetStudentMarks.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Shared\Error.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Shared\_TeacherLayout.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Areas\TeacherUser\Views\SkillsBehaviors\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\SkillsBehaviors\Edit.cshtml" />
+    <None Include="Areas\TeacherUser\Views\SkillsBehaviors\GetStudentSkillsBehaviors.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Skills\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Skills\Edit.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Skills\GetStudentSkills.cshtml" />
+    <None Include="Areas\TeacherUser\Views\TeacherCP\CPanel.cshtml" />
+    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\Edit.cshtml" />
+    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\GetStudentWS.cshtml" />
+    <None Include="Areas\TeacherUser\Views\_ViewImports.cshtml" />
+    <None Include="Areas\TeacherUser\Views\_ViewStart.cshtml" />
     <None Include="wwwroot\assets\TFiles\hero_1.jpg" />
     <None Include="wwwroot\assets\TFiles\hero_2.jpg" />
     <None Include="wwwroot\assets\TFiles\hero_3.jpg" />
@@ -70,7 +119,9 @@
     <None Include="wwwroot\assets\TFiles\img\hero_2.jpg" />
     <None Include="wwwroot\assets\TFiles\img\hero_3.jpg" />
   </ItemGroup>
-
+  <PropertyGroup>
+    <EnvironmentName>Development</EnvironmentName>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\School.DataAccess\School.DataAccess.csproj" />
   </ItemGroup>

@@ -32,7 +32,7 @@ namespace School.WebApp.Areas.StudentUser.Controllers
             _context = context;
             _HttpContextAccessor = httpContextAccessor;
             StudentEmail = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
-            StudentUserId = _context.Teacher.Where(d => d.EmailAddress == StudentEmail).Select(d => d.Id).FirstOrDefault();
+            StudentUserId = _context.Student.Where(d => d.EmailAddress == StudentEmail).Select(d => d.Id).FirstOrDefault();
 
         }
  

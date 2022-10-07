@@ -8,16 +8,58 @@
 
 
 
+}
+
+
+
+
 <div class="row" style="margin-top:-4.5rem !important ">
+    @if (Model.IsActive == true)
+     { 
+        <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+            @using (Html.BeginForm("ExporDataToFile", "Marks", FormMethod.Post))
+            {
+                <button id="btnExportData" type="submit" value="ExportData" name="action">
+                    <i class="fas fa-file-download">  تصدير </i>
+                </button>
+
+                <br />
+                <br />
+
+
+                <label>
+                    <input id="ExportPdf" name="Export" type="radio"
+                           value="Pdf" />
+                    <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+                </label>
+            }
+        </div> 
+     }
+
+
+
+    <br />
+    <br />
+    <br />
     <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
               background-color: #fff;box-shadow: rgb(0 0 0 / 10%) 0px 5px 12px;">
         <div style="color: #1459AE; font-weight: 700; font-size: 18px; margin-bottom: 35px; ">
-            <span>
-                هذه الصفحة تعرض علامات الطالب  :     <strong>@Model.Student.FullName</strong>
-            </span>
-            <span>
-                  من الصف   :     <strong>@Model.Student.Class.Name</strong>
-            </span>
+            @if (Model.IsActive == true)
+            {
+                <span>
+                    هذه الصفحة تعرض علامات الطالب  :     <strong>@Model.Student.FullName</strong>
+                </span>
+                <br />
+                <span>
+                    من الصف   :     <strong>@Model.Student.Class.Name</strong>
+                </span>
+            }
+            else
+            {
+                <span>
+                    لم يتم إضافة علامات للطالب لحتى الأن
+                </span>
+            }
         </div>
     </div>
 </div>
@@ -25,11 +67,12 @@
 <table id="myTable" class="table dt-responsive table-hover" style="width: 108%; margin-left: -35px;">
     <thead class="thead_dark">
         <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
-            <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الدرجة النهائية    </td>
-            <td class="text-right">  الدرجة النصفية  </td>
-            <td class="text-right">    الدرجة الشهرية  </td>
+            <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  المجموع      </td>
+            <td class="text-right">  الدرجة النهائية   </td>
+            <td class="text-right">  درجات التقويم النوعي  </td>
+            <td class="text-right">    الإختبارات القصيرة </td>
             <td class="text-right">      مدرس المادة  </td>
-            <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">المادة </td> 
+            <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">المادة </td>
 
         </tr>
     </thead>
@@ -38,29 +81,119 @@
 
         @foreach (var item in Model.MarkList)
         {
-            <tr style="  color: #000;">
+          <tr style="  color: #000;">
 
-                @if (item.ClassId < 105)
-                {
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)   </td>
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)   </td>
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)   </td>
-                }
-                else
-                {
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.MidTermValue)   </td>
-                    <td class="text-center"> @Html.DisplayFor(modelItem => item.FirstTermValue)   </td>
-                }
-
-
-                <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
-                <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
-
-            </tr>
+            <td class="text-center"> @Html.DisplayFor(modelItem => item.Total)   </td> 
+            <td class="text-center"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
+            <td class="text-center"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
+            <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+             
+            <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+            <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+        </tr>
         }
 
 
     </tbody>
 </table>
+@*
+    @if (item.ClassId < 105)
+    {
+        <td class="text-center">
+                        @if (item.FinalTermValue >= 95 || item.FinalTermValue <= 100)
+                        {
+                            <p>  متميز</p>
+                        }
+                        else if (item.FinalTermValue >= 90 || item.FinalTermValue <= 94)
+                        {
+                            <p>  ممتاز</p>
+                        }
+                        else if (item.FinalTermValue >= 80 || item.FinalTermValue <= 89)
+                        {
+                            <p>  جيد جدا</p>
+                        }
+                        else if (item.FinalTermValue >= 70 || item.FinalTermValue <= 79)
+                        {
+                            <p>  جيد </p>
+                        }
+                        else if (item.FinalTermValue >= 60 || item.FinalTermValue <= 69)
+                        {
+                            <p>  مقبول</p>
+                        }
+                        else if (item.FinalTermValue >= 50 || item.FinalTermValue <= 59)
+                        {
+                            <p>  ضعيف</p>
+                        }
+                        else
+                        {
+                            <p>  راسب</p>
+                        }
 
+                    </td>
+
+                    <td class="text-center">
+                        @if (item.MidTermValue >= 95 || item.MidTermValue <= 100)
+                        {
+                            <p>  متميز</p>
+                        }
+                        else if (item.MidTermValue >= 90 || item.MidTermValue <= 94)
+                        {
+                            <p>  ممتاز</p>
+                        }
+                        else if (item.MidTermValue >= 80 || item.MidTermValue <= 89)
+                        {
+                            <p>  جيد جدا</p>
+                        }
+                        else if (item.MidTermValue >= 70 || item.MidTermValue <= 79)
+                        {
+                            <p>  جيد </p>
+                        }
+                        else if (item.MidTermValue >= 60 || item.MidTermValue <= 69)
+                        {
+                            <p>  مقبول</p>
+                        }
+                        else if (item.MidTermValue >= 50 || item.MidTermValue <= 59)
+                        {
+                            <p>  ضعيف</p>
+                        }
+                        else
+                        {
+                            <p>  راسب</p>
+                        }
+
+                    </td>
+
+                    <td class="text-center">
+                        @if (item.FirstTermValue >= 95 || item.FirstTermValue <= 100)
+                        {
+                            <p>  متميز</p>
+                        }
+                        else if (item.FirstTermValue >= 90 || item.FirstTermValue <= 94)
+                        {
+                            <p>  ممتاز</p>
+                        }
+                        else if (item.FirstTermValue >= 80 || item.FirstTermValue <= 89)
+                        {
+                            <p>  جيد جدا</p>
+                        }
+                        else if (item.FirstTermValue >= 70 || item.FirstTermValue <= 79)
+                        {
+                            <p>  جيد </p>
+                        }
+                        else if (item.FirstTermValue >= 60 || item.FirstTermValue <= 69)
+                        {
+                            <p>  مقبول</p>
+                        }
+                        else if (item.FirstTermValue >= 50 || item.FirstTermValue <= 59)
+                        {
+                            <p>  ضعيف</p>
+                        }
+                        else
+                        {
+                            <p>  راسب</p>
+                        }
+
+                    </td>
+            }
+            else
+            {*@

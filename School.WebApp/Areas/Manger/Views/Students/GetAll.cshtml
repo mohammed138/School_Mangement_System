@@ -14,7 +14,31 @@
         <i class="fa-solid fa-plus"></i>
     </a>
 </p>
- 
+
+
+@if (Model.IsActive == true)
+{
+    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+        @using (Html.BeginForm("ExporDataToFile", "Students", FormMethod.Post))
+        {
+            <button id="btnExportData" type="submit" value="ExportData" name="action">
+                <i class="fas fa-file-download">  تصدير </i>
+            </button>
+
+            <br />
+            <br />
+
+
+            <label>
+                <input id="ExportPdf" name="Export" type="radio"
+                       value="Pdf" />
+                <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+            </label>
+        }
+    </div>
+}
+
+
 
 
 <table id="myTable" class="table dt-responsive  " style="width:100%">
@@ -22,7 +46,7 @@
         <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
 
             <th class="text-right">الإجراءات</th>
-             
+
             <th class="text-right">
                 @Html.DisplayNameFor(model => model.Student.Class)
             </th>
@@ -58,19 +82,19 @@
                         </button>
 
                         <div class="dropdown-menu text-right"
-                             aria-labelledby="dropdownMenuButton" style=""> 
+                             aria-labelledby="dropdownMenuButton" style="">
                             <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">
                                 تعديل
                                 <i class="fa-solid fa-pen-to-square"></i>
-                            </a>  
+                            </a>
                             <a class="dropdown-item" asp-action="Details" asp-route-id="@item.Id">
                                 عرض التفاصيل
                                 <i class="fa-solid fa-list"></i>
-                            </a>  
+                            </a>
                             <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.Id">
                                 حذف
                                 <i class="fa-solid fa-trash"></i>
-                            </a> 
+                            </a>
                         </div>
                     </div>
                 </td>

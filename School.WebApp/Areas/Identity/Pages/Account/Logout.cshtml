@@ -4,7 +4,7 @@
     ViewData["Title"] = "تسجيل خروج";
 }
 
-<header> 
+<header>
     @{
         if (User.Identity.IsAuthenticated)
         {
@@ -14,7 +14,9 @@
         }
         else
         {
-            <p>لقد قمت بتسجيل الخروج من النظام بنجاح.</p>
+           
+            <a asp-page="./Login"  style="color: #8c9cd0 !important;">تسجيل الدخول</a> 
+
         }
     }
 </header>

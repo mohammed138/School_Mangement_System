@@ -1,4 +1,4 @@
-﻿
+﻿@model School.Data.ViewModels.StudentViewModel
 @{
     ViewData["Title"] = "البيانات الأكاديمية ";
 }
@@ -37,7 +37,7 @@
                 </span>
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span">محمد علاء محمد لبد  </span>
+                <span class="data-span"> @Html.DisplayFor(d=>d.Student.FullName) </span>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@
                 </span>
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span"> 13/8/2000  </span>
+                <span class="data-span"> @Html.DisplayFor(d => d.Student.DOP) </span>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
                 </span>
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span"> 0599173040 </span>
+                <span class="data-span"> @Html.DisplayFor(d => d.Student.PhoneNumber) </span>
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@
 
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span"> moh@gmailcom </span>
+                <span class="data-span"> @Html.DisplayFor(d => d.Student.EmailAddress) </span>
             </div>
         </div>
     </div>
@@ -103,7 +103,7 @@
                 </span>
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span"> الفصل الدراسي الأول   </span>
+                <span class="data-span"> @Html.DisplayFor(d => d.Student.Semester.Name)  </span>
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
                 </span>
             </div>
             <div class="col-md-12 data-div">
-                <span class="data-span"> 2022/2023 </span>
+                <span class="data-span"> @Html.DisplayFor(d => d.Student.SchoolYear)</span>
             </div>
         </div>
     </div>
@@ -135,8 +135,7 @@
             </div>
             <div class="col-md-12 data-div">
                 <span class="data-span">
-                    الصف الأول
-                  
+                    @Html.DisplayFor(d => d.Student.Class.Name)
                 </span>
             </div>
         </div>

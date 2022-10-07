@@ -119,11 +119,28 @@
                                 <input asp-for="Input.Email" class="form-control" />
                                 <span asp-validation-for="Input.Email" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label asp-for="Input.RoleId"></label>
-                                <select asp-for="Input.RoleId" class="form-control" asp-items="@Model.RoleList"></select>
-                                <span asp-validation-for="Input.RoleId" class="text-danger"></span>
-                            </div>
+
+
+
+
+                            @if (User.IsInRole("StudentRole"))
+                            {
+
+                                <div class="form-group">
+                                    <label asp-for="Input.RoleId"></label>
+                                    <select asp-for="Input.RoleId" class="form-control" asp-items="@Model.RoleList"></select>
+                                    <span asp-validation-for="Input.RoleId" class="text-danger"></span>
+                                </div>
+
+                            }
+                            else { 
+                            
+                            
+                            }
+
+
+
+
                             <div class="form-group">
                                 <label asp-for="Input.Password"></label>
                                 <input asp-for="Input.Password" class="form-control" />

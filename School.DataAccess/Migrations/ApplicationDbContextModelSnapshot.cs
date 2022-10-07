@@ -268,7 +268,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 101,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(2858),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(6249),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الأول "
@@ -277,7 +277,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 102,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3904),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7426),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الثاني      "
@@ -286,7 +286,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 103,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3925),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7451),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف الثالث  "
@@ -295,7 +295,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 104,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3932),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7460),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف الرابع "
@@ -304,7 +304,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 105,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3938),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7465),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف الخامس  "
@@ -313,7 +313,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 106,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3945),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7475),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف السادس  "
@@ -322,7 +322,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 107,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3973),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7489),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف السابع "
@@ -331,7 +331,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 108,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3979),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7502),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الثامن"
@@ -340,7 +340,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 109,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3985),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7516),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف التاسع "
@@ -349,7 +349,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 110,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3991),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7529),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف العاشر "
@@ -358,7 +358,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 111,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(3997),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7543),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف الحادي عشر"
@@ -493,7 +493,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(991),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(3961),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الأول "
@@ -501,7 +501,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(1860),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5168),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الثاني "
@@ -509,7 +509,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(1884),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5193),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الثالث "
@@ -517,7 +517,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(1890),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5206),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الرابع "
@@ -564,7 +564,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 846, DateTimeKind.Local).AddTicks(3664),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 119, DateTimeKind.Local).AddTicks(5821),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "ذكر"
@@ -572,7 +572,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 846, DateTimeKind.Local).AddTicks(4693),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 119, DateTimeKind.Local).AddTicks(7437),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "أنثى"
@@ -595,22 +595,10 @@ namespace School.DataAccess.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("FSkillsTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("FinalSkillsTypeId")
-                        .HasColumnType("int");
-
                     b.Property<float?>("FinalTermValue")
                         .HasColumnType("real");
 
-                    b.Property<float?>("FirstTermValue")
-                        .HasColumnType("real");
-
                     b.Property<bool?>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsAllowToAdd")
                         .HasColumnType("bit");
 
                     b.Property<bool?>("IsArchive")
@@ -619,14 +607,11 @@ namespace School.DataAccess.Migrations
                     b.Property<bool?>("IsDelete")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("MSkillsTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<float?>("MidTermValue")
+                    b.Property<float>("QualitativeAssessmentGrades")
                         .HasColumnType("real");
 
-                    b.Property<string>("Notice")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<float>("ShortQuizzes")
+                        .HasColumnType("real");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -646,12 +631,6 @@ namespace School.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ClassId");
-
-                    b.HasIndex("FSkillsTypeId");
-
-                    b.HasIndex("FinalSkillsTypeId");
-
-                    b.HasIndex("MSkillsTypeId");
 
                     b.HasIndex("StudentId");
 
@@ -702,7 +681,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 847, DateTimeKind.Local).AddTicks(9579),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(1544),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الفصل الدراسي الأول "
@@ -710,7 +689,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(343),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(2887),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الفصل الدراسي الثاني"
@@ -949,7 +928,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(8611),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(2916),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " ممتاز"
@@ -957,7 +936,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(9457),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4077),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "جيد جدا "
@@ -965,7 +944,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(9475),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4103),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   جيد  "
@@ -973,7 +952,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(9479),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4117),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  مقبول   "
@@ -1113,7 +1092,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 100,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(5009),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(8697),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1123,7 +1102,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 200,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6934),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(932),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1133,7 +1112,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 300,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6957),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(958),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تربية وطنية وحياتية ",
@@ -1143,7 +1122,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 400,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6963),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(970),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1153,7 +1132,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 500,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6970),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(976),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	حاسوب  ",
@@ -1163,7 +1142,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 600,
                             ClassId = 101,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6976),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(984),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1173,7 +1152,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 700,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6982),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(998),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1183,7 +1162,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 800,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6988),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1012),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1193,7 +1172,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 9,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(6994),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1026),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تربية وطنية وحياتية ",
@@ -1203,7 +1182,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 10,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7000),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1040),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1213,7 +1192,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 11,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7006),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1054),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	حاسوب  ",
@@ -1223,7 +1202,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 12,
                             ClassId = 102,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7012),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1068),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1233,7 +1212,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 13,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7018),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1079),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1243,7 +1222,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 14,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7023),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1094),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1253,7 +1232,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 15,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7029),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1108),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تنشئة وطنية واجتماعية ",
@@ -1263,7 +1242,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 16,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7035),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1122),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1273,7 +1252,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 17,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7041),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1134),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	حاسوب  ",
@@ -1283,7 +1262,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 18,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7047),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1140),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1293,7 +1272,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 19,
                             ClassId = 103,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7053),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1146),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " علوم عامة  ",
@@ -1303,7 +1282,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 20,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7059),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1152),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1313,7 +1292,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 21,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7065),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1158),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1323,7 +1302,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 22,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7071),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1164),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تنشئة وطنية واجتماعية  ",
@@ -1333,7 +1312,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 23,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7078),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1169),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1343,7 +1322,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 24,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7084),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1176),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	حاسوب  ",
@@ -1353,7 +1332,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 25,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7090),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1182),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1363,7 +1342,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 26,
                             ClassId = 104,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7096),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1188),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " علوم عامة  ",
@@ -1373,7 +1352,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 27,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7102),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1194),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1383,7 +1362,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 28,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7108),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1203),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1393,7 +1372,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 29,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7115),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1217),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " دراسات اجتماعية     ",
@@ -1403,7 +1382,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 30,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7121),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1231),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1413,7 +1392,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 31,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7128),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1245),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	علوم  ",
@@ -1423,7 +1402,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 32,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7135),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1259),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1433,7 +1412,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 33,
                             ClassId = 105,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7141),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1274),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1443,7 +1422,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 34,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7147),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1290),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1453,7 +1432,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 35,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7154),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1302),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1463,7 +1442,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 36,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7160),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1316),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " دراسات اجتماعية",
@@ -1473,7 +1452,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 37,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7166),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1330),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1483,7 +1462,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 38,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7172),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1344),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	علوم  ",
@@ -1493,7 +1472,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 39,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7178),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1353),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1503,7 +1482,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 40,
                             ClassId = 106,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7185),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1359),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1513,7 +1492,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 41,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7191),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1365),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1523,7 +1502,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 42,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7197),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1371),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1533,7 +1512,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 43,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7203),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1377),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " دراسات اجتماعية",
@@ -1543,7 +1522,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 44,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7209),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1383),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1553,7 +1532,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 45,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7216),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1389),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	علوم  ",
@@ -1563,7 +1542,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 46,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7222),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1395),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1573,7 +1552,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 47,
                             ClassId = 107,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7228),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1404),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1583,7 +1562,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 48,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7235),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1419),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1593,7 +1572,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 49,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7241),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1433),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1603,7 +1582,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 50,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7247),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1447),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " دراسات اجتماعية ",
@@ -1613,7 +1592,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 51,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7253),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1461),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1623,7 +1602,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 52,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7259),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1475),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	علوم  ",
@@ -1633,7 +1612,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 53,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7265),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1489),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1643,7 +1622,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 54,
                             ClassId = 108,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7288),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1503),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا",
@@ -1653,7 +1632,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 55,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7294),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1517),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1663,7 +1642,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 56,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7301),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1531),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1673,7 +1652,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 57,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7307),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1546),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " دراسات اجتماعية ",
@@ -1683,7 +1662,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 58,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7313),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1554),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1693,7 +1672,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 59,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7319),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1561),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	علوم  ",
@@ -1703,7 +1682,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 60,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7326),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1566),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1713,7 +1692,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 61,
                             ClassId = 109,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7332),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1572),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1723,7 +1702,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 62,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7338),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1578),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1733,7 +1712,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 63,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7344),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1584),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1743,7 +1722,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 64,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7350),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1592),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تاريخ وجغرافيا      ",
@@ -1753,7 +1732,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 65,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7356),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1702),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1763,7 +1742,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 66,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7363),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1718),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الفيزياء",
@@ -1773,7 +1752,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 67,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7370),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1732),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "كيمياء",
@@ -1783,7 +1762,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 68,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7375),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1746),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "أحياء",
@@ -1793,7 +1772,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 69,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7381),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1752),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1803,7 +1782,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 70,
                             ClassId = 110,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7389),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1758),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1813,7 +1792,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 71,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7402),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1773),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " 	لغة عربية  ",
@@ -1823,7 +1802,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 72,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7417),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1787),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الرياضيات",
@@ -1833,7 +1812,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 73,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7431),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1801),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  لغة انجليزية  ",
@@ -1843,7 +1822,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 74,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7446),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1816),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تربية إسلامية ",
@@ -1853,7 +1832,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 75,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7460),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1830),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " تاريخ   ",
@@ -1863,7 +1842,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 76,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7471),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1844),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "جغرافيا",
@@ -1873,7 +1852,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 77,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7476),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1856),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "ثقافة عامة",
@@ -1883,7 +1862,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 78,
                             ClassId = 111,
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 848, DateTimeKind.Local).AddTicks(7482),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1870),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "تكنولوجيا   ",
@@ -1948,7 +1927,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 100,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(201),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(5065),
                             EmailAddress = "",
                             FirstName = "ألاء",
                             IsArchive = false,
@@ -1960,7 +1939,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 200,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2133),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7934),
                             EmailAddress = "",
                             FirstName = "مها  ",
                             IsArchive = false,
@@ -1972,7 +1951,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 300,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2151),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7960),
                             EmailAddress = "",
                             FirstName = "إيمان ",
                             IsArchive = false,
@@ -1984,7 +1963,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 400,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2156),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7974),
                             EmailAddress = "",
                             FirstName = "رندة ",
                             IsArchive = false,
@@ -1996,7 +1975,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 500,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2160),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7988),
                             EmailAddress = "",
                             FirstName = "علا",
                             IsArchive = false,
@@ -2008,7 +1987,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 600,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2165),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7997),
                             EmailAddress = "",
                             FirstName = "إسلام  ",
                             IsArchive = false,
@@ -2020,7 +1999,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 700,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2169),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8010),
                             EmailAddress = "",
                             FirstName = "رانيا",
                             IsArchive = false,
@@ -2032,7 +2011,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 800,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2173),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8025),
                             EmailAddress = "",
                             FirstName = "اسلام  ",
                             IsArchive = false,
@@ -2044,7 +2023,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 900,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2177),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8038),
                             EmailAddress = "",
                             FirstName = " رنا ",
                             IsArchive = false,
@@ -2056,7 +2035,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1000,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2181),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8052),
                             EmailAddress = "",
                             FirstName = "وفاء ",
                             IsArchive = false,
@@ -2068,7 +2047,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1100,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2185),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8062),
                             EmailAddress = "",
                             FirstName = " رشا ",
                             IsArchive = false,
@@ -2080,7 +2059,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1200,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2189),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8068),
                             EmailAddress = "",
                             FirstName = "نداء ",
                             IsArchive = false,
@@ -2092,7 +2071,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1300,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2193),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8073),
                             EmailAddress = "",
                             FirstName = "هبة  ",
                             IsArchive = false,
@@ -2104,7 +2083,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1400,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2198),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8081),
                             EmailAddress = "",
                             FirstName = "هديل",
                             IsArchive = false,
@@ -2116,7 +2095,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1500,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2220),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8089),
                             EmailAddress = "",
                             FirstName = "سحر ",
                             IsArchive = false,
@@ -2128,7 +2107,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1600,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2225),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8102),
                             EmailAddress = "",
                             FirstName = "اسلام",
                             IsArchive = false,
@@ -2140,7 +2119,7 @@ namespace School.DataAccess.Migrations
                         {
                             Id = 1700,
                             AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 9, 17, 21, 34, 26, 849, DateTimeKind.Local).AddTicks(2229),
+                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8116),
                             EmailAddress = "",
                             FirstName = "أمل",
                             IsArchive = false,
@@ -2274,18 +2253,6 @@ namespace School.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("School.Data.Entities.SkillsType", "FSkillsType")
-                        .WithMany()
-                        .HasForeignKey("FSkillsTypeId");
-
-                    b.HasOne("School.Data.Entities.SkillsType", "FinalSkillsType")
-                        .WithMany()
-                        .HasForeignKey("FinalSkillsTypeId");
-
-                    b.HasOne("School.Data.Entities.SkillsType", "MSkillsType")
-                        .WithMany()
-                        .HasForeignKey("MSkillsTypeId");
-
                     b.HasOne("School.Data.Entities.Student", "Student")
                         .WithMany()
                         .HasForeignKey("StudentId")
@@ -2305,12 +2272,6 @@ namespace School.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Class");
-
-                    b.Navigation("FinalSkillsType");
-
-                    b.Navigation("FSkillsType");
-
-                    b.Navigation("MSkillsType");
 
                     b.Navigation("Student");
 

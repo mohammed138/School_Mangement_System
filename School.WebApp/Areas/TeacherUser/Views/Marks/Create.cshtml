@@ -76,75 +76,34 @@
                                                 <h3 class="kt-section__title kt-section__title-lg text-right" style="text-align: right !important;"> : البيانات التفصيلية </h3>
 
 
+ 
 
-                                                @if (Model.ClassID < 105)
-                                                {
+                                              
+
                                                     <div class="form-group row">
                                                         <div class="col-9">
-                                                            <select  asp-for="@Model.Mark.FSkillsTypeId" class="form-control" asp-items="Model.SkillsTypeDrop">
-                                                                
-                                                            </select>
+                                                            <input asp-for="@Model.Mark.ShortQuizzes" class="form-control" type="text" value="10" style="direction: rtl;">
                                                         </div>
-                                                        <label class="col-3 col-form-label">  التقييم الفصلي     </label>
+                                                        <label class="col-3 col-form-label">  الدرجة الفصلية  </label>
                                                     </div>
+                                                 
 
                                                     <div class="form-group row">
                                                         <div class="col-9">
-                                                            <select  asp-for="@Model.Mark.MSkillsTypeId" class="form-control" asp-items="Model.SkillsTypeDrop">
-                                                             </select>
+                                                            <input asp-for="@Model.Mark.QualitativeAssessmentGrades" class="form-control" type="text" value="50" style="direction: rtl;">
                                                         </div>
-                                                        <label class="col-3 col-form-label">  التقييم النصفي </label>
-                                                    </div>
-
-                                                    <div class="form-group row">
-                                                        <div class="col-9">
-                                                            <select  asp-for="@Model.Mark.FinalSkillsTypeId" class="form-control" asp-items="Model.SkillsTypeDrop">
-                                                             </select>
-                                                        </div>
-                                                        <label class="col-3 col-form-label">  التقييم النهائي </label>
+                                                        <label class="col-3 col-form-label">  الدرجة النهائية  </label>
                                                     </div>
 
 
-
-                                                }
-                                                else
-                                                {
-
-                                                    <div class="form-group row">
+                                                      <div class="form-group row">
                                                         <div class="col-9">
-                                                            <input  asp-for="@Model.Mark.FirstTermValue" class="form-control" type="text" value="10" style="direction: rtl;">
+                                                            <input asp-for="@Model.Mark.FinalTermValue" class="form-control" type="text" value="10" style="direction: rtl;">
                                                         </div>
                                                         <label class="col-3 col-form-label">  الدرجة الفصلية  </label>
                                                     </div>
 
-
-                                                    <div class="form-group row">
-                                                        <div class="col-9">
-                                                            <input  asp-for="@Model.Mark.MidTermValue" class="form-control" type="text" value="20" style="direction: rtl;">
-                                                        </div>
-                                                        <label class="col-3 col-form-label">  الدرجة النصفية   </label>
-
-                                                    </div>
-
-
-                                                    <div class="form-group row">
-                                                        <div class="col-9">
-                                                            <input  asp-for="@Model.Mark.FinalTermValue" class="form-control" type="text" value="50" style="direction: rtl;">
-                                                        </div>
-                                                        <label class="col-3 col-form-label">  الدرجة النهائية  </label>
-                                                    </div>
-                                                }
-
-
-
-                                                <div class="form-group row">
-                                                    <div class="col-9">
-                                                        <input  asp-for="@Model.Mark.Notice" class="form-control" type="text" value="" style="direction: rtl;">
-                                                    </div>
-                                                    <label class="col-3 col-form-label">   ملاحظات    </label>
-                                                </div>
-
-
+ 
 
 
                                             </div>

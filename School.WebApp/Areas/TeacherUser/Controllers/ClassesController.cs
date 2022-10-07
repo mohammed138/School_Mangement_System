@@ -129,7 +129,7 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
 
             foreach (var item in MarkIDs)
             {
-                MarkList.Add(_context.Mark.Include(d => d.Student).Include(d => d.FSkillsType).Include(d => d.Subject).Include(d => d.Teacher).Where(d => d.Id == item).FirstOrDefault());
+                MarkList.Add(_context.Mark.Include(d => d.Student).Include(d => d.Subject).Include(d => d.Teacher).Where(d => d.Id == item).FirstOrDefault());
 
             }
             if (MarkIDs.Count() > 0)

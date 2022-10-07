@@ -1,9 +1,9 @@
-﻿@model School.Data.ViewModels.TeachersViewModel 
- 
+﻿@model School.Data.ViewModels.TeachersViewModel
+
 @{
     ViewData["Title"] = "عرض المعلمين ";
 }
- 
+
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
 
 <p class="text-right">
@@ -13,6 +13,25 @@
     </a>
 </p>
 
+@using (Html.BeginForm("ExporDataToFile", "Teachers", FormMethod.Post))
+{
+
+    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+        <button id="btnExportData" type="submit" value="ExportData" name="action">
+            <i class="fas fa-file-download"> Export Data </i>
+        </button>
+    </div>
+
+    <div class="col-md-3">
+        <label>
+            <input id="ExportPdf" name="Export" type="radio"
+                   value="Pdf" />
+            <i class="far fa-file-pdf">  Export To Pdf</i>
+        </label>
+    </div>
+
+
+}
 
 <table id="myTable" class="table dt-responsive  " style="width:100%">
     <thead class="thead_dark">
@@ -57,15 +76,15 @@
                              aria-labelledby="dropdownMenuButton" style="">
 
 
-                            <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">
+                            <a class="dropdown-item" asp-action="Edit" asp-controller="Teachers" asp-route-id="@item.Id">
                                 تعديل
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <a class="dropdown-item" asp-action="Details" asp-route-id="@item.Id">
-                                  تفاصيل المعلم 
+                            <a class="dropdown-item" asp-action="Details" asp-controller="Teachers" asp-route-id="@item.Id">
+                                تفاصيل المعلم
                                 <i class="fa-solid fa-list"></i>
                             </a>
-                            <a class="dropdown-item" asp-action="Delete" asp-controller="Subjects" asp-route-id="@item.Id">
+                            <a class="dropdown-item" asp-action="Delete" asp-controller="Teachers" asp-route-id="@item.Id">
                                 حذف المعلم
                                 <i class="fa-solid fa-trash"></i>
                             </a>
@@ -74,7 +93,7 @@
                     </div>
                 </td>
 
-                 <td class="text-right">
+                <td class="text-right">
                     @Html.DisplayFor(modelItem => item.EmailAddress)
                 </td>
                 <td class="text-right">
@@ -96,4 +115,3 @@
 </table>
 
 
- 

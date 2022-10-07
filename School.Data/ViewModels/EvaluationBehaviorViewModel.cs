@@ -28,5 +28,6 @@ namespace School.Data.ViewModels
         public IEnumerable<SelectListItem> DurationDrop { get; set; }
         public int ClassID { get; set; }
         public Decisions Decisions { get; set; }
+        public int? StudentID { get; set; }
     }
 }

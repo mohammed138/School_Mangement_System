@@ -61,7 +61,6 @@
                             <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
 
                                 <td class="text-right">  الإجراءات     </td>
-                                <td class="text-right">   ملاحظات    </td>
                                 <td class="text-right">   القييم    </td>
                                 <td class="text-right">   رقم الأسبوع    </td>
                                 <td class="text-right">   مدرس المادة     </td>
@@ -93,12 +92,12 @@
                                                      aria-labelledby="dropdownMenuButton">
                                                     @if (Model.Decisions.AllowToCreatMarks == true)
                                                     {
-                                                        @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+                                                        @if (Model.Decisions.UpdatedAllowedFrom <= DateTime.Now || Model.Decisions.UpdatedAllowedTo >= DateTime.Now)
                                                         {
 
                                                             <a class="dropdown-item" asp-action="Edit" asp-controller="Skills" asp-route-id="@item.Id">
                                                                 تعديل
-                                                               <i class="fa-solid fa-plus"></i>
+                                                                <i class="fa-solid fa-plus"></i>
 
                                                             </a>
                                                         }
@@ -113,7 +112,6 @@
                                             </div>
 
                                         </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Notice) </td>
                                         <td class="text-right">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
                                         <td class="text-right">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
                                         <td class="text-right">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>

@@ -37,8 +37,34 @@
     .data-info-sec {
         padding-bottom: 12px !important;
         padding-top: 10px !important;
+        border-bottom: 1px solid;
     }
 </style>
+
+
+
+@if (Model.IsActive == true)
+{
+    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+        @using (Html.BeginForm("ExporDataToFile", "Skills", FormMethod.Post))
+        {
+            <button id="btnExportData" type="submit" value="ExportData" name="action">
+                <i class="fas fa-file-download">  تصدير </i>
+            </button>
+
+            <br />
+            <br />
+
+
+            <label>
+                <input id="ExportPdf" name="Export" type="radio"
+                       value="Pdf" />
+                <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+            </label>
+        }
+    </div>
+}
+
 
 
 <div class="row" style="font-family: 'Changa', sans-serif;    ">

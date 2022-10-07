@@ -98,7 +98,7 @@
 
                                                     @if (Model.Decisions.AllowToCreatMarks == true)
                                                     {
-                                                        @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
+                                                        @if (Model.Decisions.UpdatedAllowedFrom <= DateTime.Now || Model.Decisions.UpdatedAllowedTo >= DateTime.Now)
                                                         { 
                                                             <a class="dropdown-item" asp-action="Edit" asp-controller="SkillsBehaviors" asp-route-id="@item.Id">
                                                                 تعديل

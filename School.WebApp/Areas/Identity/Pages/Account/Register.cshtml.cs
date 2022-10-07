@@ -71,7 +71,7 @@ namespace School.WebApp.Areas.Identity.Pages.Account
             [Display(Name = "تأكيد كلمة السر")]
             [Compare("Password", ErrorMessage = "كلمة المرور وتأكيد كلمة المرور  غير متطابقتين.")]
             public string ConfirmPassword { get; set; }
-            public string RoleId { get; set; }
+            public string? RoleId { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -96,21 +96,34 @@ namespace School.WebApp.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                foreach (var item in _roleManager.Roles)
+
+                if (User.IsInRole("MangerRole"))
                 {
-                    if (item.Id == Input.RoleId)
+                    foreach (var item in _roleManager.Roles)
                     {
-                        RoleName = item.Name; 
-                    } 
+                        if (item.Id == Input.RoleId)
+                        {
+                            RoleName = item.Name;
+                        }
+                    }
                 }
 
 
                 var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                var RoleResult = await _userManager.AddToRoleAsync(user, RoleName);
+
+                if (User.IsInRole("MangerRole"))
+                {
+                    var RoleResult = await _userManager.AddToRoleAsync(user, RoleName);
+                }
+                else
+                {
+                    var RoleResult = await _userManager.AddToRoleAsync(user, "StudentRole");
+
+                }
 
 
-                if (result.Succeeded && RoleResult.Succeeded)
+                if (result.Succeeded )
                 {
                     
                  
