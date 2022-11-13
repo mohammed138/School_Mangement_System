@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/ef3884b0e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
 
+
     <style>
         @@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Changa:wght@600&family=Titillium+Web:wght@300&display=swap');
 
@@ -109,6 +110,7 @@
             border-radius: 100%;
             box-shadow: 0 0 0 2px #fff;
         }
+
         ul ul a {
             font-size: 0.9em !important;
             padding-right: 30px !important;
@@ -132,9 +134,7 @@
                 color: #4159AE !important;
                 background: #fff;
             }
-    </style>
 
-    <style>
         .navbar {
             background: #fff;
             border: none;
@@ -155,7 +155,7 @@
             font-size: 1.5rem;
         }
 
-       
+
 
         .notifications-wrapper {
             overflow: auto;
@@ -204,36 +204,57 @@
             font-size: 20px;
             color: #4159AE;
         }
-    </style>
-  
-    
-    <style>
-        #sidebar ul li a { 
-            font-size: 17px !important; 
+
+        #sidebar ul li a {
+            font-size: 17px !important;
         }
+
         .dropdown-menu.show {
-            display: block;
-         }
+            display: block !important;
+            background-color: #4159AE !important;
+        }
+
         .menu-title {
             color: #fff;
             font-size: 1.5rem;
             display: inline-block;
         }
+
         a.text-dark:focus, a.text-dark:hover {
             color: #fff !important;
         }
+
         a.text-dark:focus, a.text-dark {
             color: #fff !important;
         }
+
         .notifications {
             min-width: 350px;
         }
+
+
+
+        #btnExportData {
+            padding: 3px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            border: 0px !important;
+            background-color: #4159AE !important;
+            color: #fff !important;
+        }
+
         .dropdown-menu.show {
             display: block !important;
             background-color: #4159AE !important;
+            top: 0cm !important;
+        }
+
+        .navbar {
+            border-radius: 10px;
         }
     </style>
 
+    <link rel="stylesheet" href="~/css/navbar.css" />
 </head>
 
 <body style="font-family: 'Changa', sans-serif;    ">
@@ -271,9 +292,7 @@
                         عرض التقييمات 
                         <i class="fas fa-chalkboard font-icon"></i>
                     </a>
-                </li>
-
-
+                </li> 
                 <li>
                     <a asp-action="Index" asp-controller="SkillsBehaviors">
                         عرض التقييمات السلوكية  
@@ -286,36 +305,81 @@
             </ul>
 
         </nav>
-        <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white" style="border-radius: 10px !important;">
+        <div id="content"> 
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
                         <div class="dropdown">
                             <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-
                                 <i class="fa-solid fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" > 
-                                <partial name="_LoginPartial" /> 
+                            <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" style="top: 6cm !important;">
+                                <partial name="_LoginPartial" />
                             </ul>
                         </div>
-                         
                     </div>
+                 
                     <div class="brand">
                         <span style="color: #0E268C; font-size:18px;font-weight:500;"> مدرسة السلام لأطفال الزيتون </span>
                         <img class="img-brand" src="~/assets/TFiles/logo.jpg" width="80" height="80">
                     </div>
+                    
+                    <div class="collapse navbar-collapse navbar-expand-xl" id="navbarMobileContent">
+                        <div id="ul-mobile-div">
+                            <ul class="list-unstyled components row">
+
+                                <li class="li-item-ul col-6">
+                                    <a asp-action="GetStudentInformation" asp-controller="Classes">
+                                        البيانات الأكاديمية
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="li-item-ul col-6">
+                                    <a asp-action="GetSubjects" asp-controller="Subjects">
+                                        المواد الدراسية
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="li-item-ul col-6">
+                                    <a asp-action="Index" asp-controller="Marks">
+                                        عرض درجاتي
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+                                    <a asp-action="Index" asp-controller="Skills">
+                                        عرض التقييمات
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="li-item-ul col-6 text-right">
+                                    <a asp-action="Index" asp-controller="SkillsBehaviors">
+                                        عرض التقييمات السلوكية
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="li-item-ul col-6">
+
+                                    <a href="#Identity" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        حسابي
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+                                    <ul class="collapse list-unstyled " id="Identity">
+                                        <partial name="_LoginPartialMobile" />
+                                        <hr />
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
 
 
 
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
+
                 </div>
             </nav>
-
             <div id="content" class="p-4 p-md-5 pt-5" style="background-color:#fff">
                 <main role="main" class="pb-3">
                     @RenderBody()

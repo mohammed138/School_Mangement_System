@@ -4,43 +4,19 @@
     ViewData["Title"] = "تعديل";
 }
 
- 
+
+<link rel="stylesheet" href="~/css/CreateEditMediaQuery.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 
 <style>
-    /* .form-control {
-            display: block;
-            width: 100%;
-            height: calc(1.5em + 0.75rem + 2px);
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #495057;
-            direction: rtl;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        }
-        .form-control {
-            display: block;
-            width: 100%;
-            height: calc(1.5em + 0.75rem + 8px);
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #1459AE;
-            direction: rtl;
-            background-color: #efefef;
-            background-clip: padding-box;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        }
-    */
+    .Edit-title {
+        padding-top: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Changa', sans-serif;
+    }
+
     .col-form-label {
         padding-top: calc(0.375rem + 1px);
         padding-bottom: calc(0.375rem + 1px);
@@ -164,7 +140,17 @@
 </style>
 
 <form class="kt-form" id="kt_form" asp-action="Edit">
-    <input type="hidden" asp-for="Id" /> 
+    <input type="hidden" asp-for="Id" />
+
+    <div class="col-12">
+        <div class="row">
+            <span asp-validation-for="@Model.AllowToCreatMarks" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.AllowToCreatMarks" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.AllowToCreatMarks" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.AllowToCreatMarks" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.AllowToCreatMarks" class="col-12 text-right text-danger">  </span>
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="footer-section">
             <div class="row" style="color: #fff; background-color: #8c9cd0; padding: 15px;">
@@ -179,9 +165,9 @@
                 </div>
                 <div class="col-6 text-right">
                     <div class="back-click">
-                        <div style="padding-top: 5px; color: #fff; font-size: 20px; font-family: 'Changa', sans-serif; ">
+                        <div class="Edit-title">
                             <span class="">
-                                تعديل القرارات   
+                                تعديل القرارات
                             </span>
                             <i class="fa-solid fa-pen-to-square"></i>
                         </div>
@@ -213,7 +199,8 @@
 
                                                 <div class="form-group row">
                                                     <div class="col-9">
-                                                        <input asp-for="AllowToCreatMarks"  style="direction: rtl;">
+                                                        @Html.EditorFor(x => x.AllowToCreatMarks)
+
                                                     </div>
                                                     <label class="col-3 col-form-label">   السماح بالتعديلات     </label>
                                                 </div>
@@ -222,7 +209,7 @@
 
                                                 <div class="form-group row" id="CFrombtn">
                                                     <div class="col-9">
-                                                        <input asp-for="CreatedAllowedFrom" class="form-control"  style="direction: rtl;">
+                                                        <input asp-for="CreatedAllowedFrom" class="form-control" style="direction: rtl;">
                                                     </div>
                                                     <label class="col-3 col-form-label">   من تاريخ     </label>
                                                 </div>
@@ -231,7 +218,7 @@
 
                                                 <div class="form-group row" id="CTobtn">
                                                     <div class="col-9">
-                                                        <input asp-for="CreatedAllowedTo" class="form-control"   style="direction: rtl;">
+                                                        <input asp-for="CreatedAllowedTo" class="form-control" style="direction: rtl;">
                                                     </div>
                                                     <label class="col-3 col-form-label">   إلى تاريخ     </label>
                                                 </div>
@@ -249,9 +236,8 @@
                                                 <div class="form-group row">
                                                     <div class="col-9">
                                                         @*<input asp-for="AllowToUpdatedMarks" class="form-control" type="text" value="" style="direction: rtl;">*@
-  
-                                                        <input class="form-check-input" name="AllowToUpdatedMarks" value="False" type="radio" asp-for="AllowToUpdatedMarks" />  عدم السماح
-                                                        <input class="form-check-input" name="AllowToUpdatedMarks" value="true" type="radio" asp-for="AllowToUpdatedMarks" /> السماح
+
+                                                        @Html.EditorFor(x => x.AllowToUpdatedMarks)
 
                                                     </div>
                                                     <label class="col-3 col-form-label">   السماح بالتعديلات     </label>
@@ -261,7 +247,7 @@
 
                                                 <div class="form-group row" id="Frombtn">
                                                     <div class="col-9">
-                                                        <input asp-for="UpdatedAllowedFrom" class="form-control"  style="direction: rtl;">
+                                                        <input asp-for="UpdatedAllowedFrom" class="form-control" style="direction: rtl;">
                                                     </div>
                                                     <label class="col-3 col-form-label">   من تاريخ     </label>
                                                 </div>
@@ -285,10 +271,10 @@
 
                                     </div>
                                     <div class="col-xl-2"></div>
-                                </div> 
+                                </div>
                             </div>
-                        </div> 
-                     </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -296,35 +282,35 @@
 </form>
 
 
-@section Scripts{ 
+@section Scripts{
 
-<script>
+    <script>
 
-    //$('#AllowToCreate').text($('#Createcheckbox1').val());
-    //$('#AllowToUpdate').text($('#Updatecheckbox1').val());
+        //$('#AllowToCreate').text($('#Createcheckbox1').val());
+        //$('#AllowToUpdate').text($('#Updatecheckbox1').val());
 
-    //$("#Createcheckbox1").on('change', function () {
-    //    if ($(this).is(':checked')) {
-    //        $(this).attr('value', 'true');
-    //    } else {
-    //        $(this).attr('value', 'false');
-    //    }
+        //$("#Createcheckbox1").on('change', function () {
+        //    if ($(this).is(':checked')) {
+        //        $(this).attr('value', 'true');
+        //    } else {
+        //        $(this).attr('value', 'false');
+        //    }
 
-    //    $('#AllowToCreate').text($('#Createcheckbox1').val());
-    //});
+        //    $('#AllowToCreate').text($('#Createcheckbox1').val());
+        //});
 
-    function ToggleSection() {
-      $('#Frombtn').toggle('display-none');
-      $('#Tobtn').toggle('display-none');
-    }
+        function ToggleSection() {
+            $('#Frombtn').toggle('display-none');
+            $('#Tobtn').toggle('display-none');
+        }
 
-    function ToggleSectionCreated() {
-        $('#CFrombtn').toggle('display-none');
-        $('#CTobtn').toggle('display-none');
-    }
+        function ToggleSectionCreated() {
+            $('#CFrombtn').toggle('display-none');
+            $('#CTobtn').toggle('display-none');
+        }
 
-     
-</script>
+
+    </script>
 }
 
 
@@ -341,4 +327,3 @@
 
 
 
- 

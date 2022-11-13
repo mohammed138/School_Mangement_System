@@ -101,7 +101,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-7 col-lg-5">
                     <div class="wrap">
-                        <div class="img" style="background-image: url(~/wwwroot/assets/TFiles/img/logo.jpg); "></div>
+                        <div class="img">
+                            <img class="logo-img" src="~/assets/TFiles/img/logo.jpg" style=" width: 100%; height: 138%;" />
+                        </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
@@ -123,7 +125,7 @@
 
 
 
-                            @if (User.IsInRole("StudentRole"))
+                            @if (User.IsInRole("MangerRole"))
                             {
 
                                 <div class="form-group">
@@ -133,9 +135,10 @@
                                 </div>
 
                             }
-                            else { 
-                            
-                            
+                            else
+                            {
+
+
                             }
 
 

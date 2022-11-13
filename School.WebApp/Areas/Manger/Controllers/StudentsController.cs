@@ -217,7 +217,7 @@ namespace School.WebApp.Areas.Manger.Controllers
 
             if (model.Rows.Count > 0)
             {
-                string fontLoc = @"C:\Users\hp\Desktop\arial-unicode-ms\ARIALUNI.ttf"; // make sure to have the correct path to the font file
+                string fontLoc = @"./ARIALUNI.ttf"; // make sure to have the correct path to the font file
 
                 int pdfRowIndex = 1;
                 string filename = "عرض طلاب المدرسة  " + DateTime.Now.ToString("dd-MM-yyyy hh_mm_s_tt");

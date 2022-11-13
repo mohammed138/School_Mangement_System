@@ -1,47 +1,25 @@
-﻿ 
+﻿
 
 @model School.Data.ViewModels.SkillsViewModel
 
 @{
     ViewData["Title"] = "تعديل تقييم ";
 }
+<link rel="stylesheet" href="~/css/CreateEditMediaQuery.css" />
 
 
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
 
 <style>
-    /* .form-control {
-            display: block;
-            width: 100%;
-            height: calc(1.5em + 0.75rem + 2px);
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #495057;
-            direction: rtl;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        }
-        .form-control {
-            display: block;
-            width: 100%;
-            height: calc(1.5em + 0.75rem + 8px);
-            padding: 0.375rem 0.75rem;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #1459AE;
-            direction: rtl;
-            background-color: #efefef;
-            background-clip: padding-box;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        }
-    */
+    
+    .Edit-title {
+        padding-top: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Changa', sans-serif;
+    }
+
     .col-form-label {
         padding-top: calc(0.375rem + 1px);
         padding-bottom: calc(0.375rem + 1px);
@@ -167,15 +145,20 @@
 <form class="kt-form" id="kt_form" asp-action="Edit">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="@Model.Skills.Id" />
-    <input type="hidden" asp-for="@Model.Skills.TeacherId" />
     <input type="hidden" asp-for="@Model.Skills.CreatedBy" />
     <input type="hidden" asp-for="@Model.Skills.CreatedAt" />
     <input type="hidden" asp-for="@Model.Skills.IsActive" />
     <input type="hidden" asp-for="@Model.Skills.IsDelete" />
     <input type="hidden" asp-for="@Model.Skills.IsArchive" />
-    <input type="hidden" asp-for="@Model.Skills.ClassId" />
-    <input type="hidden" asp-for="@Model.Skills.SubjectId" />
-    <input type="hidden" asp-for="@Model.Skills.StudentId" />
+    <div class="col-12">
+        <div class="row">
+            <span asp-validation-for="@Model.Skills.SubjectId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Skills.StudentId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Skills.DurationId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Skills.CompletionTypeId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Skills.Name" class="col-12 text-right text-danger">  </span>
+        </div>
+    </div>
 
     <div class="col-md-12">
         <div class="footer-section">
@@ -191,8 +174,8 @@
                 </div>
                 <div class="col-6 text-right">
                     <div class="back-click">
-                        <div style="padding-top: 5px; color: #fff; font-size: 20px; font-family: 'Changa', sans-serif; ">
-                            <span class="">
+                        <div class="Edit-title">
+                            <span class="Edit-span">
                                 تعديل تقييم
                             </span>
                             <i class="fa-solid fa-pen-to-square"></i>
@@ -294,4 +277,8 @@
 
 
 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 

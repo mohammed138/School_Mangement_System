@@ -38,10 +38,10 @@ namespace School.Data.Entities
         [Display(Name = "اسم المعلم ")] 
         public string FullName => FirstName + " " + LastName;
 
-        [Display(Name = " سنة التعيين ")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy}")]
-        public DateTime AppointmentYear { get; set; }
+        //[Display(Name = " سنة التعيين ")]
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy}")]
+        //public DateTime AppointmentYear { get; set; }
 
 
         [Display(Name = "اسم التخصص")]

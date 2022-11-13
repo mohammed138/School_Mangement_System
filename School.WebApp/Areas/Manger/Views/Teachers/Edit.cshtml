@@ -6,11 +6,18 @@
 
 
 <link rel="stylesheet" href="~/assets/TFiles/css/CreateStyle.css" />
+<link rel="stylesheet" href="~/css/CreateEditMediaQuery.css" />
 
 <style>
     .save-click {
         border: 3px solid;
         width: 175px;
+    }
+    .Edit-title {
+        padding-top: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Changa', sans-serif;
     }
 </style>
 
@@ -21,8 +28,7 @@
     @Html.HiddenFor(d => d.Teacher.CreatedBy)
     @Html.HiddenFor(d => d.Teacher.IsActive)
     @Html.HiddenFor(d => d.Teacher.IsDelete)
-    @Html.HiddenFor(d => d.Teacher.IsArchive)
-    @Html.HiddenFor(d => d.Teacher.AppointmentYear)
+    @Html.HiddenFor(d => d.Teacher.IsArchive) 
     <div class="col-md-12">
         <div class="footer-section">
             <div class="row" style="color: #fff; background-color: #8c9cd0; padding: 15px;">
@@ -37,7 +43,7 @@
                 </div>
                 <div class="col-6 text-right">
                     <div class="back-click">
-                        <div style="padding-top: 5px; color: #fff; font-size: 20px; font-family: 'Changa', sans-serif; ">
+                        <div class="Edit-title">
                             <span class="">
                                 تعديل  مادة
                             </span>
@@ -104,7 +110,7 @@
                                                     <label class="col-3 col-form-label">  التخصص      </label>
                                                 </div>
 
- 
+
                                             </div>
                                         </div>
                                         <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
@@ -129,8 +135,8 @@
     </div>
 </form>
 
- 
- 
+
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

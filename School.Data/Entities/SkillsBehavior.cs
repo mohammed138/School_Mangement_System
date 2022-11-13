@@ -41,23 +41,23 @@ namespace School.Data.Entities
         public CompletionType CompletionType { get; set; }
 
 
-        [Required]
+         
         [Display(Name = " الصف")]
-        public int ClassId { get; set; }
+        public int? ClassId { get; set; }
         [Display(Name = " المادة ")]
         public int? SubjectId { get; set; }
 
         [Display(Name = " الطالب")]
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
 
         [Display(Name = " المعلم ")]
-        public int TeacherId { get; set; }
+        public int? TeacherId { get; set; }
 
         [Display(Name = "  الأسبوع ")]
         public int? DurationId { get; set; }
 
         [Display(Name = " التقييم ")]
-        public int CompletionTypeId { get; set; }
+        public int? CompletionTypeId { get; set; }
 
      
 

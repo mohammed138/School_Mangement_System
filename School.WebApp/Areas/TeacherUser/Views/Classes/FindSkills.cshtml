@@ -6,7 +6,10 @@
 
 
 
+ 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
+
 
 
 
@@ -37,18 +40,18 @@
             {
                 @if (Model.Decisions.CreatedAllowedFrom <= DateTime.Now || Model.Decisions.CreatedAllowedTo >= DateTime.Now)
                 {
-                   <a asp-action="Create" asp-controller="Skills" asp-route-id="@Model.ClassID" class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم      </a>
+                    <a asp-action="Create" asp-controller="Skills" asp-route-id="@Model.ClassID" class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم      </a>
 
                 }
                 else
-                { 
-        <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم  </button>
-                     
+                {
+                    <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;"> إضافة تقييم  </button>
+
                 }
             }
             else
             {
-            <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;">إضافة تقييم  </button>
+                <button disabled class="btn btn-default" style="background: #4159AE; color: #fff;">إضافة تقييم  </button>
 
             }
         </div>
@@ -61,10 +64,10 @@
                             <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
 
                                 <td class="text-right">  الإجراءات     </td>
-                                <td class="text-right">   القييم    </td>
-                                <td class="text-right">   رقم الأسبوع    </td>
-                                <td class="text-right">   مدرس المادة     </td>
-                                <td class="text-right">   المادة    </td>
+                                <td class="text-right mobile-hidden">   القييم    </td>
+                                <td class="text-right mobile-hidden">   رقم الأسبوع    </td>
+                                <td class="text-right mobile-hidden">   مدرس المادة     </td>
+                                <td class="text-right mobile-hidden">   المادة    </td>
                                 <td class="text-right">  اسم الطالب  </td>
 
 
@@ -107,15 +110,18 @@
                                                         التفاصيل
                                                         <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
                                                     </a>
-
+                                                    @*<a class="dropdown-item" asp-action="Delete" asp-controller="Skills" asp-route-id="@item.Id">
+                                                        حذف
+                                                        <i class="fa-solid fa-trash" style="padding-left: 5px;"></i> 
+                                                    </a>*@
                                                 </div>
                                             </div>
 
                                         </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
-                                        <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+                                        <td class="text-right mobile-hidden">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
+                                        <td class="text-right  mobile-hidden">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
+                                        <td class="text-right  mobile-hidden">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                        <td class="text-right mobile-hidden"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
                                         <td class="text-right">
                                             @Html.DisplayFor(modelItem => item.Student.FullName)
                                         </td>
@@ -123,11 +129,7 @@
                                 }
 
 
-                            }
-                            else
-                            {
-                              
-                            }
+                            } 
                         </tbody>
                     </table>
                 </div>

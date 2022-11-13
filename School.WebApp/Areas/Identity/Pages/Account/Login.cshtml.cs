@@ -111,7 +111,7 @@ namespace School.WebApp.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, ". يرجى التحقق من البريد الإلكتروني أو كلمة المرور ");
                     return Page();
                 }
             }

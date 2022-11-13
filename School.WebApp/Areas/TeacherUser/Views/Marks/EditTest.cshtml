@@ -1,0 +1,101 @@
+﻿@model School.Data.ViewModels.ListOfStudentMarks
+@{
+    ViewData["Title"] = "تعديل الدرجات ";
+}
+
+
+
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
+
+
+
+
+
+<table id="myTable" class="table dt-responsive">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <td class="text-right">  الإجراءات     </td>
+            <td class="text-right mobile-hidden">  المجموع      </td>
+            <td class="text-center mobile-hidden"> الدرجة النهائية  </td>
+            <td class="text-center mobile-hidden">  درجات التقويم النوعي     </td>
+            <td class="text-center mobile-hidden">  الإختبارات القصيرة </td>
+            <td class="text-center">   اسم الطالب   </td>
+        </tr>
+    </thead>
+    <form asp-action="EditTest" asp-controller="Marks" >
+    <tbody>
+
+        @foreach (var item in Model.StudentMarks)
+        {
+              
+            <tr>
+                <td style="display:none">
+                    <input type="hidden" asp-for="@item.Id" />
+                    <input type="hidden" asp-for="@item.TeacherId" />
+                    <input type="hidden" asp-for="@item.ClassId" />
+                    <input type="hidden" asp-for="@item.CreatedAt" />
+                    <input type="hidden" asp-for="@item.CreatedBy" />
+                    <input type="hidden" asp-for="@item.StudentId" />
+                    <input type="hidden" asp-for="@item.SubjectId" />
+                </td>
+                <td class="text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"
+                                style="background-color: #fff;border:0px;">
+
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+
+                        </button>
+                        <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
+
+                            @*@if (Model.Decisions.AllowToCreatMarks == true)
+                            {
+                                @if (Model.Decisions.UpdatedAllowedFrom <= DateTime.Now || Model.Decisions.UpdatedAllowedTo >= DateTime.Now)
+                                {
+                                    <a class="dropdown-item btn btn-default" asp-action="Edit" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                                        تعديل
+                                        <i class="fa-solid fa-plus"></i>
+                                    </a>
+                                }
+
+                            }*@
+
+                        </div>
+                    </div>
+                </td>
+                <td class="text-center mobile-hidden">
+                    @*@Html.DisplayFor(modelItem => item.Total)*@
+                </td>
+
+
+                <td class="text-center mobile-hidden">
+
+                    <input asp-for="@item.FinalTermValue" class="form-control" value="@item.FinalTermValue" style="direction: rtl;">
+
+                </td>
+                <td class="text-center mobile-hidden">
+                    <input asp-for="@item.QualitativeAssessmentGrades" class="form-control" value="@item.QualitativeAssessmentGrades" style="direction: rtl;">
+                </td>
+                <td class="text-center mobile-hidden">
+                    <input asp-for="@item.ShortQuizzes" class="form-control" value="@item.ShortQuizzes" style="direction: rtl;">
+
+                </td>
+
+                <td class="text-center"> @Html.DisplayFor(modelItem => item.Student.FullName)   </td>
+            </tr>
+        }
+
+    </tbody>
+          <div class="input-submit">
+              <input type="submit" value="حفظ" class="btn btn-primary" style="color: #fff; border-color: #8c9cd0; background-color: #8c9cd0; " />
+          </div>
+    </form>
+</table>
+
+
+
+

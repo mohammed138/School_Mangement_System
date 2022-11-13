@@ -7,6 +7,7 @@
 
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 <p class="text-right">
     <a class="btn btn-info" asp-action="Create" style="background-color: #4159AE;color:#fff;font-weight:500;">
@@ -18,24 +19,26 @@
 
 @if (Model.IsActive == true)
 {
-    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
-        @using (Html.BeginForm("ExporDataToFile", "Students", FormMethod.Post))
-        {
-            <button id="btnExportData" type="submit" value="ExportData" name="action">
-                <i class="fas fa-file-download">  تصدير </i>
-            </button>
+<div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+    @using (Html.BeginForm("ExporDataToFile", "Students", FormMethod.Post))
+    {
+        <button id="btnExportData" type="submit" value="ExportData" name="action">
+            <i class="fas fa-file-download">  تصدير </i>
+        </button>
 
-            <br />
-            <br />
+        <br />
+        <br />
 
 
+        <div class="col-md-5">
             <label>
                 <input id="ExportPdf" name="Export" type="radio"
                        value="Pdf" />
-                <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+                <i class="far fa-file-pdf">  Export To Pdf</i>
             </label>
-        }
-    </div>
+        </div>
+    }
+</div>
 }
 
 
@@ -50,10 +53,10 @@
             <th class="text-right">
                 @Html.DisplayNameFor(model => model.Student.Class)
             </th>
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 @Html.DisplayNameFor(model => model.Student.EmailAddress)
             </th>
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 @Html.DisplayNameFor(model => model.Student.PhoneNumber)
             </th>
             <th class="text-right">
@@ -103,10 +106,10 @@
                 <td class="text-right">
                     @Html.DisplayFor(modelItem => item.Class.Name)
                 </td>
-                <td class="text-right">
+                <td class="text-right mobile-hidden">
                     @Html.DisplayFor(modelItem => item.EmailAddress)
                 </td>
-                <td class="text-right">
+                <td class="text-right mobile-hidden">
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
                 <td class="text-right">

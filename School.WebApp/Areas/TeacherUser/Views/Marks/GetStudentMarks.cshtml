@@ -4,6 +4,8 @@
     ViewData["Title"] = "سجل درجات الطالب ";
 }
 
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
 
 <div class="col-md-12 text-right">
     @if (Model.Decisions.AllowToCreatMarks == true)
@@ -29,7 +31,7 @@
     }
     else
     {
-        <button disabled  class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+        <button disabled class="btn btn-default" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
             إضافة درجة جديدة
             <i class="fa-solid fa-plus"></i>
         </button>
@@ -46,11 +48,11 @@
     <thead class="thead_dark">
         <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
             <td class="text-right">  الإجراءات     </td>
-            <td class="text-center">  الدرجة النهائية    </td>
-            <td class="text-center">  الدرجة النصفية     </td>
-            <td class="text-center">  الدرجة الشهر الثاني    </td> 
-            <td class="text-center">   الدرجة الشهر الأول   </td>
-            <td class="text-center">   المادة   </td>
+            <td class="text-right mobile-hidden">  المجموع      </td>
+            <td class="text-center mobile-hidden"> الدرجة النهائية  </td>
+            <td class="text-center mobile-hidden">  درجات التقويم النوعي     </td>
+            <td class="text-center mobile-hidden">  الإختبارات القصيرة </td>
+            <td class="text-center mobile-hidden">   المادة   </td>
             <td class="text-center">   اسم الطالب   </td>
         </tr>
     </thead>
@@ -70,32 +72,22 @@
 
                     </button>
                     <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
-
-                        @if (Model.Decisions.AllowToCreatMarks == true)
-                        {
-                            @if (Model.Decisions.UpdatedAllowedFrom <= DateTime.Now || Model.Decisions.UpdatedAllowedTo >= DateTime.Now)
-                            {
-                                <a class="dropdown-item btn btn-default" asp-action="Edit" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
-                                    تعديل
-                                    <i class="fa-solid fa-plus"></i>
-                                </a>
-                            }
-                        }
-
+                        <a class="dropdown-item btn btn-default" asp-action="Edit" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            تعديل
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <a class="dropdown-item btn btn-default" asp-action="Delete" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                            حذف
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
                     </div>
                 </div>
             </td>
 
+            <td class="text-center mobile-hidden"> @*@Html.DisplayFor(modelItem => item.Total)*@   </td>
 
-            @if (item.ClassId < 105)
-            {
-                @*<td class="text-center"> @Html.DisplayFor(modelItem => item.FSkillsType.Name)      </td>
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.MSkillsType.Name)      </td>
-            <td class="text-center">  @Html.DisplayFor(modelItem => item.FinalSkillsType.Name)  </td>*@
-            }
-            else
-            {
-                <td class="text-center">
+          
+                <td class="text-center mobile-hidden">
                     @if (item.FinalTermValue != null)
                     {
                         @Html.DisplayFor(modelItem => item.FinalTermValue)
@@ -106,7 +98,7 @@
                     }
                 </td>
 
-                <td class="text-center">
+                <td class="text-center mobile-hidden">
                     @if (item.QualitativeAssessmentGrades != null)
                     {
                         @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)
@@ -120,7 +112,7 @@
 
 
 
-                <td class="text-center">
+                <td class="text-center mobile-hidden">
                     @if (item.ShortQuizzes != null)
                     {
                         @Html.DisplayFor(modelItem => item.ShortQuizzes)
@@ -133,9 +125,7 @@
                 </td>
 
 
-             
-            }
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+            <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
             <td class="text-center"> @Html.DisplayFor(modelItem => item.Student.FullName)   </td>
         </tr>
         }

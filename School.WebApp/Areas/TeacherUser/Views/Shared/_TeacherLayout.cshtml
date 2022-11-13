@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <script src="https://kit.fontawesome.com/ef3884b0e6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+    <link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
+    <link rel="stylesheet" href="~/css/TeacherPages.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+
+
 
     <style>
         @@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Changa:wght@600&family=Titillium+Web:wght@300&display=swap');
@@ -133,9 +139,7 @@
                 color: #4159AE !important;
                 background: #fff;
             }
-    </style>
 
-    <style>
         .navbar {
             background: #fff;
             border: none;
@@ -207,7 +211,6 @@
         }
     </style>
 
-
     <style>
         #sidebar ul li a {
             font-size: 17px !important;
@@ -215,7 +218,7 @@
 
         .dropdown-menu.show {
             display: block;
-         }
+        }
 
         .menu-title {
             color: #fff;
@@ -235,16 +238,19 @@
             min-width: 350px;
         }
     </style>
-    <!--
-
-         <link rel="stylesheet" href="./css/StudentMarks.css">
-         <link rel="stylesheet" href="./css/NavSidestyle.css">
-    -->
 
     <style>
         .dropdown-menu.show {
             display: block !important;
             background-color: #4159AE !important;
+            top: 0cm !important;
+        }
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -20px !important;
+            transform: translateY(-50%);
         }
     </style>
 </head>
@@ -278,13 +284,8 @@
                                  إضافة تقييم
                              <i class="fa-solid fa-plus"></i>
                             </a>
-                            </li>
-                         @*<li>
-                             <a href="#">
-                                 عرض تقييمات الطلاب
-                                 <i class="fa-solid fa-list font-icon"></i> 
-                                </a>
-                         </li>*@ 
+                         </li>
+                       
                         </ul>
                  </li>
                
@@ -300,36 +301,11 @@
                              <i class="fa-solid fa-plus font-icon"></i>
                             </a>
                             </li>
-                         @*<li>
-                             <a href="#">
-                                 عرض تقييمات سلوكية 
-                                 <i class="fa-solid fa-list font-icon"></i>
-                             </a>
-                           
-                            </li>*@ 
+                        
                      </ul>
                  </li>
  
-                 @*<li>
-                     <a href="#WKSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         مواطن الضعف والقوة
-                         <i class="fa-solid fa-bullseye font-icon"></i>
-                        </a>
-                     <ul class="collapse list-unstyled " id="WKSubmenu">
-                         <li>
-                             <a href="#">
-                                 إضافة مواطن الضعف والقوة  
-                                 <i class="fa-solid fa-plus font-icon"></i>
-                            </a>
-                         </li>
-                         <li>
-                              <a href="#">
-                                  عرض مواطن الضعف والقوة  
-                                  <i class="fa-solid fa-list font-icon"></i>
-                                </a> 
-                         </li> 
-                     </ul>
-                 </li>*@ 
+                
              </ul> 
               
          </nav> 
@@ -337,34 +313,62 @@
            <nav class="navbar navbar-expand-lg navbar-light bg-white" style="border-radius: 10px !important;">
                <div class="container-fluid">
                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      
-
                        <div class="dropdown">
                            <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-
                                <i class="fa-solid fa-user"></i>
                            </a>
-
-                           <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
-
+                           <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" style="top: 6cm !important;">
                                <partial name="_LoginPartial" />
-
                            </ul>
-
-
                        </div>
-                        
                    </div>
                    <div class="brand">
                        <span style="color: #0E268C; font-size:18px;font-weight:500;"> مدرسة السلام لأطفال الزيتون </span>
                        <img class="img-brand" src="~/assets/TFiles/logo.jpg" width="80" height="80">
                    </div>
 
-                    
- 
-                   <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                       <i class="fas fa-align-justify"></i>
-                   </button>
+
+                   <div class="collapse navbar-collapse navbar-expand-xl" id="navbarMobileContent">
+                       <div id="ul-mobile-div">
+                           <ul class="list-unstyled components row">
+
+                               <li class="li-item-ul col-6">
+                                   <a asp-action="Index" asp-controller="Classes">
+                                       صفوفي
+                                       <i class="fas fa-chalkboard font-icon"></i>
+                                   </a>
+                               </li>
+                               <li class="li-item-ul col-6">
+                                   <a asp-action="Create" asp-controller="Skills">
+                                       إضافة تقييم
+                                       <i class="fa-solid fa-plus"></i>
+                                   </a>
+                               </li>
+                               <li class="li-item-ul col-6 ">
+                                   <a asp-action="Create" asp-controller="SkillsBehavior">
+                                       إضافة تقييمات سلوكية
+                                       <i class="fa-solid fa-plus font-icon"></i>
+                                   </a>
+                               </li>
+                               <li class="li-item-ul col-6">
+
+                                   <a href="#Identity" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                       حسابي
+                                       <i class="fa-solid fa-user"></i>
+                                   </a>
+                                   <ul class="collapse list-unstyled " id="Identity">
+                                       <partial name="_LoginPartialMobile" />
+                                       <hr />
+                                   </ul>
+                               </li>
+
+                           </ul>
+                       </div>
+                   </div>
+
+
+
+
                </div>
              </nav>
  

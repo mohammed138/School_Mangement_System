@@ -4,19 +4,90 @@
     ViewData["Title"] = "تسجيل خروج";
 }
 
-<header>
-    @{
-        if (User.Identity.IsAuthenticated)
-        {
-            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Login", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark">تسجيل الخروج</button>
-            </form>
-        }
-        else
-        {
-           
-            <a asp-page="./Login"  style="color: #8c9cd0 !important;">تسجيل الدخول</a> 
+<style>
 
-        }
+    .logo-img {
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        box-shadow: rgb(0 0 0 / 24%) 1px 0px 15px;
+        margin-top: 2cm;
     }
-</header>
+
+
+    .container {
+        position: relative;
+    }
+
+    .text {
+        background-color: #7386D5;
+        color: white !important;
+        font-size: 16px;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin-top: 40px;
+    }
+
+    .logo-img {
+        opacity: 1;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .container:hover .image {
+        opacity: 0.3;
+    }
+
+    .container:hover .middle {
+        opacity: 1;
+    }
+
+    .logo-img {
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        box-shadow: rgb(0 0 0 / 24%) 1px 0px 15px;
+        margin-top: 2cm;
+        margin-left: 28%;
+    }
+
+    a {
+        color: white !important;
+    }
+</style>
+<link rel="stylesheet" href="~/css/LogOutMedia.css" />
+
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Login", new { area = "" })" method="post">
+            <button type="submit" class="nav-link btn btn-link text-dark">تسجيل الخروج</button>
+        </form>
+    }
+    else
+    {
+    
+                 <img class="logo-img" src="~/assets/TFiles/img/logo.jpg" />
+                <div class="middle">
+                    <div class="text">
+                        <a asp-area="Identity" asp-page="/Account/Login">
+                            تسجيل الدخول
+                        </a>
+                    </div>
+                </div>
+         
+
+    }
+}

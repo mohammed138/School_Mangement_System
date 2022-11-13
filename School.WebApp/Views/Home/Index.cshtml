@@ -9,13 +9,14 @@
         width: 500px;
         height: 500px;
         box-shadow: rgb(0 0 0 / 24%) 1px 0px 15px;
-       margin-top:2cm;
+        margin-top: 2cm;
     }
 
 
     .container {
         position: relative;
-     }
+    }
+
     .text {
         background-color: #7386D5;
         color: white !important;
@@ -24,9 +25,9 @@
         text-decoration: none;
         margin-top: 40px;
     }
+
     .logo-img {
         opacity: 1;
-
         transition: .5s ease;
         backface-visibility: hidden;
     }
@@ -49,12 +50,12 @@
     .container:hover .middle {
         opacity: 1;
     }
-     
+
     a {
         color: white !important;
     }
-
 </style>
+<link rel="stylesheet" href="~/css/HomeMedia.css" />
 
 
 
@@ -63,8 +64,7 @@
 <div class="row">
     <div class="col-md-12 text-center ">
 
-        @{
-
+        @{ 
 
             if (User.IsInRole("MangerRole"))
             {
@@ -72,9 +72,9 @@
                     <img class="logo-img" src="~/assets/TFiles/img/logo.jpg" />
                     <div class="middle">
                         <div class="text">
-                                    <a asp-action="Index" asp-controller="Classes" asp-area="Manger">
-                                        الذهاب الى لوحة التحكم
-                                    </a>
+                            <a asp-action="Index" asp-controller="Classes" asp-area="Manger">
+                                الذهاب الى لوحة التحكم
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     <div class="middle">
                         <div class="text">
                             <a asp-action="Index" asp-controller="Classes" asp-area="TeacherUser">
-                               الذهاب الى لوحة التحكم 
+                                الذهاب الى لوحة التحكم
                             </a>
                         </div>
                     </div>
@@ -125,11 +125,11 @@
         }
 
     </div>
-            </div>
+</div>
 
 
 
- 
+
 
 
 

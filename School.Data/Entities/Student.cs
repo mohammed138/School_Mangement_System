@@ -15,11 +15,11 @@ namespace School.Data.Entities
         [Display(Name = "معرف الطالب")]
         public int Id { get; set; }
 
-        [Required] 
+        [Required(ErrorMessage = "حقل الاسم الأول مطلوب ")]
         [Display(Name = "الاسم الأول")]
         public string FirstName { get; set; }
 
-        [Required] 
+        [Required(ErrorMessage = "حقل اسم العائلة مطلوب  ")] 
         [Display(Name = "اسم العائلة ")]
         public string LastName { get; set; }
 
@@ -28,33 +28,37 @@ namespace School.Data.Entities
         public string FullName => FirstName + " " + LastName;
 
 
-        [Display(Name = "رقم الهاتف ")]
-        [Required]
+        [Required(ErrorMessage = "حقل رقم الهاتف   مطلوب  ")]
         //[RegularExpression("([1-9][0-9]*)", ErrorMessage = "يجب أن يكون العدد عددًا طبيعيًا")]
 
+
+        [Display(Name = "رقم الهاتف")]
         public string PhoneNumber { get; set; }
 
         [Display(Name = "الايميل")]
-        [Required]
         [EmailAddress]
         public string EmailAddress { get; set; }
 
         [Display(Name = "تاريخ الميلاد")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy}")]
+        //[ErrorMessage = "حقل تاريخ الميلاد   مطلوب  "]
+
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy}")]
         public DateTime DOP { get; set; }
 
         [Display(Name = " عنوان السكن ")]
-        [Required]
+        [Required(ErrorMessage = "حقل   عنوان السكن مطلوب  ")] 
         public string AddressName { get; set; }
 
         [Display(Name = "العام الدراسي")]
-        [Required]
+        [Required(ErrorMessage = "حقل السنة مطلوب  ")]
         [DataType(DataType.Date)]
-        public string SchoolYear { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy}")]
+        public DateTime SchoolYear { get; set; }
 
 
         [Display(Name = "مكان الولادة ")]
-        [Required]
+        [Required(ErrorMessage = "حقل مكان الولادة    مطلوب  ")] 
         public string PlaceOBirth { get; set; }
 
 

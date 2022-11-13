@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\StudentUser\Views\Shared\_LoginPartial.cshtml" />
+    <Content Remove="Areas\TeacherUser\Views\Marks\Delete.cshtml" />
+    <Content Remove="Areas\TeacherUser\Views\Shared\_LoginPartial.cshtml" />
+    <Content Remove="Areas\TeacherUser\Views\SkillsBehaviors\Delete.cshtml" />
+    <Content Remove="Areas\TeacherUser\Views\Skills\Delete.cshtml" />
+    <Content Remove="Areas\TeacherUser\Views\Students\Delete.cshtml" />
     <Content Remove="wwwroot\assets\TFiles\hero_1.jpg" />
     <Content Remove="wwwroot\assets\TFiles\hero_2.jpg" />
     <Content Remove="wwwroot\assets\TFiles\hero_3.jpg" />
@@ -92,24 +98,23 @@
     <None Include="Areas\TeacherUser\Views\Classes\Index.cshtml" />
     <None Include="Areas\TeacherUser\Views\Classes\specificClass.cshtml" />
     <None Include="Areas\TeacherUser\Views\Marks\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Marks\Delete.cshtml" />
     <None Include="Areas\TeacherUser\Views\Marks\Edit.cshtml" />
     <None Include="Areas\TeacherUser\Views\Marks\Find.cshtml" />
-    <None Include="Areas\TeacherUser\Views\Marks\GetStudentMarkDetails.cshtml" />
     <None Include="Areas\TeacherUser\Views\Marks\GetStudentMarks.cshtml" />
     <None Include="Areas\TeacherUser\Views\Shared\Error.cshtml" />
     <None Include="Areas\TeacherUser\Views\Shared\_LoginPartial.cshtml" />
     <None Include="Areas\TeacherUser\Views\Shared\_TeacherLayout.cshtml" />
     <None Include="Areas\TeacherUser\Views\Shared\_ValidationScriptsPartial.cshtml" />
     <None Include="Areas\TeacherUser\Views\SkillsBehaviors\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\SkillsBehaviors\Delete.cshtml" />
     <None Include="Areas\TeacherUser\Views\SkillsBehaviors\Edit.cshtml" />
     <None Include="Areas\TeacherUser\Views\SkillsBehaviors\GetStudentSkillsBehaviors.cshtml" />
     <None Include="Areas\TeacherUser\Views\Skills\Create.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Skills\Delete.cshtml" />
     <None Include="Areas\TeacherUser\Views\Skills\Edit.cshtml" />
     <None Include="Areas\TeacherUser\Views\Skills\GetStudentSkills.cshtml" />
-    <None Include="Areas\TeacherUser\Views\TeacherCP\CPanel.cshtml" />
-    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\Create.cshtml" />
-    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\Edit.cshtml" />
-    <None Include="Areas\TeacherUser\Views\WeaknessStrengths\GetStudentWS.cshtml" />
+    <None Include="Areas\TeacherUser\Views\Students\Delete.cshtml" />
     <None Include="Areas\TeacherUser\Views\_ViewImports.cshtml" />
     <None Include="Areas\TeacherUser\Views\_ViewStart.cshtml" />
     <None Include="wwwroot\assets\TFiles\hero_1.jpg" />

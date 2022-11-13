@@ -3,12 +3,30 @@
 @{
     ViewData["Title"] = "إضافة طالب جديد";
 }
+
+
+
 <link rel="stylesheet" href="~/assets/TFiles/css/CreateStyle.css" />
+<link rel="stylesheet" href="~/css/CreateEditMediaQuery.css" />
 
 
 
+<form class="kt-form" id="kt_form" asp-action="Create">
 
-<form class="kt-form" id="kt_form" asp-action="Create" asp-controller="Students">
+    <div class="col-12">
+        <div class="row">
+            <span asp-validation-for="@Model.Student.FirstName" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.LastName" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.DOP" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.PlaceOBirth" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.AddressName" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.PhoneNumber" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.EmailAddress" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.GenderId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.ClassId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.Student.SemesterId" class="col-12 text-right text-danger">  </span> 
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="footer-section">
             <div class="row" style="color: #fff; background-color: #8c9cd0; padding: 15px;">
@@ -53,7 +71,8 @@
                                     <div class="col-xl-8">
                                         <div class="kt-section kt-section--first">
                                             <div class="kt-section__body">
-                                                <h3 class="kt-section__title kt-section__title-lg " style="text-align: right;"> :  بيانات الطالب </h3>
+                                                <h3 class="kt-section__title kt-section__title-lg " style="text-align: right;"> : البيانات الأساسية </h3>
+
                                                 <div class="form-group row">
                                                     <div class="col-9">
                                                         <input asp-for="@Model.Student.FirstName" class="form-control" />
@@ -133,11 +152,7 @@
                                             </div>
                                         </div>
                                         <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
-                                        <div class="kt-section">
-                                            <div class="kt-section__body">  </div>
-                                        </div>
-
-
+                                       
                                     </div>
                                     <div class="col-xl-2"></div>
                                 </div>
@@ -152,9 +167,10 @@
         </div>
     </div>
 </form>
- 
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
 
+ 

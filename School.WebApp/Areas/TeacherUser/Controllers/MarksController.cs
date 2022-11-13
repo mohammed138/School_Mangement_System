@@ -24,6 +24,7 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
         public string UserEmail;
         public int TeacherUserId;
         public int StudId;
+        public List<Mark> MarksListTest { get; set; }
 
         public MarksController(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
@@ -35,15 +36,121 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
 
 
 
-        public async Task<IActionResult> Index()
-        {
-            MarkViewModel model = new MarkViewModel();
+        
+         
+   
 
-            model.Decisions = _context.Decisions.FirstOrDefault();
-            model.MarkList = _context.Mark.ToList();
+
+
+        public IActionResult EditTest()
+        {
+            ListOfStudentMarks model = new ListOfStudentMarks()
+            {
+                StudentMarks = _context.Mark.Include(d=>d.Class).Include(d => d.Teacher).Include(d => d.Subject).Include(d => d.Student)
+                .Where(d => d.SubjectId == 811).Where(a => a.ClassId == 1010).ToList()
+            };
+
+            if (model.StudentMarks.Count < 0)
+            {
+                model.IsActive = false;
+            }
+            else
+            {
+                model.IsActive = true;
+            }
 
             return View(model);
 
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditTest(ListOfStudentMarks model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    foreach (var item in model.StudentMarks)
+                    {
+
+                        item.UpdatedAt = DateTime.Now;
+                        item.UpdatedBy = UserEmail;
+                    }
+
+                    _context.UpdateRange(model.StudentMarks);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (model.StudentMarks.Count() < 0)
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index", "Classes");
+            }
+            return View(model);
+        }
+
+
+
+
+
+
+
+
+
+
+        
+
+        public async Task<IActionResult> Search(MarkViewModel model)
+        {
+
+            if (model.Mark.ClassId != 0  && model.Mark.SubjectId != 0)
+            {
+                model.MarkList = _context.Mark.Where(s => s.ClassId== model.Mark.ClassId).Where(d=>d.SubjectId == model.Mark.SubjectId).Where(d=>d.TeacherId == TeacherUserId)
+                   .Include(d=>d.Class).Include(d => d.Subject).Include(d => d.Teacher).Include(d => d.Student).ToList();
+            }
+
+            return View(model);
+        }
+
+
+
+
+
+
+
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            MarkViewModel model = new MarkViewModel();
+            if (id == null)
+            {
+                return NotFound();
+            }
+            model.Decisions = _context.Decisions.FirstOrDefault();
+            model.Student = _context.Student.Find(id);
+            model.MarkList = await _context.Mark
+                .Include(m => m.Class)
+                .Include(m => m.Student)
+                .Include(m => m.Subject)
+                .Include(m => m.Teacher)
+                .Where(d => d.StudentId == id).ToListAsync();
+
+            model.ClassID = (int)id;
+
+
+            if (model == null)
+            {
+                return NotFound();
+            }
+            //model.StudentId = (int)id;
+            return View(model);
         }
 
         public async Task<IActionResult> GetStudentMarks(int? id)
@@ -73,15 +180,14 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
             return View(model);
         }
 
- 
+
+
         public IActionResult Create(int? Id)
-        { MarkViewModel model = new MarkViewModel()
         {
-            SubjectsDrop = _context.Subject.Where(d => d.TeacherId == TeacherUserId).Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() }),
-            SkillsTypeDrop = _context.SkillsType.Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() }),
-            StudentDrop = _context.Student.Where(d => d.ClassId == Id).Select(i => new SelectListItem { Text = i.FullName, Value = i.Id.ToString() }),
-            
-             ClassID = (int)Id
+            MarkViewModel model = new MarkViewModel()
+           {
+               StudentList = _context.Student.Where(d => d.ClassId == Id).ToList(),
+              ClassID = (int)Id
             };
              
             return View(model);
@@ -104,7 +210,88 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
             return View(MarkViewModel);
         }
 
-    
+
+
+
+        public IActionResult CreateList() 
+        {
+            CRUDMarksViewModel model = new CRUDMarksViewModel();
+            List<Student> StudentList = _context.Student.Where(d => d.ClassId == 1010).ToList();
+
+      
+            foreach (var item in StudentList)
+            {
+                MarksListTest.Add(new Mark { StudentId = item.Id, ClassId = 1010, TeacherId = TeacherUserId, SubjectId = 811 });
+             }
+            model.MarkList = MarksListTest;
+           
+
+ 
+             return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateList(CRUDMarksViewModel model  )
+        {
+            
+            if (ModelState.IsValid)
+            {
+
+ 
+
+                    foreach (var i in model.MarkList)
+                    {
+                        if (i.StudentId != null && i.ShortQuizzes != null || i.QualitativeAssessmentGrades != null)
+                        {
+                            _context.Mark.Add(new Mark
+                            {
+                                StudentId = i.StudentId,
+                                ClassId = i.ClassId,
+                                SubjectId = i.SubjectId,
+                                TeacherId = i.TeacherId,
+                                CreatedAt = DateTime.Now,
+                                CreatedBy = UserEmail,
+                                ShortQuizzes = i.ShortQuizzes,
+                                QualitativeAssessmentGrades = i.QualitativeAssessmentGrades,
+                                FinalTermValue = i.FinalTermValue
+                            });
+                        }
+                    }
+               
+
+                //foreach (var item in model.MarkValuesList)
+                //{ 
+                //        _context.Mark.Add(new Mark
+                //        {
+                //            StudentId = item.StudentId,
+                //            ClassId = item.ClassId,
+                //            SubjectId = item.SubjectId,
+                //            TeacherId = item.TeacherId,
+                //            CreatedAt = DateTime.Now,
+                //            CreatedBy = UserEmail,
+                //            ShortQuizzes = item.ShortQuizzes,
+                //            QualitativeAssessmentGrades = item.QualitativeAssessmentGrades,
+                //            FinalTermValue = item.FinalTermValue
+                //        });
+
+                //}
+
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index", "Classes");
+            }
+            return View();
+        }
+
+
+
+
+
+
+
+
+
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -162,10 +349,10 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
             return View(model);
         }
 
-       
 
 
-         
+
+
 
         public async Task<IActionResult> Delete(int? id)
         {
@@ -188,7 +375,7 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
             return View(mark);
         }
 
-        // POST: TeacherUsers/Marks/Delete/5
+        // POST: TeacherUser/Marks1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -199,7 +386,6 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool MarkExists(int id)
         {
             return _context.Mark.Any(e => e.Id == id);
@@ -207,63 +393,4 @@ namespace School.WebApp.Areas.TeacherUsers.Controllers
     }
 }
 
-////GET - UPSERT
-//public IActionResult Upsert(int? id)
-//{
-
-//    MarkViewModel MarkViewModel = new MarkViewModel();
-//    //{
-//    //    Product = new Product(),
-//    //    CategorySelectList = _context.Category.Select(i => new SelectListItem
-//    //    {
-//    //        Text = i.Name,
-//    //        Value = i.Id.ToString()
-//    //    }),
-
-//    //};
-
-//    if (id == null)
-//    {
-//        //this is for create
-//        return View(MarkViewModel);
-//    }
-//    else
-//    {
-//        MarkViewModel.Mark = _context.Mark.Find(id);
-//        if (MarkViewModel.Mark == null)
-//        {
-//            return NotFound();
-//        }
-//        return View(MarkViewModel);
-//    }
-//}
-
-
-////POST - UPSERT
-//[HttpPost]
-//[ValidateAntiForgeryToken]
-//public IActionResult Upsert(MarkViewModel MarkViewModel)
-//{
-//    if (ModelState.IsValid)
-//    { 
-//        if (MarkViewModel.Mark.Id == 0)
-//        {
-//            //Creating 
-
-//            _context.Mark.Add(MarkViewModel.Mark);
-//        }
-//        else
-//        {
-//            //updating
-
-//            _context.Mark.Update(MarkViewModel.Mark);
-//        }
-
-
-//        _context.SaveChanges();
-//        return RedirectToAction("Index");
-//    }
-
-//    return View(MarkViewModel);
-
-//}
+ 

@@ -7,6 +7,7 @@
 
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
 
 
 
@@ -66,10 +67,10 @@
                             <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
 
                                 <td class="text-right">  الإجراءات     </td>
-                                 <td class="text-right">   الإنجاز    </td>
-                                <td class="text-right">   رقم الشهر    </td>
-                                <td class="text-right">   مدرس المادة     </td>
-                                <td class="text-right">   المادة    </td>
+                                <td class="text-right mobile-hidden">   الإنجاز    </td>
+                                <td class="text-right mobile-hidden">   رقم الشهر    </td>
+                                <td class="text-right mobile-hidden">   مدرس المادة     </td>
+                                <td class="text-right mobile-hidden">   المادة    </td>
                                 <td class="text-right">  اسم الطالب  </td>
 
 
@@ -99,7 +100,7 @@
                                                     @if (Model.Decisions.AllowToCreatMarks == true)
                                                     {
                                                         @if (Model.Decisions.UpdatedAllowedFrom <= DateTime.Now || Model.Decisions.UpdatedAllowedTo >= DateTime.Now)
-                                                        { 
+                                                        {
                                                             <a class="dropdown-item" asp-action="Edit" asp-controller="SkillsBehaviors" asp-route-id="@item.Id">
                                                                 تعديل
                                                                 <i class="fa-brands fa-first-order" style="padding-left: 5px;"></i>
@@ -111,16 +112,19 @@
                                                         التفاصيل
                                                         <i class="fa-sharp fa-solid fa-eye" style="padding-left: 5px;"></i>
                                                     </a>
-
+                                                    @*<a class="dropdown-item" asp-action="Delete" asp-controller="SkillsBehaviors" asp-route-id="@item.StudentId">
+                                                        حذف
+                                                        <i class="fa-solid fa-trash" style="padding-left: 5px;"></i>
+                                                    </a>*@
                                                 </div>
                                             </div>
 
                                         </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
-                                        <td class="text-right">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
-                                        <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
-                                        <td class="text-right">
+                                        <td class="text-right mobile-hidden">  @Html.DisplayFor(modelItem => item.CompletionType.Name)   </td>
+                                        <td class="text-right mobile-hidden">  @Html.DisplayFor(modelItem => item.Duration.Name)  </td>
+                                        <td class="text-right mobile-hidden">  @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                                        <td class="text-right mobile-hidden"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+                                        <td class="text-right mobile-hidden">
                                             @Html.DisplayFor(modelItem => item.Student.FullName)
                                         </td>
                                     </tr>
@@ -128,10 +132,7 @@
 
 
                             }
-                            else
-                            {
-
-                            }
+                            
                         </tbody>
                     </table>
                 </div>

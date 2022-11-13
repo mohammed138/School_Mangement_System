@@ -149,9 +149,38 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
 
 
 
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var mark = await _context.SkillsBehavior
+                .Include(m => m.Class)
+                .Include(m => m.Student)
+                .Include(m => m.Subject)
+                .Include(m => m.Teacher)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (mark == null)
+            {
+                return NotFound();
+            }
 
+            return View(mark);
+        }
 
+        // POST: TeacherUser/Marks1/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var mark = await _context.SkillsBehavior.FindAsync(id);
+            mark.IsDelete = true;
+            _context.SkillsBehavior.Update(mark);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
         private bool SkillsBehaviorExists(int id)
         {
             return _context.SkillsBehavior.Any(e => e.Id == id);

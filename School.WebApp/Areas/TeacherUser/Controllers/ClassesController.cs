@@ -122,7 +122,9 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
             MarkViewModel model = new MarkViewModel()
             { 
                 SkillsTypeDrop = _context.SkillsType.Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() }),
-                Decisions = _context.Decisions.FirstOrDefault()
+                Decisions = _context.Decisions.FirstOrDefault(),
+                SubjectsDrop = _context.Subject.Where(d=>d.TeacherId == TeacherUserId).Select(i => new SelectListItem { Text = i.Name, Value = i.Id.ToString() }),
+                ClassDrop = _context.Subject.Where(d=>d.TeacherId == TeacherUserId).Include(d=>d.Class).Select(i => new SelectListItem { Text = i.Class.Name, Value = i.ClassId.ToString() })
 
             };
             MarkIDs = _context.Mark.Where(d => d.ClassId == id).Select(h => h.Id).ToList();
@@ -228,42 +230,42 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
             return View(model);
         }
 
-        public IActionResult FindSkillsSuggestionss(int? id)
-        {
-            List<int> SkillsSuggestionsIDs = new List<int>();
-            List<SkillsSuggestions> SkillsSuggestionsList = new List<SkillsSuggestions>();
-            if (id == null)
-            {
-                return NotFound();
-            }
-            SkillsSuggestionsViewModel model = new SkillsSuggestionsViewModel()
-            {
-                ClassID = (int)id
-            };
+        //public IActionResult FindSkillsSuggestionss(int? id)
+        //{
+        //    List<int> SkillsSuggestionsIDs = new List<int>();
+        //    List<SkillsSuggestions> SkillsSuggestionsList = new List<SkillsSuggestions>();
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    SkillsSuggestionsViewModel model = new SkillsSuggestionsViewModel()
+        //    {
+        //        ClassID = (int)id
+        //    };
 
-            SkillsSuggestionsIDs = _context.SkillsSuggestions.Where(d => d.ClassId == id).Select(h => h.Id).ToList();// get student Ids from class   
-            foreach (var item in SkillsSuggestionsIDs)
-            {
-                SkillsSuggestionsList.Add(_context.SkillsSuggestions.Include(d => d.Teacher).Include(d => d.Class).Include(d => d.Student).Include(d => d.Subject).Where(d => d.Id == item).FirstOrDefault());
-            }
-            if (SkillsSuggestionsIDs.Count() > 0)
-            {
-                model.SkillsSuggestionsList = SkillsSuggestionsList;
-                model.IsActive = true;
-                //model.SubjectName = _context.Teacher.Where(d => d.EmailAddress == UserEmail).Select(d => d.SubjectName).FirstOrDefault();
-                model.TeacherName = _context.Teacher.Where(d => d.EmailAddress == UserEmail).Select(d => d.FullName).FirstOrDefault();
-            }
-            else
-            {
-                model.IsActive = false;
-                //model.ClassID = (int)id;
-            }
-            if (model == null)
-            {
-                return NotFound();
-            }
-            return View(model);
-        }
+        //    SkillsSuggestionsIDs = _context.SkillsSuggestions.Where(d => d.ClassId == id).Select(h => h.Id).ToList();// get student Ids from class   
+        //    foreach (var item in SkillsSuggestionsIDs)
+        //    {
+        //        SkillsSuggestionsList.Add(_context.SkillsSuggestions.Include(d => d.Teacher).Include(d => d.Class).Include(d => d.Student).Include(d => d.Subject).Where(d => d.Id == item).FirstOrDefault());
+        //    }
+        //    if (SkillsSuggestionsIDs.Count() > 0)
+        //    {
+        //        model.SkillsSuggestionsList = SkillsSuggestionsList;
+        //        model.IsActive = true;
+        //        //model.SubjectName = _context.Teacher.Where(d => d.EmailAddress == UserEmail).Select(d => d.SubjectName).FirstOrDefault();
+        //        model.TeacherName = _context.Teacher.Where(d => d.EmailAddress == UserEmail).Select(d => d.FullName).FirstOrDefault();
+        //    }
+        //    else
+        //    {
+        //        model.IsActive = false;
+        //        //model.ClassID = (int)id;
+        //    }
+        //    if (model == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(model);
+        //}
         private bool ClassExists(int id)
         {
             return _context.Classes.Any(e => e.Id == id);

@@ -60,7 +60,7 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
         }
 
 
-        public IActionResult Create(int? ClassID)
+        public IActionResult Create( )
         {
             var model = new SkillsViewModel(); 
             model.DurationDrop = _context.Duration.Select(i => new SelectListItem { Value = i.Id.ToString(), Text = i.Name });
@@ -149,9 +149,39 @@ namespace School.WebApp.Areas.TeacherUser.Controllers
 
 
 
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var mark = await _context.Skills
+                .Include(m => m.Class)
+                .Include(m => m.Student)
+                .Include(m => m.Subject)
+                .Include(m => m.Teacher)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (mark == null)
+            {
+                return NotFound();
+            }
 
- 
+            return View(mark);
+        }
+
+        // POST: TeacherUser/Marks1/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var mark = await _context.Skills.FindAsync(id);
+            mark.IsDelete = true;
+            _context.Skills.Update(mark);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
         private bool SkillsExists(int id)
         {
             return _context.Skills.Any(e => e.Id == id);

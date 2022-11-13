@@ -1,0 +1,325 @@
+﻿
+
+
+
+
+
+
+
+/*500%*/
+@media(min-width:0px) and (max-width:299px) {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display: none !important;
+    }
+
+    .navbar {
+        border-radius: 0px !important;
+    }
+
+    #btnExportData {
+        padding: 3px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        border: 0px !important;
+        background-color: #4159AE !important;
+        color: #fff !important;
+        margin-bottom: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: right !important;
+        text-align: right !important;
+        direction: rtl !important;
+    }
+
+    .fa-regular, .far {
+        font-weight: 400;
+        font-size: 13px !important;
+        color: #4159AE;
+    }
+
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+    .mobile-hidden {
+        display: none
+    }
+     
+}
+/*400%*/
+@media(min-width:300px) and (max-width:445px) {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display: none !important;
+    }
+    
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .navbar {
+        border-radius: 0px !important;
+    }
+
+    #btnExportData {
+        padding: 3px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        border: 0px !important;
+        background-color: #4159AE !important;
+        color: #fff !important;
+        margin-bottom: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        float: right !important;
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    .mobile-hidden {
+        display: none
+    }
+}
+/*300%*/
+@media(min-width:446px) and (max-width:545px) {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display: none !important;
+    }
+
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .navbar {
+        border-radius: 0px !important;
+    }
+
+    #btnExportData {
+        padding: 3px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        border: 0px !important;
+        background-color: #4159AE !important;
+        color: #fff !important;
+        margin-bottom: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+    .mobile-hidden {
+        display: none
+    }
+}
+/*250%*/
+@media(min-width:546px) and (max-width:699px) {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display: none !important;
+    }
+
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .navbar {
+        border-radius: 0px !important;
+    }
+
+    #btnExportData {
+        padding: 3px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        border: 0px !important;
+        background-color: #4159AE !important;
+        color: #fff !important;
+        margin-bottom: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+    .mobile-hidden{
+        display:none
+    }
+}
+/*200%*/
+@media(min-width:650px) and (max-width:768px) {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display: none;
+    }
+
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .navbar {
+        border-radius: 0px !important;
+    }
+
+    #btnExportData {
+        padding: 3px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        border: 0px !important;
+        background-color: #4159AE !important;
+        color: #fff !important;
+        margin-bottom: 20px;
+    }
+}
+/*175%*/
+@media(min-width:768px) and (max-width:790px) {
+    #sidebar ul li a {
+        font-size: 13px !important;
+    }
+
+    #sidebar {
+        min-width: 150px;
+        max-width: 150px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+        display:none
+    }
+
+    .h3, h3 {
+        font-size: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+
+    input[type=checkbox], input[type=radio] {
+        box-sizing: border-box;
+        padding: 0;
+        margin-right: 5px;
+        margin-left: -20px;
+    }
+
+    .fa-file-pdf {
+        font-size: 10px !important;
+    }
+
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+}
+/*150%*/
+@media(min-width:791px) and (max-width:999px) {
+    #sidebar ul li a {
+        font-size: 13px !important;
+    }
+
+    #sidebar {
+        min-width: 200px;
+        max-width: 200px;
+        background: #4159AE;
+        color: #fff;
+        transition: all 0.3s;
+    }
+
+    .h3, h3 {
+        font-size: 20px;
+    }
+
+    .img-brand {
+        display: none;
+    }
+
+    input[type=checkbox], input[type=radio] {
+        box-sizing: border-box;
+        padding: 0;
+        margin-right: 1px;
+        margin-left: -15px;
+    }
+
+    .fa-file-pdf {
+        font-size: 10px !important;
+    }
+
+    .btn-dark {
+        color: #fff;
+        background-color: #4159AE;
+        border-color: #4159AE;
+    }
+}

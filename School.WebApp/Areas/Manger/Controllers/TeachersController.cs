@@ -188,7 +188,7 @@ namespace School.WebApp.Areas.Manger.Controllers
 
             if (model.Rows.Count > 0)
             {
-                string fontLoc = @"C:\Users\hp\Desktop\arial-unicode-ms\ARIALUNI.ttf"; // make sure to have the correct path to the font file
+                string fontLoc = @"./ARIALUNI.ttf"; // make sure to have the correct path to the font file
 
                 int pdfRowIndex = 1;
                 string filename = "عرض معلمين المدرسة    " + DateTime.Now.ToString("dd-MM-yyyy hh_mm_s_tt");
@@ -227,7 +227,6 @@ namespace School.WebApp.Areas.Manger.Controllers
 
 
                 table.AddCell(new Phrase("الإيميل     ", fHeader));
-                table.AddCell(new Phrase("سنة التعيين   ", fHeader));
                 table.AddCell(new Phrase("تخصص المعلم      ", fHeader));
   
                 foreach (DataRow data in model.Rows)
@@ -288,13 +287,12 @@ namespace School.WebApp.Areas.Manger.Controllers
                 new DataColumn("LastName"),
                 new DataColumn("PhoneNumber"),
                 new DataColumn("EmailAddress"),
-                new DataColumn("AppointmentYear"), 
                 new DataColumn("Specialization")  
             });
             foreach (var model in ModelList)
             {
                 dtProduct.Rows.Add(model.FirstName, model.LastName, model.PhoneNumber,
-                                   model.EmailAddress, model.AppointmentYear.ToString("yyyy"), model.Specialization );
+                                   model.EmailAddress,  model.Specialization );
             }
 
             return dtProduct;

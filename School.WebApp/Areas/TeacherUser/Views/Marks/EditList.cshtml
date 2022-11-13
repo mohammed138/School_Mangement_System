@@ -1,0 +1,118 @@
+﻿
+
+@model School.Data.ViewModels.CRUDMarksViewModel
+@{
+    ViewData["Title"] = "CreateList";
+}
+
+
+
+
+<form asp-action="CreateList" asp-controller="Marks" method="post">
+
+
+    @foreach (var item in Model.MarkList.ToList())
+    {
+
+        <tr>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.ShortQuizzes" class="form-control" />
+            </td>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.QualitativeAssessmentGrades" class="form-control" />
+            </td>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.FinalTermValue" class="form-control" />
+            </td>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.CreatedAt" />
+            </td>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.CreatedBy" value="moh@gmail.com" />
+            </td>
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.TeacherId" value="1734" />
+            </td>
+
+            <td class="text-center mobile-hidden">
+                <input asp-for="@item.SubjectId" value="811" />
+            </td>
+
+
+        </tr>
+
+
+
+        <div>
+
+            @{
+    
+                for (int i = Model.MarkList.Count - 1; i >= 0; i--)
+                {
+                    if (Model.MarkList[i].StudentId == item.StudentId)
+                    {
+                        Model.MarkList[i] = new School.Data.Entities.Mark
+                        {
+                            ClassId = item.ClassId,
+                            TeacherId = item.TeacherId,
+                            SubjectId = item.SubjectId,
+                            StudentId = item.StudentId,
+                            QualitativeAssessmentGrades = item.QualitativeAssessmentGrades,
+                            ShortQuizzes = item.ShortQuizzes,
+                            FinalTermValue = item.FinalTermValue,
+
+                        };
+                    }
+                }
+
+
+
+            }
+
+            @*@{
+
+            List<School.Data.Entities.Mark> MarkModelList = new List<School.Data.Entities.Mark>();
+
+            MarkModelList.Add(new School.Data.Entities.Mark
+            {
+                FinalTermValue = item.FinalTermValue,
+                ShortQuizzes = item.ShortQuizzes,
+                QualitativeAssessmentGrades = item.QualitativeAssessmentGrades,
+                TeacherId = item.TeacherId,
+                SubjectId = item.SubjectId,
+                ClassId = item.ClassId,
+                StudentId = item.StudentId
+            });
+            Model.MarkList = MarkModelList;
+            Model.MarkValuessssList = MarkModelList;
+
+        }*@
+        </div>
+
+
+
+    }
+
+    @*@foreach (var item in Model.Mark.StudentList)
+    {
+        <p>
+            @item.FullName
+        </p>
+        <p>
+            @item.Id
+        </p>
+    }*@
+
+    <div>
+
+       
+    </div>
+    <input type="submit" value="حفظ" class="btn btn-primary" style="color: #fff; border-color: #8c9cd0; background-color: #8c9cd0; " />
+</form>
+
+
+
+
+
+
+

@@ -53,7 +53,8 @@ namespace School.WebApp.Areas.Manger.Controllers
 
             if (@class.Rows.Count > 0)
             {
-                string fontLoc = @"C:\Users\hp\Desktop\arial-unicode-ms\ARIALUNI.ttf"; // make sure to have the correct path to the font file
+                string fontLoc = @"./ARIALUNI.ttf"; // make sure to have the correct path to the font file
+                //string fontLoc = Static.FontFamily; // make sure to have the correct path to the font file
 
                 int pdfRowIndex = 1;
                 string filename = "الفصول الدراسية -" + DateTime.Now.ToString("dd-MM-yyyy hh_mm_s_tt");
@@ -255,11 +256,9 @@ namespace School.WebApp.Areas.Manger.Controllers
             return View(model);
         }
 
+     
 
 
-
-
-      
 
     }
 }

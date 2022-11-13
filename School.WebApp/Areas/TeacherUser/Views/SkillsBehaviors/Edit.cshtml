@@ -6,6 +6,7 @@
     ViewData["Title"] = "تعديل تقييم ";
 }
 
+<link rel="stylesheet" href="~/css/CreateEditMediaQuery.css" />
 
 
 <style>
@@ -162,20 +163,34 @@
         .save-click :hover {
             cursor: pointer;
         }
+
+    .Edit-title {
+        padding-top: 5px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Changa', sans-serif;
+    }
 </style>
 
 <form class="kt-form" id="kt_form" asp-action="Edit">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="@Model.SkillsBehavior.Id" />
-    <input type="hidden" asp-for="@Model.SkillsBehavior.TeacherId" />
-    <input type="hidden" asp-for="@Model.SkillsBehavior.CreatedBy" />
+     <input type="hidden" asp-for="@Model.SkillsBehavior.CreatedBy" />
     <input type="hidden" asp-for="@Model.SkillsBehavior.CreatedAt" />
     <input type="hidden" asp-for="@Model.SkillsBehavior.IsActive" />
     <input type="hidden" asp-for="@Model.SkillsBehavior.IsDelete" />
     <input type="hidden" asp-for="@Model.SkillsBehavior.IsArchive" />
-    <input type="hidden" asp-for="@Model.SkillsBehavior.ClassId" />
-    <input type="hidden" asp-for="@Model.SkillsBehavior.SubjectId" />
-    <input type="hidden" asp-for="@Model.SkillsBehavior.StudentId" />
+
+    <div class="col-12">
+        <div class="row">
+            <span asp-validation-for="@Model.SkillsBehavior.SubjectId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.SkillsBehavior.StudentId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.SkillsBehavior.DurationId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.SkillsBehavior.CompletionTypeId" class="col-12 text-right text-danger">  </span>
+            <span asp-validation-for="@Model.SkillsBehavior.Name" class="col-12 text-right text-danger">  </span>
+         </div>
+    </div>
+
 
     <div class="col-md-12">
         <div class="footer-section">
@@ -191,7 +206,7 @@
                 </div>
                 <div class="col-6 text-right">
                     <div class="back-click">
-                        <div style="padding-top: 5px; color: #fff; font-size: 20px; font-family: 'Changa', sans-serif; ">
+                        <div class="Edit-title">
                             <span class="">
                                 تعديل تقييم
                             </span>
@@ -222,18 +237,34 @@
                                         <div class="kt-section kt-section--first">
                                             <div class="kt-section__body">
                                                 <h3 class="kt-section__title kt-section__title-lg " style="text-align: right;"> : البيانات الأساسية </h3>
+                                                @*<div class="form-group row">
+                                    <div class="col-9">
+                                        <select asp-for="@Model.SkillsBehavior.SubjectId" class="form-control" asp-items="@Model.SubjectsDrop"></select>
+                                    </div>
+                                    <label class="col-3 col-form-label">المادة </label>
+                                </div>*@
+
                                                 <div class="form-group row">
                                                     <div class="col-9">
-                                                        <select asp-for="@Model.SkillsBehavior.StudentId" disabled class="form-control" asp-items="Model.StudentDrop"></select>
+                                                        <select asp-for="@Model.SkillsBehavior.StudentId" class="form-control" asp-items="@Model.StudentDrop"></select>
                                                     </div>
-                                                    <label class="col-3 col-form-label">الطالب</label>
+                                                    <label class="col-3 col-form-label">الطالب </label>
                                                 </div>
-                                                @*<div class="form-group row">
+                                                <div class="form-group row">
                                                     <div class="col-9">
-                                                        <select asp-for="@Model.SkillsBehavior.SubjectId" disabled class="form-control" asp-items="Model.SubjectsDrop"></select>
+                                                        <select asp-for="@Model.SkillsBehavior.SubjectId" class="form-control" asp-items="@Model.SubjectsDrop"></select>
                                                     </div>
-                                                    <label class="col-3 col-form-label"> المادة</label>
-                                                </div>*@
+                                                    <label class="col-3 col-form-label">المادة </label>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <div class="col-9">
+                                                        <input asp-for="@Model.SkillsBehavior.Name" class="form-control" type="text" style="direction: rtl;">
+                                                    </div>
+                                                    <label class="col-3 col-form-label">   اسم البند    </label>
+                                                </div>
+
+
 
                                             </div>
                                         </div>
@@ -243,27 +274,20 @@
                                                 <h3 class="kt-section__title kt-section__title-lg text-right" style="text-align: right !important;"> : البيانات التفصيلية </h3>
 
 
-
-
-
-                                                @*<div class="form-group row">
+                                                <div class="form-group row">
                                                     <div class="col-9">
-                                                        <select asp-for="@Model.SkillsBehavior.DurationId" class="form-control" asp-items="Model.DurationDrop"></select>
+                                                        <select asp-for="@Model.SkillsBehavior.DurationId" class="form-control" asp-items="@Model.DurationDrop"></select>
                                                     </div>
-                                                    <label class="col-3 col-form-label">  رقم الأسبوع </label>
-                                                </div>*@
+                                                    <label class="col-3 col-form-label"> الشهر </label>
+                                                </div>
 
 
                                                 <div class="form-group row">
                                                     <div class="col-9">
-                                                        <select asp-for="@Model.SkillsBehavior.CompletionTypeId" class="form-control" asp-items="Model.CompletionTypeDrop"></select>
+                                                        <select asp-for="@Model.SkillsBehavior.CompletionTypeId" class="form-control" asp-items="@Model.CompletionTypeDrop"></select>
                                                     </div>
-                                                    <label class="col-3 col-form-label">  التقييم   </label>
-
+                                                    <label class="col-3 col-form-label"> نوع الإنجاز</label>
                                                 </div>
- 
-
-
                                             </div>
                                         </div>
 
@@ -284,6 +308,10 @@
     </div>
 </form>
 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 
 
 

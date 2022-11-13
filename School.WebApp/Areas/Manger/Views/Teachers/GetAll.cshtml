@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 <p class="text-right">
     <a class="btn btn-info" asp-action="Create" style="background-color: #4159AE;color:#fff;font-weight:500;">
@@ -22,7 +23,7 @@
         </button>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-5">
         <label>
             <input id="ExportPdf" name="Export" type="radio"
                    value="Pdf" />
@@ -38,13 +39,13 @@
         <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
             <th class="text-right">الإجراءات</th>
 
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 الإيميل
             </th>
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 رقم الهاتف
             </th>
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 التخصص
             </th>
             <th class="text-right">
@@ -93,13 +94,13 @@
                     </div>
                 </td>
 
-                <td class="text-right">
+                <td class="text-right mobile-hidden">
                     @Html.DisplayFor(modelItem => item.EmailAddress)
                 </td>
-                <td class="text-right">
+                <td class="text-right mobile-hidden">
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
-                <td class="text-right">
+                <td class="text-right mobile-hidden">
                     @Html.DisplayFor(modelItem => item.Specialization)
                 </td>
 

@@ -88,7 +88,7 @@ namespace School.WebApp.Areas.Manger.Controllers
 
             if (model.Rows.Count > 0)
             {
-                string fontLoc = @"C:\Users\hp\Desktop\arial-unicode-ms\ARIALUNI.ttf"; // make sure to have the correct path to the font file
+                string fontLoc = @"./ARIALUNI.ttf"; // make sure to have the correct path to the font file
 
                 int pdfRowIndex = 1;
                 string filename = "عرض التقييمات السلوكية " + DateTime.Now.ToString("dd-MM-yyyy hh_mm_s_tt");
@@ -174,10 +174,13 @@ namespace School.WebApp.Areas.Manger.Controllers
         private DataTable GetDataDetail()
         {
             var ModelList = _context.SkillsBehavior
-            .Include(w => w.Class)
-            .Include(w => w.Student)
             .Include(w => w.Subject)
-            .Include(w => w.Teacher) 
+            .Include(w => w.Class)
+            .Include(w => w.Teacher)
+            .Include(w => w.Duration) 
+            .Include(w => w.CompletionType)
+            .Include(w => w.Student)
+            
             .ToList();
              
 

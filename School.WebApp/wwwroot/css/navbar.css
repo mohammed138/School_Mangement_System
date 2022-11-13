@@ -1,0 +1,187 @@
+﻿
+
+
+#navbarMobileContent {
+    display: none !important;
+}
+
+.links-mobile {
+    font-size: 14px;
+    margin-right: 17px;
+}
+/*#ul-mobile-div {
+    margin-top: 20px;
+    margin-right: 50px;
+}*/
+.li-items {
+    background-color: #fff !important;
+}
+
+.li-item-ul {
+    margin-bottom: 3px;
+}
+
+
+ 
+/*500%*/
+@media(min-width:0px) and (max-width:299px) {
+    #navbarMobileContent {
+        display: grid !important   ;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 11px;
+    }
+    .li-item-ul {
+        margin-bottom: 3px;
+        font-size: 11px;
+    }
+    .logo-img {
+        border-radius: 5% !important;
+        width: 300px !important;
+        height: 300px !important;
+        box-shadow: rgb(0 0 0 / 24%) 1px 0px 15px;
+        margin-top: 2cm;
+    }
+
+
+
+}
+/*400%*/
+@media(min-width:300px) and (max-width:445px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 11px;
+    }
+    .li-item-ul {
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+    .logo-img {
+        border-radius: 5% !important;
+        width: 300px !important;
+        height: 300px !important;
+        box-shadow: rgb(0 0 0 / 24%) 1px 0px 15px;
+        margin-top: 2cm;
+    }
+}
+/*300%*/
+@media(min-width:446px) and (max-width:545px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 13px;
+    }
+    .li-item-ul {
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+}
+/*250%*/
+@media(min-width:546px) and (max-width:699px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 13px;
+    }
+}
+/*200%*/
+@media(min-width:650px) and (max-width:768px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 13px;
+    }
+}
+/*175%*/
+@media(min-width:768px) and (max-width:790px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 13px;
+    }
+}
+/*150%*/
+@media(min-width:791px) and (max-width:999px) {
+    #navbarMobileContent {
+        display: grid !important;
+        color: #4159ae;
+        text-align: right;
+    }
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -20px !important;
+        transform: translateY(-50%);
+    }
+    #ul-mobile-div {
+        margin-top: 20px;
+        margin-right: 13px;
+    }
+}

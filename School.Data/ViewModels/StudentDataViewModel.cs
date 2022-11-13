@@ -10,7 +10,7 @@ namespace School.Data.ViewModels
    public class StudentDataViewModel:BaseClass 
     { 
         public MarkViewModel MarkViewModel { get; set; }
-        public SkillsSuggestionsViewModel SkillsSuggestionsViewModel { get; set; }
+       
         public ClassViewModel ClassViewModel { get; set; }
         public SkillsBehaviorViewModel SkillsBehaviorViewModel { get; set; }
         public SkillsViewModel SkillsViewModel { get; set; }

@@ -8,6 +8,7 @@
 
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 <p class="text-right">
     <a class="btn btn-info" asp-action="Create" style="background-color: #4159AE;color:#fff;font-weight:500;">
@@ -23,8 +24,7 @@
             <i class="fas fa-file-download"> Export Data </i>
         </button>
     </div>
-
-    <div class="col-md-3">
+    <div class="col-md-5">
         <label>
             <input id="ExportPdf" name="Export" type="radio"
                    value="Pdf" />
@@ -41,7 +41,7 @@
             <th class="text-right">الإجراءات</th>
 
 
-            <th class="text-right">
+            <th class="text-right mobile-hidden">
                 مدرس المادة
             </th>
             <th class="text-right">
@@ -94,8 +94,8 @@
                 </td>
 
 
-                <td class="text-right">
-                    @Html.DisplayFor(modelItem => item.Teacher.FirstName)
+                <td class="text-right mobile-hidden">
+                    @Html.DisplayFor(modelItem => item.Teacher.FullName)
                 </td>
                 <td class="text-right">
                     @Html.DisplayFor(modelItem => item.Class.Name)

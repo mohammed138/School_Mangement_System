@@ -266,102 +266,129 @@ namespace School.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 101,
+                            Id = 1010,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(6249),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(3850),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الأول "
                         },
                         new
                         {
-                            Id = 102,
+                            Id = 1020,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7426),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5040),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الثاني      "
                         },
                         new
                         {
-                            Id = 103,
+                            Id = 1030,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7451),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5062),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف الثالث  "
                         },
                         new
                         {
-                            Id = 104,
+                            Id = 1040,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7460),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5193),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف الرابع "
                         },
                         new
                         {
-                            Id = 105,
+                            Id = 1050,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7465),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5202),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف الخامس  "
                         },
                         new
                         {
-                            Id = 106,
+                            Id = 1060,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7475),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5209),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  الصف السادس  "
                         },
                         new
                         {
-                            Id = 107,
+                            Id = 1070,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7489),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5216),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف السابع "
                         },
                         new
                         {
-                            Id = 108,
+                            Id = 1080,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7502),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5223),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف الثامن"
                         },
                         new
                         {
-                            Id = 109,
+                            Id = 1090,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7516),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5229),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   الصف التاسع "
                         },
                         new
                         {
-                            Id = 110,
+                            Id = 1100,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7529),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5236),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " الصف العاشر "
                         },
                         new
                         {
-                            Id = 111,
+                            Id = 115,
                             Capacity = 0,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(7543),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5243),
                             IsArchive = false,
                             IsDelete = false,
-                            Name = "   الصف الحادي عشر"
+                            Name = "   الصف الحادي عشر أدبي"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Capacity = 0,
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5250),
+                            IsArchive = false,
+                            IsDelete = false,
+                            Name = "  الصف الحادي عشر علمي"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Capacity = 0,
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5258),
+                            IsArchive = false,
+                            IsDelete = false,
+                            Name = "   الصف الثاني عشر أدبي "
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Capacity = 0,
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(5263),
+                            IsArchive = false,
+                            IsDelete = false,
+                            Name = "   الصف الثاني عشر علمي  "
                         });
                 });
 
@@ -451,6 +478,17 @@ namespace School.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Decisions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 3,
+                            AllowToCreatMarks = false,
+                            AllowToUpdatedMarks = false,
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 697, DateTimeKind.Local).AddTicks(8661),
+                            IsArchive = false,
+                            IsDelete = false
+                        });
                 });
 
             modelBuilder.Entity("School.Data.Entities.Duration", b =>
@@ -493,7 +531,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(3961),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(1610),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الأول "
@@ -501,7 +539,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5168),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(2866),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الثاني "
@@ -509,7 +547,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5193),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(2892),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الثالث "
@@ -517,7 +555,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(5206),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(2899),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الشهر الرابع "
@@ -564,7 +602,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 119, DateTimeKind.Local).AddTicks(5821),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 694, DateTimeKind.Local).AddTicks(7724),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "ذكر"
@@ -572,7 +610,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 119, DateTimeKind.Local).AddTicks(7437),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 695, DateTimeKind.Local).AddTicks(1312),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "أنثى"
@@ -586,7 +624,7 @@ namespace School.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClassId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -613,13 +651,13 @@ namespace School.DataAccess.Migrations
                     b.Property<float>("ShortQuizzes")
                         .HasColumnType("real");
 
-                    b.Property<int>("StudentId")
+                    b.Property<int?>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubjectId")
+                    b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -681,7 +719,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(1544),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 697, DateTimeKind.Local).AddTicks(6219),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الفصل الدراسي الأول "
@@ -689,7 +727,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(2887),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 697, DateTimeKind.Local).AddTicks(7695),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "الفصل الدراسي الثاني"
@@ -703,10 +741,10 @@ namespace School.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClassId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CompletionTypeId")
+                    b.Property<int?>("CompletionTypeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -715,7 +753,7 @@ namespace School.DataAccess.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DurationId")
+                    b.Property<int?>("DurationId")
                         .HasColumnType("int");
 
                     b.Property<bool?>("IsActive")
@@ -734,13 +772,13 @@ namespace School.DataAccess.Migrations
                     b.Property<string>("Notice")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StudentId")
+                    b.Property<int?>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SubjectId")
+                    b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -773,10 +811,10 @@ namespace School.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClassId")
+                    b.Property<int?>("ClassId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CompletionTypeId")
+                    b.Property<int?>("CompletionTypeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -801,13 +839,13 @@ namespace School.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StudentId")
+                    b.Property<int?>("StudentId")
                         .HasColumnType("int");
 
                     b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -831,62 +869,6 @@ namespace School.DataAccess.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("SkillsBehavior");
-                });
-
-            modelBuilder.Entity("School.Data.Entities.SkillsSuggestions", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsArchive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SubjectId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClassId");
-
-                    b.HasIndex("StudentId");
-
-                    b.HasIndex("SubjectId");
-
-                    b.HasIndex("TeacherId");
-
-                    b.ToTable("SkillsSuggestions");
                 });
 
             modelBuilder.Entity("School.Data.Entities.SkillsType", b =>
@@ -928,7 +910,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(2916),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(6285),
                             IsArchive = false,
                             IsDelete = false,
                             Name = " ممتاز"
@@ -936,7 +918,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4077),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(7413),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "جيد جدا "
@@ -944,7 +926,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4103),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(7436),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "   جيد  "
@@ -952,7 +934,7 @@ namespace School.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(4117),
+                            CreatedAt = new DateTime(2022, 10, 25, 23, 57, 41, 698, DateTimeKind.Local).AddTicks(7447),
                             IsArchive = false,
                             IsDelete = false,
                             Name = "  مقبول   "
@@ -1014,9 +996,8 @@ namespace School.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SchoolYear")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("SchoolYear")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("SemesterId")
                         .HasColumnType("int");
@@ -1086,788 +1067,6 @@ namespace School.DataAccess.Migrations
                     b.HasIndex("TeacherId");
 
                     b.ToTable("Subject");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 100,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 122, DateTimeKind.Local).AddTicks(8697),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 100
-                        },
-                        new
-                        {
-                            Id = 200,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(932),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 500
-                        },
-                        new
-                        {
-                            Id = 300,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(958),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تربية وطنية وحياتية ",
-                            TeacherId = 100
-                        },
-                        new
-                        {
-                            Id = 400,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(970),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 100
-                        },
-                        new
-                        {
-                            Id = 500,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(976),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	حاسوب  ",
-                            TeacherId = 100
-                        },
-                        new
-                        {
-                            Id = 600,
-                            ClassId = 101,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(984),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 100
-                        },
-                        new
-                        {
-                            Id = 700,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(998),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 200
-                        },
-                        new
-                        {
-                            Id = 800,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1012),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 500
-                        },
-                        new
-                        {
-                            Id = 9,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1026),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تربية وطنية وحياتية ",
-                            TeacherId = 200
-                        },
-                        new
-                        {
-                            Id = 10,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1040),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 200
-                        },
-                        new
-                        {
-                            Id = 11,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1054),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	حاسوب  ",
-                            TeacherId = 200
-                        },
-                        new
-                        {
-                            Id = 12,
-                            ClassId = 102,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1068),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 200
-                        },
-                        new
-                        {
-                            Id = 13,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1079),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 14,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1094),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 500
-                        },
-                        new
-                        {
-                            Id = 15,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1108),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تنشئة وطنية واجتماعية ",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 16,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1122),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 17,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1134),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	حاسوب  ",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 18,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1140),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 19,
-                            ClassId = 103,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1146),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " علوم عامة  ",
-                            TeacherId = 300
-                        },
-                        new
-                        {
-                            Id = 20,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1152),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 21,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1158),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 500
-                        },
-                        new
-                        {
-                            Id = 22,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1164),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تنشئة وطنية واجتماعية  ",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 23,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1169),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 24,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1176),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	حاسوب  ",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 25,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1182),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 26,
-                            ClassId = 104,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1188),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " علوم عامة  ",
-                            TeacherId = 400
-                        },
-                        new
-                        {
-                            Id = 27,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1194),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 600
-                        },
-                        new
-                        {
-                            Id = 28,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1203),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 700
-                        },
-                        new
-                        {
-                            Id = 29,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1217),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " دراسات اجتماعية     ",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 30,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1231),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 31,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1245),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	علوم  ",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 32,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1259),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 33,
-                            ClassId = 105,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1274),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 34,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1290),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 600
-                        },
-                        new
-                        {
-                            Id = 35,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1302),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 700
-                        },
-                        new
-                        {
-                            Id = 36,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1316),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " دراسات اجتماعية",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 37,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1330),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 38,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1344),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	علوم  ",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 39,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1353),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 40,
-                            ClassId = 106,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1359),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1000
-                        },
-                        new
-                        {
-                            Id = 41,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1365),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 1100
-                        },
-                        new
-                        {
-                            Id = 42,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1371),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 700
-                        },
-                        new
-                        {
-                            Id = 43,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1377),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " دراسات اجتماعية",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 44,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1383),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 45,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1389),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	علوم  ",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 46,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1395),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 47,
-                            ClassId = 107,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1404),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 48,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1419),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 1100
-                        },
-                        new
-                        {
-                            Id = 49,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1433),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 700
-                        },
-                        new
-                        {
-                            Id = 50,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1447),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " دراسات اجتماعية ",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 51,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1461),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 52,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1475),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	علوم  ",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 53,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1489),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 54,
-                            ClassId = 108,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1503),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا",
-                            TeacherId = 1200
-                        },
-                        new
-                        {
-                            Id = 55,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1517),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 1300
-                        },
-                        new
-                        {
-                            Id = 56,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1531),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 1400
-                        },
-                        new
-                        {
-                            Id = 57,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1546),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " دراسات اجتماعية ",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 58,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1554),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 59,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1561),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	علوم  ",
-                            TeacherId = 1600
-                        },
-                        new
-                        {
-                            Id = 60,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1566),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1500
-                        },
-                        new
-                        {
-                            Id = 61,
-                            ClassId = 109,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1572),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1500
-                        },
-                        new
-                        {
-                            Id = 62,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1578),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 1300
-                        },
-                        new
-                        {
-                            Id = 63,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1584),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 1400
-                        },
-                        new
-                        {
-                            Id = 64,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1592),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تاريخ وجغرافيا      ",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 65,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1702),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 66,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1718),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الفيزياء",
-                            TeacherId = 1600
-                        },
-                        new
-                        {
-                            Id = 67,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1732),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "كيمياء",
-                            TeacherId = 1600
-                        },
-                        new
-                        {
-                            Id = 68,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1746),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "أحياء",
-                            TeacherId = 1600
-                        },
-                        new
-                        {
-                            Id = 69,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1752),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1500
-                        },
-                        new
-                        {
-                            Id = 70,
-                            ClassId = 110,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1758),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1600
-                        },
-                        new
-                        {
-                            Id = 71,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1773),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " 	لغة عربية  ",
-                            TeacherId = 1100
-                        },
-                        new
-                        {
-                            Id = 72,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1787),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "الرياضيات",
-                            TeacherId = 1500
-                        },
-                        new
-                        {
-                            Id = 73,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1801),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "  لغة انجليزية  ",
-                            TeacherId = 1400
-                        },
-                        new
-                        {
-                            Id = 74,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1816),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تربية إسلامية ",
-                            TeacherId = 900
-                        },
-                        new
-                        {
-                            Id = 75,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1830),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = " تاريخ   ",
-                            TeacherId = 800
-                        },
-                        new
-                        {
-                            Id = 76,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1844),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "جغرافيا",
-                            TeacherId = 1700
-                        },
-                        new
-                        {
-                            Id = 77,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1856),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "ثقافة عامة",
-                            TeacherId = 1500
-                        },
-                        new
-                        {
-                            Id = 78,
-                            ClassId = 111,
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(1870),
-                            IsArchive = false,
-                            IsDelete = false,
-                            Name = "تكنولوجيا   ",
-                            TeacherId = 1600
-                        });
                 });
 
             modelBuilder.Entity("School.Data.Entities.Teacher", b =>
@@ -1876,9 +1075,6 @@ namespace School.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("AppointmentYear")
-                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -1921,212 +1117,6 @@ namespace School.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teacher");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 100,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(5065),
-                            EmailAddress = "",
-                            FirstName = "ألاء",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "أبو شعير",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 200,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7934),
-                            EmailAddress = "",
-                            FirstName = "مها  ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "ستوم",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 300,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7960),
-                            EmailAddress = "",
-                            FirstName = "إيمان ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "الجخبير ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 400,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7974),
-                            EmailAddress = "",
-                            FirstName = "رندة ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "الزيناتي ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 500,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7988),
-                            EmailAddress = "",
-                            FirstName = "علا",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "محسن",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 600,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(7997),
-                            EmailAddress = "",
-                            FirstName = "إسلام  ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "البرعي",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 700,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8010),
-                            EmailAddress = "",
-                            FirstName = "رانيا",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "حسان",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 800,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8025),
-                            EmailAddress = "",
-                            FirstName = "اسلام  ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "أبو ندى",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 900,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8038),
-                            EmailAddress = "",
-                            FirstName = " رنا ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "أبو حمد ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1000,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8052),
-                            EmailAddress = "",
-                            FirstName = "وفاء ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "نصار  ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1100,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8062),
-                            EmailAddress = "",
-                            FirstName = " رشا ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = " الخضري ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1200,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8068),
-                            EmailAddress = "",
-                            FirstName = "نداء ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "الغولة ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1300,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8073),
-                            EmailAddress = "",
-                            FirstName = "هبة  ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "وشاح",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1400,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8081),
-                            EmailAddress = "",
-                            FirstName = "هديل",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "عكاشة ",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1500,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8089),
-                            EmailAddress = "",
-                            FirstName = "سحر ",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "لبد",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1600,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8102),
-                            EmailAddress = "",
-                            FirstName = "اسلام",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "أبو شمالة",
-                            PhoneNumber = ""
-                        },
-                        new
-                        {
-                            Id = 1700,
-                            AppointmentYear = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreatedAt = new DateTime(2022, 10, 7, 2, 11, 32, 123, DateTimeKind.Local).AddTicks(8116),
-                            EmailAddress = "",
-                            FirstName = "أمل",
-                            IsArchive = false,
-                            IsDelete = false,
-                            LastName = "ياسين ",
-                            PhoneNumber = ""
-                        });
                 });
 
             modelBuilder.Entity("School.Data.Entities.ApplicationUser", b =>
@@ -2143,55 +1133,6 @@ namespace School.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
-                });
-
-            modelBuilder.Entity("School.Data.Entities.StudentApp", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<string>("AddressName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ClassId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DOP")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("EmailAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("GenderId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PlaceOBirth")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SchoolYear")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SemesterId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("ClassId");
-
-                    b.HasIndex("GenderId");
-
-                    b.HasIndex("SemesterId");
-
-                    b.HasDiscriminator().HasValue("StudentApp");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -2249,27 +1190,19 @@ namespace School.DataAccess.Migrations
                 {
                     b.HasOne("School.Data.Entities.Class", "Class")
                         .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("School.Data.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId");
 
                     b.HasOne("School.Data.Entities.Subject", "Subject")
                         .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubjectId");
 
                     b.HasOne("School.Data.Entities.Teacher", "Teacher")
                         .WithMany()
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TeacherId");
 
                     b.Navigation("Class");
 
@@ -2284,39 +1217,27 @@ namespace School.DataAccess.Migrations
                 {
                     b.HasOne("School.Data.Entities.Class", "Class")
                         .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("School.Data.Entities.CompletionType", "CompletionType")
                         .WithMany()
-                        .HasForeignKey("CompletionTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CompletionTypeId");
 
                     b.HasOne("School.Data.Entities.Duration", "Duration")
                         .WithMany()
-                        .HasForeignKey("DurationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DurationId");
 
                     b.HasOne("School.Data.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId");
 
                     b.HasOne("School.Data.Entities.Subject", "Subject")
                         .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SubjectId");
 
                     b.HasOne("School.Data.Entities.Teacher", "Teacher")
                         .WithMany()
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TeacherId");
 
                     b.Navigation("Class");
 
@@ -2335,15 +1256,11 @@ namespace School.DataAccess.Migrations
                 {
                     b.HasOne("School.Data.Entities.Class", "Class")
                         .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.HasOne("School.Data.Entities.CompletionType", "CompletionType")
                         .WithMany()
-                        .HasForeignKey("CompletionTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CompletionTypeId");
 
                     b.HasOne("School.Data.Entities.Duration", "Duration")
                         .WithMany()
@@ -2351,9 +1268,7 @@ namespace School.DataAccess.Migrations
 
                     b.HasOne("School.Data.Entities.Student", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId");
 
                     b.HasOne("School.Data.Entities.Subject", "Subject")
                         .WithMany()
@@ -2361,50 +1276,13 @@ namespace School.DataAccess.Migrations
 
                     b.HasOne("School.Data.Entities.Teacher", "Teacher")
                         .WithMany()
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TeacherId");
 
                     b.Navigation("Class");
 
                     b.Navigation("CompletionType");
 
                     b.Navigation("Duration");
-
-                    b.Navigation("Student");
-
-                    b.Navigation("Subject");
-
-                    b.Navigation("Teacher");
-                });
-
-            modelBuilder.Entity("School.Data.Entities.SkillsSuggestions", b =>
-                {
-                    b.HasOne("School.Data.Entities.Class", "Class")
-                        .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("School.Data.Entities.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("School.Data.Entities.Subject", "Subject")
-                        .WithMany()
-                        .HasForeignKey("SubjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("School.Data.Entities.Teacher", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
 
                     b.Navigation("Student");
 
@@ -2457,33 +1335,6 @@ namespace School.DataAccess.Migrations
                     b.Navigation("Class");
 
                     b.Navigation("Teacher");
-                });
-
-            modelBuilder.Entity("School.Data.Entities.StudentApp", b =>
-                {
-                    b.HasOne("School.Data.Entities.Class", "Class")
-                        .WithMany()
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("School.Data.Entities.Gender", "Gender")
-                        .WithMany()
-                        .HasForeignKey("GenderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("School.Data.Entities.Semester", "Semester")
-                        .WithMany()
-                        .HasForeignKey("SemesterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Class");
-
-                    b.Navigation("Gender");
-
-                    b.Navigation("Semester");
                 });
 #pragma warning restore 612, 618
         }

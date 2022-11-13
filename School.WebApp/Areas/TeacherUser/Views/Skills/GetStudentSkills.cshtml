@@ -5,8 +5,10 @@
 @{
     ViewData["Title"] = "سجل التقييم للطالب ";
 }
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
 
- 
+
 <style>
     .subrow {
         border-top: 2px solid;
@@ -33,18 +35,17 @@
         line-height: 1.7em;
         color: #000;
     }
-    
+
 
     .data-info-sec {
         padding-bottom: 12px !important;
         padding-top: 10px !important;
         border-bottom: 1px solid;
     }
-
 </style>
 
 
-<div class="row" style="font-family: 'Changa', sans-serif;    ">
+<div class="row" id="mobile-notAv" style="font-family: 'Changa', sans-serif;    ">
     <div class="container-fluid">
         <div class="row text-right" style=" border: 2px solid;">
             <div class="col-md-3" style=" border-right: 1px solid;">
@@ -111,7 +112,7 @@
 
                         }
 
-                     } 
+                    }
 
                 </div>
             </div>
@@ -126,7 +127,7 @@
 
                         @foreach (var item in Model.SkillsList)
                         {
-                            <div class="col-md-12 data-info-sec" >
+                            <div class="col-md-12 data-info-sec">
                                 @item.Name
                             </div>
                         }
@@ -154,7 +155,7 @@
                         }
                     }
 
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -168,7 +169,9 @@
 
 
 
-
+<div class="mobile-vi">
+    <p>  تصفح سجل التقييم الدراسي للطالب غير متوفر للهاتف   </p>
+</div>
 
 
 

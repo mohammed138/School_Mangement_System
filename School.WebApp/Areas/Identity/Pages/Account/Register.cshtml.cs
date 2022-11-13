@@ -71,6 +71,8 @@ namespace School.WebApp.Areas.Identity.Pages.Account
             [Display(Name = "تأكيد كلمة السر")]
             [Compare("Password", ErrorMessage = "كلمة المرور وتأكيد كلمة المرور  غير متطابقتين.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "نوع الحساب   ")] 
             public string? RoleId { get; set; }
         }
 
@@ -123,10 +125,10 @@ namespace School.WebApp.Areas.Identity.Pages.Account
                 }
 
 
-                if (result.Succeeded )
+                
+                 if (result.Succeeded )
                 {
-                    
-                 
+
 
 
                     _logger.LogInformation("User created a new account with password.");

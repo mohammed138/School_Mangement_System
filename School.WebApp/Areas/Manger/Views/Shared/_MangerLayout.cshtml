@@ -133,9 +133,7 @@
                 color: #4159AE !important;
                 background: #fff;
             }
-    </style>
 
-    <style>
         .navbar {
             background: #fff;
             border: none;
@@ -205,14 +203,11 @@
             font-size: 20px;
             color: #4159AE;
         }
-    </style>
 
-
-    <style>
         #sidebar ul li a {
             font-size: 17px !important;
         }
- 
+
         .dropdown-menu.show {
             display: block !important;
             background-color: #4159AE !important;
@@ -235,12 +230,31 @@
         .notifications {
             min-width: 350px;
         }
-    </style>
-    <!--
 
-         <link rel="stylesheet" href="./css/StudentMarks.css">
-         <link rel="stylesheet" href="./css/NavSidestyle.css">
-    -->
+
+
+        #btnExportData {
+            padding: 3px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            border: 0px !important;
+            background-color: #4159AE !important;
+            color: #fff !important;
+        }
+
+        .dropdown-menu.show {
+            display: block !important;
+            background-color: #4159AE !important;
+            top: 0cm !important;
+        }
+
+        .navbar {
+            border-radius: 10px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="~/css/navbar.css" />
+
 </head>
 
 <body style="font-family: 'Changa', sans-serif;    ">
@@ -326,48 +340,157 @@
 
                 <li>
                     <a asp-action="Details" asp-controller="Decisions">
-                         القرارات 
+                        القرارات
                         <i class="fas fa-chalkboard font-icon"></i>
                     </a>
                 </li>
 
-               
+
             </ul>
 
         </nav>
         <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white" style="border-radius: 10px !important;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
                         <div class="dropdown">
                             <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
-
                                 <i class="fa-solid fa-user"></i>
                             </a>
-
-                            <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
-
+                            <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" style="top: 6cm !important;">
                                 <partial name="_LoginPartial" />
-
                             </ul>
-
-
                         </div>
-
-                         
                     </div>
+
+
+
                     <div class="brand">
                         <span style="color: #0E268C; font-size:18px;font-weight:500;"> مدرسة السلام لأطفال الزيتون </span>
                         <img class="img-brand" src="~/assets/TFiles/logo.jpg" width="80" height="80">
                     </div>
+                  
+
+                    <div class="collapse navbar-collapse navbar-expand-xl" id="navbarMobileContent">
+                        <div id="ul-mobile-div">
+                            <ul class="list-unstyled components row">
+                                <li class="li-item-ul col-6"> 
+                                    <a asp-action="Index" asp-controller="Classes">
+                                        الصفوف الدراسية
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+                                    <a href="#EVSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        طلاب المدرسة
+                                        <i class="fa-brands fa-figma font-icon"></i>
+                                    </a>
+                                    <ul class="collapse list-unstyled " id="EVSubmenu">
+                                        <li>
+                                            <div id="br-div" />
+                                            <a class="li-items" asp-action="Create" asp-controller="Students">
+                                                إضافة طالب جديد
+                                                <i class="fa-solid fa-plus"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div id="br-div" />
+                                            <a class="li-items" asp-action="GetAll" asp-controller="Students">
+                                                عرض  الطلاب
+                                                <i class="fa-solid fa-list font-icon"></i>
+                                            </a>
+                                            <hr />
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+                                    <div id="br-div" />
+
+                                    <a href="#EVABSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        المعلمين
+                                        <i class="fa-brands fa-buffer font-icon"></i>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="EVABSubmenu">
+                                        <li>
+                                            <div id="br-div" />
+
+                                            <a class="li-items" asp-action="Create" asp-controller="Teachers">
+                                                إضافة معلم  جديد
+                                                <i class="fa-solid fa-plus font-icon"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div id="br-div" />
+
+                                            <a class="li-items" asp-action="GetAll" asp-controller="Teachers">
+                                                عرض المعلمين
+                                                <i class="fa-solid fa-list font-icon"></i>
+                                            </a>
+                                            <hr />
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+                                    <div id="br-div" />
+
+                                    <a href="#WKSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        المواد الدراسية
+                                        <i class="fa-solid fa-bullseye font-icon"></i>
+                                    </a>
+                                    <ul class="collapse list-unstyled " id="WKSubmenu">
+                                        <li>
+                                            <div id="br-div" />
+
+                                            <a class="li-items" asp-action="Create" asp-controller="Subjects">
+                                                إضافة مادة دراسية
+                                                <i class="fa-solid fa-plus font-icon"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div id="br-div" />
+
+                                            <a class="li-items" asp-action="GetAll" asp-controller="Subjects">
+                                                عرض المواد الدراسية
+                                                <i class="fa-solid fa-list font-icon"></i>
+                                            </a>
+                                            <hr />
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+                                    <div id="br-div" />
+
+                                    <a asp-action="Details" asp-controller="Decisions">
+                                        القرارات
+                                        <i class="fas fa-chalkboard font-icon"></i>
+                                    </a>
+                                </li>
+
+                                <li class="li-item-ul col-6">
+
+                                    <a href="#Identity" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                        حسابي
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+                                    <ul class="collapse list-unstyled " id="Identity">
+                                        <partial name="_LoginPartialMobile" />
+ 
+                                        <hr />
+                                    </ul>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
 
 
 
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
+
                 </div>
             </nav>
 
@@ -437,8 +560,22 @@
             $.noConflict();
             var table = $('#myTable').DataTable();
         });</script>
+    <script>
+
+
+        //document.getElementById("toggle_button").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("ul-mobile-div").toggle = "display-none";
+        }
+
+                                //function enablecollapse1() {
+                                //    $(document).g
+                                //        ('#ul-mobile-div').toggle('display-none');
+                                //}
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-</html> 
+</html>
 
 

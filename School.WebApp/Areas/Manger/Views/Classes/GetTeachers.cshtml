@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 <div class="row" style="margin-top:-4.5rem !important ">
     <div class="col-12 text-right" style="margin-bottom: 50px;padding: 30px;
@@ -39,13 +40,11 @@
         <thead class="thead_dark">
             <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
                 <th class="text-right">الإجراءات</th>
-                <th class="text-right">
-                    @Html.DisplayNameFor(model => model.Teacher.AppointmentYear)
-                </th>
-                <th class="text-right">
+                
+                <th class="text-right mobile-hidden">
                     @Html.DisplayNameFor(model => model.Teacher.PhoneNumber)
                 </th>
-                <th class="text-right">
+                <th class="text-right mobile-hidden">
                     @Html.DisplayNameFor(model => model.Teacher.EmailAddress)
                 </th>
                 <th class="text-right">
@@ -82,17 +81,15 @@
                                 <a class="dropdown-item" asp-controller="Teachers" asp-action="Delete" asp-route-id="@item.Id">
                                     حذف المعلم
                                     <i class="fa-solid fa-trash"></i>
-                                 </a>
+                                </a>
                             </div>
-                           
 
-                            </div>
-                    
+
+                        </div>
+
                     </td>
-                    <td class="text-right">
-                        @Html.DisplayFor(modelItem => item.AppointmentYear)
-                    </td>
-                    <td class="text-right">
+                   
+                    <td class="text-right mobile-hidden">
                         @if (item.PhoneNumber != null)
                         {
                             @Html.DisplayFor(modelItem => item.PhoneNumber)
@@ -104,7 +101,7 @@
                         }
 
                     </td>
-                    <td class="text-right">
+                    <td class="text-right mobile-hidden">
                         @if (item.EmailAddress != null)
                         {@Html.DisplayFor(modelItem => item.EmailAddress) }
                     else

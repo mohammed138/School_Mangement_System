@@ -16,7 +16,7 @@ namespace School.Data.ViewModels
 
         
 
-        public List<Mark> MarkList = new List<Mark>();
+        public List<Mark> MarkList { get; set; }
         public List<Subject> SubjectList { get; set; }
 
 

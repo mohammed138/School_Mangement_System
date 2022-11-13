@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "سجل الدرجات ";
 }
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
+
 <style>
     .dropdown {
         padding: 0px;
@@ -122,10 +125,7 @@
     .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
         color: #fff !important;
         background-color: #0E268C;
-    }
-</style>
-<style>
-
+    } 
 
     .content {
         padding: 7rem 0;
@@ -270,66 +270,47 @@
 </style>
 
 
-@if (Model.IsActive == true)
-{
 
 
 
-    <table id="myTable" class="table dt-responsive table-hover" style="width: 108%; margin-left: -35px;">
+
+    <table id="myTable" class="table dt-responsive table-hover" style="width:100% !important;" >
         <thead class="thead_dark">
             <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
-                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  الدرجة النهائية    </td>
-                <td class="text-right">  الدرجة النصفية  </td>
-                <td class="text-right">    الدرجة الشهرية  </td>
-                <td class="text-right">    الدرجة الشهرية  </td>
-                <td class="text-right">    الدرجة الشهرية  </td>
-                <td class="text-right">      مدرس المادة  </td>
+
+                <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">المجموع     </td>
+                <td class="text-right mobile-hidden"> الدرجة النهائية      </td>
+                <td class="text-right mobile-hidden">   درجات التقويم النوعي </td>
+                <td class="text-right mobile-hidden">  الإختبارات القصيرة   </td>
+                <td class="text-right mobile-hidden">      مدرس المادة  </td>
                 <td class="text-right">      المادة </td>
-                <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
+                <td class="text-right mobile-hidden" style=" border-top-right-radius: 16px; border-bottom: 0px;">    اسم الطالب </td>
 
             </tr>
         </thead>
 
         <tbody>
-
-            @foreach (var item in Model.MarkList)
+            @if (Model.IsActive == true)
             {
-                <tr style="  color: #000;">
+                @foreach (var item in Model.MarkList)
+                {
+                    <tr style="  color: #000;">
 
-                    @if (item.ClassId < 105)
-                    {
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.Total)   </td>
+                        <td class="text-center"> @*@Html.DisplayFor(modelItem => item.Total)*@   </td>
+                        <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+                        <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
+                        <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
+                        <td class="text-right  mobile-hidden">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                        <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+                        <td class="text-right  mobile-hidden">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
 
-                    }
-                    else
-                    {
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
-                        <td class="text-center"> @Html.DisplayFor(modelItem => item.Total)   </td>
-                    }
-
-
-                    <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
-                    <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
-                    <td class="text-right">    @Html.DisplayFor(modelItem => item.Student.FullName)  </td>
-
-                </tr>
+                    </tr>
+                }
             }
 
-
-        </tbody>
+            </tbody>
     </table>
 
 
-}
-else
-{
-    <p style="    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 5cm;">  لم يتم رصد درجات حتى الأن </p>
-}
+
+ 

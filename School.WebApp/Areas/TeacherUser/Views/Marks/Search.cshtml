@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "درجات الطلاب ";
+}
+
+@model School.Data.ViewModels.MarkViewModel
+
+
+
+<link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/ClassesMediaQuery.css" />
+ 
+
+
+
+
+<table id="myTable" class="table dt-responsive">
+    <thead class="thead_dark">
+        <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
+            <td class="text-right">  الإجراءات     </td>
+            <td class="text-right mobile-hidden">  المجموع      </td>
+            <td class="text-center mobile-hidden"> الدرجة النهائية  </td>
+            <td class="text-center mobile-hidden">  درجات التقويم النوعي     </td>
+            <td class="text-center mobile-hidden">  الإختبارات القصيرة </td>
+            <td class="text-center mobile-hidden">   المادة   </td>
+            <td class="text-center">   اسم الطالب   </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MarkList)
+        {
+            <tr>
+
+                <td class="text-right">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary"
+                                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"
+                                style="background-color: #fff;border:0px;">
+
+                            <i class="fa-solid fa-ellipsis" style="color: #000;"></i>
+
+                        </button>
+                        <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item btn btn-default" asp-action="Edit" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                                تعديل
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                            <a class="dropdown-item btn btn-default" asp-action="Delete" asp-controller="Marks" asp-route-id="@item.Id" style="background-color: #4159AE; border-color: #221ecd; color: #fff; ">
+                                حذف
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+
+                <td class="text-center mobile-hidden"> @*@Html.DisplayFor(modelItem => item.Total)*@   </td>
+
+
+                <td class="text-center mobile-hidden">
+                    @if (item.FinalTermValue != null)
+                    {
+                        @Html.DisplayFor(modelItem => item.FinalTermValue)
+                    }
+                    else
+                    {
+                        <p> لم يتم رصد الدرجة  </p>
+                    }
+                </td>
+
+                <td class="text-center mobile-hidden">
+                    @if (item.QualitativeAssessmentGrades != null)
+                    {
+                        @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)
+                    }
+                    else
+                    {
+                        <p> لم يتم رصد الدرجة  </p>
+                    }
+
+                </td>
+
+
+
+                <td class="text-center mobile-hidden">
+                    @if (item.ShortQuizzes != null)
+                    {
+                        @Html.DisplayFor(modelItem => item.ShortQuizzes)
+                    }
+                    else
+                    {
+                        <p> لم يتم رصد الدرجة  </p>
+                    }
+
+                </td>
+
+
+                <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.Subject.Name)   </td>
+                <td class="text-center"> @Html.DisplayFor(modelItem => item.Student.FullName)   </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

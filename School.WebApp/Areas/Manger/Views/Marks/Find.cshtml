@@ -5,36 +5,37 @@
 }
 
 <link rel="stylesheet" href="~/assets/TFiles/css/TableListStyle.css" />
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 
-
-}
 
 
 
 
 <div class="row" style="margin-top:-4.5rem !important ">
     @if (Model.IsActive == true)
-     { 
-        <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
-            @using (Html.BeginForm("ExporDataToFile", "Marks", FormMethod.Post))
-            {
-                <button id="btnExportData" type="submit" value="ExportData" name="action">
-                    <i class="fas fa-file-download">  تصدير </i>
-                </button>
+    {
+    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+        @using (Html.BeginForm("ExporDataToFile", "Marks", FormMethod.Post))
+        {
+            <button id="btnExportData" type="submit" value="ExportData" name="action">
+                <i class="fas fa-file-download">  تصدير </i>
+            </button>
 
-                <br />
-                <br />
+            <br />
+            <br />
 
 
+            <div class="col-md-5">
                 <label>
                     <input id="ExportPdf" name="Export" type="radio"
                            value="Pdf" />
-                    <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+                    <i class="far fa-file-pdf">  Export To Pdf</i>
                 </label>
-            }
-        </div> 
-     }
+            </div>
+        }
+    </div>
+    }
 
 
 
@@ -64,13 +65,13 @@
     </div>
 </div>
 
-<table id="myTable" class="table dt-responsive table-hover" style="width: 108%; margin-left: -35px;">
+<table id="myTable" class="table dt-responsive table-hover" style="width: 108%; margin-left: -10px;">
     <thead class="thead_dark">
         <tr style=" background-color: #8c9cd0; border: 0px; color: #fff;">
-            <td class="text-right" style=" border-top-left-radius: 16px; border-bottom: 0px;">  المجموع      </td>
-            <td class="text-right">  الدرجة النهائية   </td>
-            <td class="text-right">  درجات التقويم النوعي  </td>
-            <td class="text-right">    الإختبارات القصيرة </td>
+            <td class="text-right " style=" border-top-left-radius: 16px; border-bottom: 0px;">  المجموع      </td>
+            <td class="text-right mobile-hidden">  الدرجة النهائية   </td>
+            <td class="text-right mobile-hidden">  درجات التقويم النوعي  </td>
+            <td class="text-right mobile-hidden">    الإختبارات القصيرة </td>
             <td class="text-right">      مدرس المادة  </td>
             <td class="text-right" style=" border-top-right-radius: 16px; border-bottom: 0px;">المادة </td>
 
@@ -81,16 +82,16 @@
 
         @foreach (var item in Model.MarkList)
         {
-          <tr style="  color: #000;">
+            <tr style="  color: #000;">
 
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.Total)   </td> 
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
-            <td class="text-center"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
-             
-            <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
-            <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
-        </tr>
+                <td class="text-center"> @*@Html.DisplayFor(modelItem => item.Total)*@   </td>
+                <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.ShortQuizzes)   </td>
+                <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.QualitativeAssessmentGrades)   </td>
+                <td class="text-center mobile-hidden"> @Html.DisplayFor(modelItem => item.FinalTermValue)   </td>
+
+                <td class="text-right">   @Html.DisplayFor(modelItem => item.Teacher.FullName)  </td>
+                <td class="text-right"> @Html.DisplayFor(modelItem => item.Subject.Name)  </td>
+            </tr>
         }
 
 

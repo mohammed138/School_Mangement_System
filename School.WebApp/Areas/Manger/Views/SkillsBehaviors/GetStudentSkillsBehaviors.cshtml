@@ -40,28 +40,31 @@
         border-bottom: 1px solid;
     }
 </style>
+<link rel="stylesheet" href="~/css/GetAllMediaQuery.css" />
 
 
 @if (Model.IsActive == true)
 {
-    <div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
-        @using (Html.BeginForm("ExporDataToFile", "SkillsBehaviors", FormMethod.Post))
-        {
-            <button id="btnExportData" type="submit" value="ExportData" name="action" >
-                <i class="fas fa-file-download">  تصدير </i>
-            </button>
+<div class="col-md-12" style="text-align:center; padding : 5px 5px 5px 5px">
+    @using (Html.BeginForm("ExporDataToFile", "SkillsBehaviors", FormMethod.Post))
+    {
+        <button id="btnExportData" type="submit" value="ExportData" name="action">
+            <i class="fas fa-file-download">  تصدير </i>
+        </button>
 
-            <br />
-            <br />
+        <br />
+        <br />
 
 
+        <div class="col-md-5">
             <label>
                 <input id="ExportPdf" name="Export" type="radio"
                        value="Pdf" />
-                <i class="far fa-file-pdf"> Pdf تصدير الى </i>
+                <i class="far fa-file-pdf">  Export To Pdf</i>
             </label>
-        }
-    </div>
+        </div>
+    }
+</div>
 }
 
 
